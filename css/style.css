@@ -558,6 +558,16 @@ PÁGINAS DEL LIBRO
 
 }
 
+#page1 .paper p{
+
+    font-size:small;
+
+    line-height:1.7;
+
+    margin:10px 0;
+
+}
+
 .divider{
 
     width:120px;
@@ -566,7 +576,7 @@ PÁGINAS DEL LIBRO
 
     background:#d8b36a;
 
-    margin:20px auto 40px;
+    margin:20px auto 20px;
 
 }
 

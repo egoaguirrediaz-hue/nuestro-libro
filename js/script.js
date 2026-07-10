@@ -110,6 +110,7 @@ function openBook() {
 
 }
 
+
 async function revealLetter() {
 
     const items = document.querySelectorAll("#page1 .fade-item");
@@ -117,6 +118,7 @@ async function revealLetter() {
     for (const item of items) {
 
         const text = item.innerText;
+        item.innerText = "";
 
         if (text.includes("Mi Amor")) {
 
@@ -125,6 +127,8 @@ async function revealLetter() {
         }
 
         item.classList.add("show");
+
+        await typeWriter(item, text, 50);
 
         if (text.includes("Gracias por elegirme")) {
 
@@ -138,7 +142,19 @@ async function revealLetter() {
 
         }
 
-        await wait(1800);
+        await wait(800);
+
+    }
+
+}
+
+async function typeWriter(element, text, speed = 50) {
+
+    for (let i = 0; i < text.length; i++) {
+
+        element.innerHTML += text.charAt(i);
+
+        await wait(speed);
 
     }
 
