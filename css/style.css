@@ -61,18 +61,21 @@ body {
 /* ==========================================
    PORTADA
 ========================================== */
+
 .cover{
+
     min-height:100vh;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
     position:relative;
 
-    z-index:3;
+    z-index:5;
 
-    padding-top:80px;
 }
 
 
@@ -85,13 +88,16 @@ body {
     width: 420px;
     max-width: 95%;
 
+    z-index:5;
+
     background: rgba(16, 26, 52, .85);
 
     border: 2px solid rgba(255, 217, 138, .25);
 
     border-radius: 28px;
 
-  padding:45px 40px;
+    padding: 60px 45px;
+
     text-align: center;
 
     backdrop-filter: blur(18px);
@@ -109,42 +115,40 @@ body {
 /* ==========================================
    LUNA
 ========================================== */
-/* ==========================================
-   LUNA
-========================================== */
 
-#moon {
-    position: fixed;
-
-    top: 50px;
-    left: 50%;
-
-    transform: translateX(-50%);
-
-    width: 80px;
-    height: 80px;
-
-    border-radius: 50%;
-
-    background: radial-gradient(circle at 30% 30%,
-        #FFF9D6,
-        #FFD98A 60%,
-        #F6C95D
-    );
-
-    box-shadow:
-        0 0 25px rgba(255,220,120,.5),
-        0 0 60px rgba(255,220,120,.25);
-
-    animation: moonFloat 6s ease-in-out infinite;
-
-    z-index: 2;
-}
 /*=====================================
 LUNA
 ======================================*/
 
+#moon{
 
+    position:fixed;
+
+    top:60px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:70px;
+height:70px;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle at 30% 30%,
+    #FFF9D6,
+    #FFD98A 60%,
+    #F6C95D);
+
+    box-shadow:
+0 0 20px rgba(255,220,120,.4),
+0 0 45px rgba(255,220,120,.15);
+
+    animation:moonFloat 6s ease-in-out infinite;
+
+    z-index:1;
+
+}
 
 /* ==========================================
    TITULOS
@@ -154,7 +158,7 @@ LUNA
 
     font-family: 'Cormorant Garamond', serif;
 
-    font-size: 48px;
+    font-size: 58px;
 
     color: var(--gold);
 
@@ -253,18 +257,25 @@ LUNA
 @keyframes moonFloat {
 
     0% {
-        transform: translate(-50%,0);
+
+        transform: translateY(0);
+
     }
 
     50% {
-        transform: translate(-50%,-10px);
+
+        transform: translateY(-10px);
+
     }
 
     100% {
-        transform: translate(-50%,0);
+
+        transform: translateY(0);
+
     }
 
 }
+
 .book-cover::before {
 
     content: "";
@@ -389,6 +400,23 @@ ESTRELLAS
 
 }
 
+#moon {
+
+    position: absolute;
+
+    top: 35px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    font-size: 60px;
+
+    animation: moonFloat 6s ease-in-out infinite;
+
+    filter: drop-shadow(0 0 18px rgba(255, 220, 120, .5));
+
+}
 
 .book-cover::before {
 
