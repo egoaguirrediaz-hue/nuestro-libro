@@ -1,0 +1,49 @@
+/*=====================================
+PÉTALOS
+======================================*/
+
+.petal{
+
+    position:fixed;
+
+    top:-50px;
+
+    font-size:28px;
+
+    pointer-events:none;
+
+    z-index:999;
+
+    animation:fallPetal 9s linear forwards;
+
+}
+
+@keyframes fallPetal{
+
+    0%{
+
+        transform:
+        translateY(0)
+        rotate(0deg);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:1;
+
+    }
+
+    100%{
+
+        transform:
+        translateY(110vh)
+        rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}

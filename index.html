@@ -14,19 +14,30 @@
 </head>
 
 <body>
-
+<div id="app">
     <!-- Fondo -->
     <div id="stars"></div>
-   
+
     <div id="moon">
         <div class="moon-glow"></div>
     </div>
 
+    <section id="intro">
+
+        <div class="intro-content">
+
+            <p id="introText">
+
+            </p>
+
+        </div>
+
+    </section>
+
     <!-- Portada -->
 
-    <main class="cover">
-
-        <div class="book-cover">
+<main id="cover" class="cover hidden">
+            <div class="book-cover">
 
             <h1>
 
@@ -53,7 +64,7 @@
 
             </p>
 
-            <button id="startButton">
+            <button id="startButton" onclick="openBook()">
 
                 ❤️ Abrir nuestro libro
 
@@ -63,6 +74,72 @@
 
     </main>
 
+    <!-- ===============================
+     PÁGINA 1
+================================ -->
+
+   <section id="page1"
+         class="page hidden book-page">
+
+    <div class="paper">
+
+        <span class="page-number">
+            Página I
+        </span>
+
+        <h2 class="fade-item">
+            Para Mi Reina ❤️
+        </h2>
+
+        <div class="divider fade-item"></div>
+
+        <p class="fade-item">
+            Mi Amor...
+        </p>
+
+        <p class="fade-item">
+            Hoy no quería darte un regalo cualquiera.
+        </p>
+
+        <p class="fade-item">
+            Quería regalarte un pequeño rincón donde siempre puedas volver cuando necesites recordar cuánto te amo.
+        </p>
+
+        <p class="fade-item">
+            Porque estos dos meses han estado llenos de momentos que guardaré para siempre.
+        </p>
+
+        <p class="fade-item">
+            Gracias por existir.
+        </p>
+
+        <p class="fade-item">
+            Gracias por elegirme.
+        </p>
+
+        <p class="fade-item">
+            Gracias por dejarme escribir este capítulo contigo.
+        </p>
+
+        <h3 class="fade-item">
+            Con todo mi amor,
+        </h3>
+
+        <h2 class="fade-item">
+            Chris ❤️
+        </h2>
+
+       <button class="fade-item next-btn"
+        onclick="nextPage()">
+
+    Pasar la página →
+
+</button>
+
+    </div>
+
+</section>
+</div>
     <audio id="music" loop>
 
         <source src="assets/music/piano.mp3" type="audio/mpeg">
@@ -70,6 +147,8 @@
     </audio>
 
     <script src="js/script.js"></script>
+    <script src="js/effects.js"></script>
+    <script src="js/book.js"></script>
 
 </body>
 
