@@ -1,60 +1,55 @@
-function fadeVolume(target,duration){
+function fadeVolume(target, duration) {
 
-    const music=document.getElementById("music");
+    const music = document.getElementById("music");
 
-    const start=music.volume;
+    const start = music.volume;
 
-    const step=(target-start)/40;
+    const step = (target - start) / 40;
 
-    let count=0;
+    let count = 0;
 
-    const interval=setInterval(()=>{
+    const interval = setInterval(() => {
 
-        music.volume+=step;
+        music.volume += step;
 
         count++;
 
-        if(count>=40){
+        if (count >= 40) {
 
-            music.volume=target;
+            music.volume = target;
 
             clearInterval(interval);
 
         }
 
-    },duration/40);
+    }, duration / 40);
 
 }
 
-function createPetals(){
+function createPetals() {
 
-    for(let i=0;i<4;i++){
+    for (let i = 0; i < 4; i++) {
 
-        setTimeout(()=>{
+        setTimeout(() => {
 
-            const petal=document.createElement("div");
+            
+            const paper = document.querySelector(".paper");
 
-            petal.className="petal";
+            const rect = paper.getBoundingClientRect();
 
-            petal.innerHTML="🌹";
-
-const paper=document.querySelector(".paper");
-
-const rect=paper.getBoundingClientRect();
-
-petal.style.left=
-rect.left+
-Math.random()*rect.width+
-"px";
+            petal.style.left =
+                rect.left +
+                Math.random() * rect.width +
+                "px";
             document.body.appendChild(petal);
 
-            setTimeout(()=>{
+            setTimeout(() => {
 
                 petal.remove();
 
-            },9000);
+            }, 9000);
 
-        },i*600);
+        }, i * 600);
 
     }
 

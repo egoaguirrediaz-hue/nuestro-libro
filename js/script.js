@@ -96,9 +96,33 @@ function wait(ms) {
 
 }
 
-window.onload = () => {
+window.onload=()=>{
 
-    playIntro();
+    const button=document.getElementById("beginButton");
+
+    button.addEventListener("click",startExperience);
+
+}
+
+function startExperience(){
+
+    const music=document.getElementById("music");
+
+    music.volume=0.25;
+
+    music.play();
+
+    const welcome=document.getElementById("welcome");
+
+    welcome.style.opacity="0";
+
+    setTimeout(()=>{
+
+        welcome.remove();
+
+        playIntro();
+
+    },1500);
 
 }
 

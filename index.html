@@ -14,132 +14,165 @@
 </head>
 
 <body>
-<div id="app">
-    <!-- Fondo -->
-    <div id="stars"></div>
+    <div id="app">
+        <!-- Fondo -->
+        <div id="stars"></div>
 
-    <div id="moon">
-        <div class="moon-glow"></div>
-    </div>
-
-    <section id="intro">
-
-        <div class="intro-content">
-
-            <p id="introText">
-
-            </p>
-
+        <div id="moon">
+            <div class="moon-glow"></div>
         </div>
 
-    </section>
+        <!-- ====================================
+     PANTALLA DE BIENVENIDA
+==================================== -->
 
-    <!-- Portada -->
+        <section id="welcome">
 
-<main id="cover" class="cover hidden">
+            <div class="welcome-card">
+
+                <div class="welcome-heart">
+
+                    ❤️
+
+                </div>
+
+                <h1>
+
+                    Feliz Aniversario,
+                    Mi Reina
+
+                </h1>
+
+                <p>
+
+                    Hoy quiero regalarte algo diferente...
+
+                </p>
+
+                <p>
+
+                    No es solo una página.
+                    Es un pequeño pedacito de nuestra historia.
+
+                </p>
+
+                <button id="beginButton">
+
+                    ❤️ Abrir nuestro capítulo II
+
+                </button>
+
+                <span>
+
+                    Tócalo cuando estés lista ❤️
+
+                </span>
+
+            </div>
+
+        </section>
+
+        <section id="intro">
+
+            <div class="intro-content">
+
+                <p id="introText">
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <!-- Portada -->
+
+        <main id="cover" class="cover hidden">
             <div class="book-cover">
 
-            <h1>
+                <h1>
 
-                Nuestro Libro
+                    Nuestro Libro
 
-            </h1>
+                </h1>
 
-            <p class="chapter">
+                <p class="chapter">
 
-                Capítulo II
+                    Capítulo II
 
-            </p>
+                </p>
 
-            <h2>
+                <h2>
 
-                Dos meses contigo ❤️
+                    Dos meses contigo ❤️
 
-            </h2>
+                </h2>
 
-            <p>
+                <p>
 
-                Porque las mejores historias...
-                nunca terminan.
+                    Porque las mejores historias...
+                    nunca terminan.
 
-            </p>
+                </p>
 
-            <button id="startButton" onclick="openBook()">
+                <button id="startButton" onclick="openBook()">
 
-                ❤️ Abrir nuestro libro
+                    ❤️ Abrir nuestro libro
 
-            </button>
+                </button>
 
-        </div>
+            </div>
 
-    </main>
+        </main>
 
-    <!-- ===============================
+        <!-- ===============================
      PÁGINA 1
 ================================ -->
 
-   <section id="page1"
-         class="page hidden book-page">
+<section id="page1" class="page hidden">
 
     <div class="paper">
 
         <span class="page-number">
-            Página I
+
+            Capítulo II
+
         </span>
 
-        <h2 class="fade-item">
-            Para Mi Amor ❤️
-        </h2>
+        <div class="scene-container">
 
-        <div class="divider fade-item"></div>
+            <div id="sceneText">
 
-        <p class="fade-item">
-            Mi Amor...
-        </p>
+            </div>
 
-        <p class="fade-item">
-            Hoy no quería darte un regalo cualquiera.
-        </p>
+        </div>
 
-        <p class="fade-item">
-            Quería regalarte un pequeño rincón donde siempre puedas volver cuando necesites recordar cuánto te amo.
-        </p>
+        <div class="gold-line"></div>
 
-        <p class="fade-item">
-            Porque estos dos meses han estado llenos de momentos que guardaré para siempre.
-        </p>
+        <button
+            id="nextPageButton"
+            class="next-btn hidden"
+            onclick="nextPage()">
 
-        <p class="fade-item">
-            Gracias por existir.
-        </p>
+            📖 Comenzar nuestra historia
 
-        <p class="fade-item">
-            Gracias por elegirme.
-        </p>
+        </button>
 
-        <p class="fade-item">
-            Gracias por dejarme escribir este capítulo contigo.
-        </p>
+        <div class="page-footer">
 
-        <h3 class="fade-item">
-            Con todo mi amor,
-        </h3>
+            Toda gran historia comienza con una página.
 
-        <h2 class="fade-item">
-            Chris ❤️
-        </h2>
+        </div>
 
-       <button class="fade-item next-btn"
-        onclick="nextPage()">
+        <div class="page-date">
 
-    Pasar la página →
+            20 Julio 2026
 
-</button>
+        </div>
 
     </div>
 
 </section>
-</div>
+
     <audio id="music" loop>
 
         <source src="assets/music/piano.mp3" type="audio/mpeg">

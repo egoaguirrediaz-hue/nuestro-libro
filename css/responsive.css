@@ -1,0 +1,95 @@
+/* ==========================================
+   CELULARES
+========================================== */
+
+@media (max-width:768px){
+
+    .paper{
+
+        width:95%;
+
+        padding:35px 25px;
+
+        min-height:auto;
+
+    }
+
+    #sceneText{
+
+        font-size:1.55rem;
+
+        line-height:1.7;
+
+        max-width:100%;
+
+    }
+
+    .scene:first-child{
+
+        font-size:2rem;
+
+    }
+
+    .paper h2{
+
+        font-size:2.1rem;
+
+    }
+
+    .page-footer{
+
+        left:25px;
+
+        right:25px;
+
+        bottom:20px;
+
+        text-align:center;
+
+        font-size:.8rem;
+
+    }
+
+    .page-date{
+
+        right:25px;
+
+        bottom:50px;
+
+        font-size:.8rem;
+
+    }
+
+    .next-btn{
+
+        width:100%;
+
+        font-size:1rem;
+
+        padding:16px;
+
+    }
+
+}
+
+@media (max-width:480px){
+
+    #sceneText{
+
+        font-size:1.3rem;
+
+    }
+
+    .paper{
+
+        padding:28px 20px;
+
+    }
+
+    .paper h2{
+
+        font-size:1.8rem;
+
+    }
+
+}
