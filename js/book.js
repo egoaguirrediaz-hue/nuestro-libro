@@ -135,3 +135,11 @@ async function revealLetter() {
         .remove("hidden");
 
 }
+
+function nextPage(currentPage, nextPage){
+
+    document.getElementById(currentPage).classList.add("hidden");
+
+    document.getElementById(nextPage).classList.remove("hidden");
+
+}

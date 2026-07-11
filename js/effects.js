@@ -37,17 +37,7 @@ function createPetals() {
 
             const rect = paper.getBoundingClientRect();
 
-            petal.style.left =
-                rect.left +
-                Math.random() * rect.width +
-                "px";
-            document.body.appendChild(petal);
-
-            setTimeout(() => {
-
-                petal.remove();
-
-            }, 9000);
+           
 
         }, i * 600);
 

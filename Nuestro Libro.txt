@@ -1,0 +1,208 @@
+Nuestro Libro
+│
+├── ❤️ 0. Pantalla de Bienvenida
+│
+│     Feliz Aniversario, Mi Reina ❤️
+│
+│     "Hoy preparé algo muy especial para ti..."
+│
+│     [❤️ Abrir nuestro Capítulo II]
+│
+│     ↓
+│     Empieza piano.mp3
+│
+├── 🎬 1. Intro Cinematográfica
+│
+│     Hay personas que llegan...
+│
+│     y cambian nuestros días...
+│
+│     Sin hacer ruido...
+│
+│     ...
+│
+│     Hace exactamente dos meses...
+│
+│     comenzó nuestro capítulo favorito ❤️
+│
+├── 🌙 2. Portada del Libro
+│
+│     Luna
+│     Estrellas
+│
+│     Nuestro Libro
+│
+│     Capítulo II
+│
+│     Dos meses contigo ❤️
+│
+│     ❤️ Abrir nuestro libro
+│
+│     (La portada se abre)
+│
+├── 📖 3. Página I
+│
+│     Antes de comenzar...
+│
+│     Una bienvenida muy romántica.
+│
+│     Todo aparece poco a poco.
+│
+│     Música baja.
+│
+│     Carta principal.
+│
+│     Música vuelve.
+│
+│     Chris ❤️
+│
+│     Caen pétalos.
+│
+├── 📖 4. Nuestra Línea del Tiempo
+│
+│     ❤️ Nos conocimos
+│
+│     ❤️ Primera salida
+│
+│     ❤️ Primer beso
+│
+│     ❤️ Primer "Te Amo"
+│
+│     ❤️ Hoy
+│
+│     Todo con animaciones.
+│
+├── 📸 5. Nuestros Recuerdos
+│
+│     Fotografías tipo Polaroid
+│
+│     Al tocar una foto:
+│
+│     Zoom elegante
+│
+│     Frase debajo
+│
+├── 🎥 6. Nuestro Pequeño Recuerdo
+│
+│     Un video corto
+│
+│     (20-40 segundos)
+│
+│     Piano baja
+│
+│     Reproduce video
+│
+│     Piano vuelve
+│
+├── ❤️ 7. Lo que Amo de Ti
+│
+│     Aparece una razón
+│
+│     cada vez que pulsa
+│
+│     "Descubrir otra"
+│
+│     30 o más razones
+│
+├── 🌙 8. Nuestro Destino
+│
+│     Piscis ❤️ Cáncer
+│
+│     Compatibilidad
+│
+│     Constelaciones
+│
+│     Las estrellas unen ambos signos.
+│
+├── 🌹 9. Las Pequeñas Cosas
+│
+│     Amo cuando...
+│
+│     Me encanta cuando...
+│
+│     Gracias por...
+│
+│     Cosas cotidianas.
+│
+├── 💌 10. Lo que Nunca Te Dije
+│
+│     Fondo oscuro
+│
+│     Solo texto
+│
+│     Muy íntimo.
+│
+├── ⭐ 11. Si Pudiera Pedir un Deseo...
+│
+│     Más tiempo.
+│
+│     Más abrazos.
+│
+│     Más besos.
+│
+│     Más capítulos.
+│
+├── ⏳ 12. Nuestro Tiempo Juntos
+│
+│     Han pasado...
+│
+│     XX días
+│
+│     XX horas
+│
+│     XX minutos
+│
+│     XX segundos
+│
+│     Contador en tiempo real.
+│
+├── ✨ 13. Carta para Nuestro Futuro
+│
+│     No sé dónde estaremos...
+│
+│     Pero quiero seguir
+│
+│     escribiendo capítulos contigo.
+│
+├── 📖 14. Nuestro Próximo Capítulo
+│
+│     Promesas.
+│
+│     Sueños.
+│
+│     Metas.
+│
+│     Todo lo que quiero vivir contigo.
+│
+├── ❤️ 15. Página en Blanco
+│
+│     "Nuestro próximo capítulo...
+│
+│     todavía está por escribirse."
+│
+├── 💝 16. Final
+│
+│     Gracias...
+│
+│     por convertirte
+│
+│     en mi lugar favorito.
+│
+│     ❤️
+│
+│     [Cerrar el Libro]
+│
+│
+└── 🌙 Epílogo
+      El libro se cierra.
+
+      Vuelve la portada.
+
+      Ahora dice:
+
+      Capítulo II
+
+      Leído con amor por
+      ❤️ (Su Nombre)
+
+      Piano termina lentamente.

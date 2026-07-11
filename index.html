@@ -129,60 +129,148 @@
      PÁGINA 1
 ================================ -->
 
-<section id="page1" class="page hidden">
+        <section id="page1" class="page hidden">
 
-    <div class="paper">
+            <div class="paper">
 
-        <span class="page-number">
+                <div class="page-header">
 
-            Capítulo II
+                    <div class="line"></div>
 
-        </span>
+                    <span class="page-number">
+                        Página I
+                    </span>
 
-        <div class="scene-container">
+                    <div class="line"></div>
 
-            <div id="sceneText">
+                </div>
+
+                <div class="scene-container">
+
+                    <div id="sceneText">
+
+                    </div>
+
+                </div>
+
+                <div class="gold-line"></div>
+
+                <button id="nextPageButton" class="next-btn hidden" onclick="nextPage('page1','page2')">
+
+                    Comenzar nuestra historia ❤️
+
+                </button>
+
+                <div class="page-bottom">
+
+                    <span class="page-footer">
+
+                        Toda historia comienza con una primera página.
+                    </span>
+
+                    <span class="page-date">
+
+                        20 Julio 2026
+
+                    </span>
+
+                </div>
 
             </div>
 
-        </div>
+        </section>
 
-        <div class="gold-line"></div>
+        <!-- ==================================================
+                    PÁGINA II
+=================================================== -->
 
-        <button
-            id="nextPageButton"
-            class="next-btn hidden"
-            onclick="nextPage()">
+        <section id="page2" class="page hidden">
 
-            📖 Comenzar nuestra historia
+            <div class="paper">
 
-        </button>
+                <div class="page-header">
 
-        <div class="page-footer">
+                    <div class="line"></div>
 
-            Toda gran historia comienza con una página.
+                    <span class="page-number">
 
-        </div>
+                        Página II
 
-        <div class="page-date">
+                    </span>
 
-            20 Julio 2026
+                    <div class="line"></div>
 
-        </div>
+                </div>
 
-    </div>
+                <h2 class="page-title">
 
-</section>
+                    El día que todo comenzó...
 
-    <audio id="music" loop>
+                </h2>
 
-        <source src="assets/music/piano.mp3" type="audio/mpeg">
+                <div class="photo-frame">
 
-    </audio>
+                    <span class="tape"></span>
+                    <img src="assets/photos/foto3.jpg" >
+                    <span class="photo-date">
+                        20 de Mayo de 2026 ❤️
+                    </span>
 
-    <script src="js/script.js"></script>
-    <script src="js/effects.js"></script>
-    <script src="js/book.js"></script>
+                </div>
+
+                <div class="story">
+
+                    <p>
+                        Nunca imaginé que una simple conversación pudiera cambiar tanto mi vida.
+                    </p>
+
+                    <p>
+                        Sin buscarlo...
+                        apareciste tú.
+                    </p>
+
+                    <p>
+                        Poco a poco,
+                        sin darme cuenta,
+                        te convertiste en mi lugar favorito.
+                    </p>
+
+                </div>
+
+                <button class="next-btn" onclick="nextPage('page2','page3')">
+
+                    ❤️ Comenzar nuestro viaje
+
+                </button>
+
+                    <div class="page-bottom">
+
+                    <span class="page-footer">
+
+                        Toda historia comienza con una primera página.
+                    </span>
+
+                    <span class="page-date">
+
+                        20 Julio 2026
+
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <audio id="music" loop>
+
+            <source src="assets/music/piano.mp3" type="audio/mpeg">
+
+        </audio>
+
+        <script src="js/script.js"></script>
+        <script src="js/effects.js"></script>
+        <script src="js/book.js"></script>
 
 </body>
 

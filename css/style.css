@@ -15,7 +15,7 @@
     --background-card: #101A34;
 
     --gold: #FFD98A;
-    --pink: #F86CA7;
+    --pink: #FFD98A;
     --white: #FFFFFF;
     --gray: #D8D8D8;
 
@@ -495,23 +495,6 @@ PÁGINAS DEL LIBRO
 
 }
 
-
-
-.page-number {
-
-    position: absolute;
-
-    right: 35px;
-
-    top: 25px;
-
-    color: #999;
-
-    font-size: .9rem;
-
-}
-
-
 .divider {
 
     width: 120px;
@@ -750,13 +733,9 @@ PÁGINA I
 
 .paper{
 
-    width:min(90vw,760px);
+     width:min(92vw,430px);
 
-    height:min(88vh,820px);
-
-    background:#FDF8EF;
-
-    border-radius:14px;
+    height:min(92vh,820px);
 
     position:relative;
 
@@ -768,14 +747,25 @@ PÁGINA I
 
     justify-content:space-between;
 
-    padding:40px 55px;
+    padding:28px;
+
+
+    border-radius:16px;
+
+    background:
+        radial-gradient(circle at top,
+        #fffdf8 0%,
+        #fbf6ee 45%,
+        #f6efe4 100%);
+
+    border:1px solid rgba(184,156,110,.22);
 
     box-shadow:
-        0 25px 70px rgba(0,0,0,.35);
+        0 30px 80px rgba(0,0,0,.30),
+        inset 0 0 35px rgba(255,255,255,.45),
+        inset 0 0 80px rgba(214,190,140,.08);
 
 }
-
-/* textura suave */
 
 .paper::before{
 
@@ -783,15 +773,88 @@ PÁGINA I
 
     position:absolute;
 
-    inset:0;
+    inset:18px;
 
-    background:
-    radial-gradient(circle at 20% 20%,rgba(255,255,255,.25),transparent 35%),
-    radial-gradient(circle at 80% 70%,rgba(0,0,0,.03),transparent 40%);
+    border:1px solid rgba(184,156,110,.18);
+
+    border-radius:10px;
 
     pointer-events:none;
 
 }
+
+.paper::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.05;
+
+    background-image:
+
+        radial-gradient(circle,#b8955b 1px,transparent 1px);
+
+    background-size:24px 24px;
+
+    pointer-events:none;
+
+}
+
+.paper{
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(170,140,90,.08) 0%,
+            transparent 6%
+        ),
+        radial-gradient(circle at top,
+            #fffdf8,
+            #fbf6ee 50%,
+            #f6efe4 100%);
+}
+
+.photo-frame{
+
+    transform:rotate(-4deg);
+
+    transition:.5s;
+
+}
+
+.photo-frame:hover{
+
+    transform:
+        rotate(0deg)
+        scale(1.03);
+
+}
+
+.tape{
+
+    position:absolute;
+
+    top:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%) rotate(-8deg);
+
+    width:80px;
+
+    height:24px;
+
+    background:rgba(255,255,255,.45);
+
+    backdrop-filter:blur(2px);
+
+}
+
+/* textura suave */
+
 
 /*=====================================
 CAPÍTULO
@@ -817,6 +880,158 @@ CAPÍTULO
 
 }
 
+.page-header{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-bottom:25px;
+
+}
+
+.line{
+
+    flex:1;
+
+    height:1px;
+
+    background:linear-gradient(to right,
+    transparent,
+    #caa66b,
+    transparent);
+
+}
+
+.page-title{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.2rem;
+
+    color:#9d5c63;
+
+    margin-bottom:25px;
+
+}
+
+.photo-frame{
+
+    width:260px;
+
+    margin:0 auto 30px;
+
+    padding:10px;
+
+    background:white;
+
+    border-radius:8px;
+
+    box-shadow:
+
+        0 15px 30px rgba(0,0,0,.20);
+
+    transform:rotate(-2deg);
+
+}
+
+.photo-frame img{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:4px;
+
+}
+
+.story{
+
+    text-align:center;
+
+}
+
+.page-title{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:3.3rem;
+
+    color:#b57b86;
+
+    text-align:center;
+
+    margin-bottom:35px;
+
+    text-shadow:0 2px 8px rgba(181,123,134,.15);
+
+}
+
+.photo-date{
+
+    display:block;
+
+    margin-top:12px;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.2rem;
+
+    color:#8a6d5b;
+
+    font-style:italic;
+
+}
+
+.story p{
+
+    color:#caa66b;
+
+    font-size:-0.85rem; /*test*/
+
+    line-height:2;
+
+    margin:22px 0;
+
+    text-align:center;
+
+}
+
+.page-number{
+
+    color:#b18d53;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    font-size:.8rem;
+
+}
+
+.paper::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:12px;
+
+    border:1px solid rgba(183,150,92,.20);
+
+    border-radius:10px;
+
+    pointer-events:none;
+
+}
 /*=====================================
 CONTENIDO
 ======================================*/
@@ -908,7 +1123,7 @@ BOTÓN
 
 .next-btn{
 
-    margin-top:35px;
+    margin-top:0px;
 
     padding:18px 40px;
 
@@ -940,37 +1155,37 @@ BOTÓN
 FRASE
 ======================================*/
 
-.page-footer{
 
-    position:absolute;
-
-    bottom:35px;
-
-    left:60px;
-
-    font-style:italic;
-
-    color:#8c8c8c;
-
-     font-size:.85rem;
-
-}
 
 /*=====================================
 FECHA
 ======================================*/
 
-.page-date{
+.page-bottom{
 
-       position:absolute;
+    display:flex;
 
-    right:35px;
+    justify-content:space-between;
 
-    bottom:25px;
+    align-items:center;
+
+    margin-top:25px;
 
     font-size:.85rem;
 
-    color:#999;
+    color:#8d8d8d;
+
+}
+
+.page-footer{
+
+    font-style:italic;
+
+}
+
+.page-date{
+
+    opacity:.8;
 
 }
 
@@ -994,6 +1209,10 @@ FECHA
 
     max-width:560px;
 
+     text-shadow:
+
+    0 0 1px rgba(255,255,255,.4);
+    
     font-family:'Cormorant Garamond',serif;
 
     font-size:clamp(1.8rem,2vw,2.6rem);
