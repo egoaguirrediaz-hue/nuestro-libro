@@ -395,7 +395,7 @@
                             </span>
                             <p>
 
-                               Con la explicacion de un log...
+                                Con la explicacion de un log...
 
                             </p>
 
@@ -892,7 +892,7 @@
 
                 <button class="page5-button" onclick="nextPage('page5','page6')">
 
-                    Ver nuestra galería 🤎
+                    Crear nuestro recuerdo 🤎
 
                 </button>
 
@@ -905,6 +905,162 @@
                         Amar también es admirar los pequeños detalles.
 
                     </span>
+
+                </div>
+
+            </div>
+
+        </section>
+        <!-- ==================================================
+                    PÁGINA VI
+=================================================== -->
+        <section id="page6" class="page hidden page-scroll">
+
+            <div class="paper paper-page6">
+
+                <div class="page-header">
+
+                    <div class="line"></div>
+
+                    <span class="page-number">
+                        Página VI
+                    </span>
+
+                    <div class="line"></div>
+
+                </div>
+
+
+                <h2 class="page6-title">
+                    Nuestro recuerdo secreto 
+                </h2>
+
+
+                <p class="page6-subtitle">
+                    Hay momentos que no estaban escritos...
+                    porque estaban esperando ser creados contigo.
+                </p>
+
+
+                <div class="page6-camera-box">
+
+
+                    <button class="page6-button" onclick="openPhotoRequest()">
+
+                        📸 Crear nuestro recuerdo
+
+                    </button>
+
+
+                </div>
+
+
+                <!-- Cámara -->
+
+                <div id="cameraContainer" class="hidden">
+
+                    <video id="camera" autoplay></video>
+
+                    <button onclick="takePhoto()">
+                        🤎 Tomar foto
+                    </button>
+
+                    <canvas id="canvas" class="hidden"></canvas>
+
+                </div>
+
+
+
+                <!-- Foto tomada -->
+
+                <div id="photoResult" class="hidden">
+
+                    <img id="capturedPhoto">
+
+
+                    <div class="page6-message">
+
+                        🤎 Gracias por regalarme este momento.
+
+                        <br><br>
+
+                        Me encanta verte así...
+                        tan tú, tan hermosa,
+                        tan especial.
+
+                        <br><br>
+
+                        Esta página ahora tiene un recuerdo
+                        que solo nosotros podemos tener.
+
+                    </div>
+
+                </div>
+
+                  <!-- Botón -->
+
+                <button class="page6-button" onclick="nextPage('page6','page7')">
+
+                    Crear nuestro recuerdo 🤎
+
+                </button>
+
+                <!-- Pie -->
+
+                <div class="page-bottom">
+
+                    <span class="page-footer">
+
+                        Amar también es admirar los pequeños detalles.
+
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Modal petición foto -->
+
+            <div id="photoRequestModal" class="photo-modal hidden">
+
+                <div class="photo-modal-content">
+
+
+                    <h3>
+                        Nuestro recuerdo secreto 🔥
+                    </h3>
+
+
+                    <p>
+                        Tengo una petición especial...
+                        <br><br>
+                        ¿Me regalas una foto tuya? 🤎
+                        <br><br>
+                        Una de esas que me recuerdan lo hermosa que eres.
+                    </p>
+
+
+                    <div class="photo-modal-buttons">
+
+
+                        <button onclick="startCamera()">
+
+                            🤎 Sí, crear recuerdo
+
+                        </button>
+
+
+
+                        <button onclick="closePhotoRequest()">
+
+                            Ahora no 🤎
+
+                        </button>
+
+
+                    </div>
+
 
                 </div>
 
@@ -1018,7 +1174,7 @@
             <source src="assets/music/piano.mp3" type="audio/mpeg">
 
         </audio>
-
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
         <script src="js/script.js"></script>
         <script src="js/effects.js"></script>
         <script src="js/book.js"></script>

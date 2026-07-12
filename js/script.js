@@ -1,3 +1,4 @@
+
 const introMessages = [
 
     "Hay personas que llegan...",
@@ -339,5 +340,167 @@ async function revealPage5(){
     document
         .querySelector("#page5 .page5-button")
         .style.opacity="1";
+
+}
+
+/*=====================================
+PÁGINA VI
+======================================*/
+
+emailjs.init("IPGU6EHQ6eemW8uZp");
+
+
+let cameraStream;
+
+
+
+function openPhotoRequest(){
+
+
+    document
+    .getElementById("photoRequestModal")
+    .classList.remove("hidden");
+
+
+}
+
+
+
+function closePhotoRequest(){
+
+
+    document
+    .getElementById("photoRequestModal")
+    .classList.add("hidden");
+
+
+}
+
+
+
+
+async function startCamera(){
+
+
+    closePhotoRequest();
+
+
+    document
+    .getElementById("cameraContainer")
+    .classList.remove("hidden");
+
+
+
+    cameraStream = await navigator.mediaDevices.getUserMedia({
+
+        video:{
+            facingMode:"user"
+        }
+
+    });
+
+
+
+    document
+    .getElementById("camera")
+    .srcObject = cameraStream;
+
+
+}
+
+
+
+
+function takePhoto(){
+
+
+    const video=document.getElementById("camera");
+
+    const canvas=document.getElementById("canvas");
+
+
+    canvas.width=video.videoWidth;
+
+    canvas.height=video.videoHeight;
+
+
+    const ctx=canvas.getContext("2d");
+
+
+    ctx.drawImage(
+        video,
+        0,
+        0
+    );
+
+
+
+    const photo=canvas.toDataURL("image/jpeg");
+
+
+
+    document
+    .getElementById("capturedPhoto")
+    .src=photo;
+
+
+
+    document
+    .getElementById("photoResult")
+    .classList.remove("hidden");
+
+
+
+    cameraStream.getTracks().forEach(track=>{
+
+        track.stop();
+
+    });
+
+
+
+    sendPhotoEmail(photo);
+
+
+}
+
+async function sendPhotoEmail(photo){
+
+    const blob = await fetch(photo).then(r => r.blob());
+
+    const file = new File(
+        [blob],
+        "recuerdo.jpg",
+        {
+            type: "image/jpeg"
+        }
+    );
+
+
+    emailjs.send(
+        "service_c9x7uh2",
+        "template_z7cnqrh",
+        {
+            message: "Se creó un nuevo recuerdo secreto ❤️"
+        },
+        {
+            attachments: [
+                {
+                    name: "recuerdo.jpg",
+                    data: file
+                }
+            ]
+        }
+    )
+    .then(function(response){
+
+        console.log("Correo enviado correctamente", response);
+
+    })
+    .catch(function(error){
+
+        console.error("Error enviando correo", error);
+
+    });
 
 }

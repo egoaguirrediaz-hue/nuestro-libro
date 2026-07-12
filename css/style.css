@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
 
 
+
 /* ==========================================
    VARIABLES
 ========================================== */
@@ -2480,5 +2481,475 @@ PÁGINA V
 .page-scroll {
 
     align-items: flex-start;
+
+}
+
+/* ========================= */
+/*        PÁGINA VI           */
+/* Nuestro recuerdo secreto   */
+/* ========================= */
+
+
+.paper-page6 {
+
+    width: 90vw;
+
+    max-width: 760px;
+
+    min-height: 88vh;
+
+    height: auto;
+
+    padding: 45px 55px;
+
+    position: relative;
+
+    overflow: visible;
+
+}
+
+
+/* Borde del papel */
+
+.paper-page6::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    border: 1px solid rgba(184,156,110,.22);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+
+}
+
+
+
+/* Título */
+
+#page6 .page6-title {
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2.6rem;
+
+    color: #d8b36a;
+
+    margin-top: 18px;
+
+}
+
+
+
+/* Subtítulo */
+
+#page6 .page6-subtitle {
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.45rem;
+
+    margin-top: 12px;
+
+    color: #56453B;
+
+    font-style: italic;
+
+    line-height: 1.8;
+
+}
+
+
+
+/* Línea dorada */
+
+#page6 .page6-divider {
+
+    width:120px;
+
+    height:2px;
+
+    background:#d8b36a;
+
+    margin:30px auto 45px;
+
+}
+
+
+
+/* Contenedor cámara */
+
+#page6 .page6-camera-box {
+
+    text-align:center;
+
+    margin-top:50px;
+
+}
+
+
+
+/* Botón principal */
+
+#page6 .page6-button,
+#page6 #cameraContainer button {
+
+
+    display:block;
+
+    margin:36px auto 35px;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:35px;
+
+    background:linear-gradient(45deg,#c89b54,#e4c98c);
+
+    color:white;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    box-shadow:0 15px 25px rgba(0,0,0,.15);
+
+    transition:.35s;
+
+}
+
+
+
+#page6 .page6-button:hover,
+#page6 #cameraContainer button:hover {
+
+    background:#a67d4d;
+
+    transform:translateY(-3px);
+
+}
+
+
+
+/* Cámara */
+
+#page6 #cameraContainer {
+
+    text-align:center;
+
+    margin-top:35px;
+
+}
+
+
+
+#page6 video {
+
+
+    width:280px;
+
+    max-width:90%;
+
+    border-radius:15px;
+
+    border:2px solid #d8b36a;
+
+    padding:6px;
+
+    background:white;
+
+}
+
+
+
+/* Resultado foto */
+
+#page6 #photoResult {
+
+    text-align:center;
+
+    margin-top:45px;
+
+}
+
+
+
+/* Foto estilo polaroid */
+
+#page6 #capturedPhoto {
+
+
+    width:280px;
+
+    max-width:90%;
+
+    padding:12px;
+
+    background:white;
+
+    border-radius:5px;
+
+    box-shadow:0 15px 30px rgba(0,0,0,.15);
+
+}
+
+
+
+/* Mensaje final */
+
+#page6 .page6-message {
+
+
+    margin-top:35px;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.45rem;
+
+    color:#56453B;
+
+    font-style:italic;
+
+    line-height:1.8;
+
+}
+
+
+
+/* Animación entrada */
+
+#page6 .page6-button,
+#page6 #photoResult {
+
+
+    animation:fadePage6 .8s ease;
+
+}
+
+
+
+@keyframes fadePage6 {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:768px){
+
+
+    .paper-page6 {
+
+        width:95vw;
+
+        padding:28px 20px;
+
+    }
+
+
+    .paper-page6::before {
+
+        top:12px;
+
+        left:12px;
+
+        right:12px;
+
+        bottom:12px;
+
+    }
+
+
+    #page6 .page6-title {
+
+        font-size:2rem;
+
+    }
+
+
+    #page6 .page6-subtitle {
+
+        font-size:1.2rem;
+
+    }
+
+
+    #page6 .page6-message {
+
+        font-size:1.3rem;
+
+    }
+
+
+}
+
+/* MODAL FOTO */
+
+.photo-modal {
+
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+
+}
+
+
+
+.photo-modal-content {
+
+
+    width:90%;
+
+    max-width:420px;
+
+    background:#fffaf2;
+
+    padding:35px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    border:1px solid rgba(184,156,110,.35);
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+    animation:photoModal .5s ease;
+
+
+}
+
+
+
+.photo-modal-content h3 {
+
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    color:#d8b36a;
+
+
+}
+
+
+
+.photo-modal-content p {
+
+
+    font-family:'Cormorant Garamond',serif;
+
+    color:#56453B;
+
+    font-size:1.3rem;
+
+    line-height:1.6;
+
+
+}
+
+
+
+.photo-modal-buttons button {
+
+
+    padding:14px 25px;
+
+    margin:10px;
+
+    border:none;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    color:white;
+
+    background:linear-gradient(45deg,#c89b54,#e4c98c);
+
+
+}
+
+
+
+.photo-modal-buttons button:last-child {
+
+
+    background:#8b6b4c;
+
+
+}
+
+
+
+@keyframes photoModal {
+
+
+from{
+
+opacity:0;
+
+transform:scale(.8);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
 
 }
