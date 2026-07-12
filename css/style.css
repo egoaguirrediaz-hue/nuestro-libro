@@ -1148,7 +1148,7 @@ TÍTULO FINAL
 
     color: #d8b36a;
 
-    margin-top: 10px;
+    margin-top: 19px;
 
 }
 
@@ -1512,16 +1512,18 @@ PÁGINA III
 
 #page3 .page3-button {
 
-    background: linear-gradient(45deg, #cfa15b, #f4d08b);
-    color: white;
+    margin-top: 0px;
+    padding: 18px 40px;
     border: none;
-    padding: 18px 42px;
-    border-radius: 50px;
+    margin: 14px;
+    border-radius: 40px;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 1rem;
+    background: linear-gradient(45deg, #c89b54, #e4c98c);
+    color: white;
     transition: .35s;
-    animation: heartbeat 2.8s infinite;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+
 
 }
 
@@ -1669,7 +1671,7 @@ TÍTULO
     color: #56453B;
     font-size: 1.45rem;
     line-height: 2;
-    margin: 2px 0;
+    margin: 20px 0;
     text-align: center;
     font-family: 'Cormorant Garamond', serif;
 
@@ -2174,5 +2176,309 @@ ANIMACIONES
     background-size: 24px 24px;
 
     pointer-events: none;
+
+}
+
+/*=====================================
+PÁGINA V
+======================================*/
+
+.paper-page5 {
+
+    width: 90vw;
+
+    max-width: 760px;
+
+    min-height: 88vh;
+
+    height: auto;
+
+    padding: 45px 55px;
+
+    position: relative;
+
+    overflow: visible;
+
+}
+
+/* Borde del papel */
+
+.paper-page5::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    border: 1px solid rgba(184, 156, 110, .22);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+
+}
+
+/* Título */
+
+#page5 .page5-title {
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2.6rem;
+
+    color: #d8b36a;
+
+    margin-top: 18px;
+
+}
+
+/* Subtítulo */
+
+#page5 .page5-subtitle {
+
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    margin-top: 12px;
+    color: #56453B;
+    font-style: italic;
+    line-height: 1.8;
+
+}
+
+/* Línea dorada */
+
+#page5 .page5-divider {
+
+    width: 120px;
+
+    height: 2px;
+
+    background: #d8b36a;
+
+    margin: 30px auto 45px;
+
+}
+
+/* Contenedor */
+
+#page5 .page5-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 40px;
+
+}
+
+/* Cada bloque */
+
+#page5 .page5-item {
+
+    position: relative;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid rgba(184, 156, 110, .18);
+
+}
+
+/* Último sin línea */
+
+#page5 .page5-item:last-child {
+
+    border-bottom: none;
+
+}
+
+/* Corazón */
+
+#page5 .page5-heart {
+
+    width: 14px;
+
+    height: 14px;
+
+    background: #c9a56a;
+
+    transform: rotate(45deg);
+
+    margin: 0 auto 18px;
+
+    position: relative;
+
+}
+
+#page5 .page5-heart::before,
+
+#page5 .page5-heart::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 14px;
+
+    height: 14px;
+
+    background: #c9a56a;
+
+    border-radius: 50%;
+
+}
+
+#page5 .page5-heart::before {
+
+    left: -7px;
+
+}
+
+#page5 .page5-heart::after {
+
+    top: -7px;
+
+}
+
+/* Título */
+
+#page5 .page5-heading {
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.7rem;
+
+    color: #d8b36a;
+
+    margin-bottom: 18px;
+
+}
+
+/* Texto */
+
+#page5 .page5-text {
+
+    text-align: center;
+
+    color: #5b5047;
+
+    line-height: 2;
+
+    font-size: 1.08rem;
+
+}
+
+/* Frase final */
+
+#page5 .page5-ending {
+
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.45rem;
+    margin-top: 12px;
+    color: #56453B;
+    font-style: italic;
+    line-height: 1.8;
+
+}
+
+/* Botón */
+
+#page5 .page5-button {
+
+    display: block;
+
+    margin: 36px auto 35px;
+
+    padding: 16px 40px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    background: linear-gradient(45deg, #c89b54, #e4c98c);
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+    transition: .35s;
+
+}
+
+#page5 .page5-button:hover {
+
+    background: #a67d4d;
+
+    transform: translateY(-3px);
+
+}
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+    .paper-page5 {
+
+        width: 95vw;
+
+        padding: 28px 20px;
+
+    }
+
+    .paper-page5::before {
+
+        top: 12px;
+
+        left: 12px;
+
+        right: 12px;
+
+        bottom: 12px;
+
+    }
+
+    #page5 .page5-title {
+
+        font-size: 2rem;
+
+    }
+
+    #page5 .page5-heading {
+
+        font-size: 1.45rem;
+
+    }
+
+    #page5 .page5-text {
+
+        font-size: 1rem;
+
+    }
+
+    #page5 .page5-ending {
+
+        font-size: 1.3rem;
+
+    }
+
+}
+
+.page-scroll {
+
+    align-items: flex-start;
 
 }

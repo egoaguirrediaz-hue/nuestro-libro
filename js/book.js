@@ -140,36 +140,55 @@ function nextPage(currentPage, nextPage) {
 
     document.getElementById(currentPage).classList.add("hidden");
 
-    document.getElementById(nextPage).classList.remove("hidden");
+    const page = document.getElementById(nextPage);
+
+    page.classList.remove("hidden");
+
+
+    // volver al inicio de la nueva página
+    setTimeout(() => {
+
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "instant"
+        });
+
+        page.scrollTop = 0;
+
+    }, 50);
+
 
     if (nextPage === "page2") {
         startStory();
     }
+
     if (nextPage === "page3") {
-
         revealPage3();
-
     }
+
     if (nextPage === "page4") {
-
         revealPage4();
+    }
 
+    if (nextPage === "page5") {
+        revealPage5();
     }
 }
 
-function openFireModal(){
+function openFireModal() {
 
     document
-    .getElementById("fireModal")
-    .classList.add("show");
+        .getElementById("fireModal")
+        .classList.add("show");
 
 }
 
 
-function closeFireModal(){
+function closeFireModal() {
 
     document
-    .getElementById("fireModal")
-    .classList.remove("show");
+        .getElementById("fireModal")
+        .classList.remove("show");
 
 }

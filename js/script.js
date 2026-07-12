@@ -300,3 +300,44 @@ async function revealPage4(){
         .classList.add("show");
 
 }
+
+/*=====================================
+PÁGINA V
+======================================*/
+
+async function revealPage5(){
+
+    const items=document.querySelectorAll("#page5 .fade-item");
+
+    for(const item of items){
+
+        item.style.opacity="0";
+        item.style.transform="translateY(30px)";
+
+    }
+
+    await wait(300);
+
+    for(const item of items){
+
+        item.style.transition=".8s";
+
+        item.style.opacity="1";
+
+        item.style.transform="translateY(0)";
+
+        await wait(500);
+
+    }
+
+    document
+        .querySelector("#page5 .page5-ending")
+        .style.opacity="1";
+
+    await wait(400);
+
+    document
+        .querySelector("#page5 .page5-button")
+        .style.opacity="1";
+
+}
