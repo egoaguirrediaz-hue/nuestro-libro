@@ -64,7 +64,7 @@ comenzó el capítulo favorito de mi vida.`,
 
 que este sea solo el segundo
 
-de muchísimos capítulos más... ❤️`,
+de muchísimos capítulos más... 🤎`,
 
     `Bienvenida...
 
@@ -150,4 +150,26 @@ function nextPage(currentPage, nextPage) {
         revealPage3();
 
     }
+    if (nextPage === "page4") {
+
+        revealPage4();
+
+    }
+}
+
+function openFireModal(){
+
+    document
+    .getElementById("fireModal")
+    .classList.add("show");
+
+}
+
+
+function closeFireModal(){
+
+    document
+    .getElementById("fireModal")
+    .classList.remove("show");
+
 }

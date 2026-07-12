@@ -12,7 +12,7 @@ const introMessages = [
 
     "Hace exactamente dos meses...",
 
-    "comenzó nuestro capítulo favorito ❤️"
+    "comenzó nuestro capítulo favorito 🤎"
 
 ];
 
@@ -269,6 +269,34 @@ async function revealPage3() {
 
     // Cuando termina TODO el texto aparece el botón
     document.querySelector("#page3 .page3-button")
+        .classList.add("show");
+
+}
+
+/*=====================================
+PÁGINA IV
+======================================*/
+
+async function revealPage4(){
+
+    const items=document.querySelectorAll("#page4 .page4-item");
+
+    for(const item of items){
+
+        item.classList.add("show");
+
+        await wait(700);
+
+    }
+
+    document
+        .querySelector("#page4 .page4-ending")
+        .classList.add("show");
+
+    await wait(800);
+
+    document
+        .querySelector("#page4 .page4-button")
         .classList.add("show");
 
 }

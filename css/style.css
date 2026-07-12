@@ -1031,7 +1031,7 @@ CAPÍTULO
 
 .story p {
 
-       color: #56453B;
+    color: #56453B;
     font-size: 1.15rem;
     line-height: 2;
     margin: 22px 0;
@@ -1351,23 +1351,57 @@ FECHA
 PÁGINA II
 ======================================*/
 
-.paper-page2 {
+/*=====================================
+PÁGINA II
+======================================*/
 
-    max-width: 760px;
+.paper-page2 {
 
     width: 90vw;
 
-    height: 88vh;
+    max-width: 760px;
 
-    overflow-y: auto;
+    min-height: 88vh;
 
-    overflow-x: hidden;
+    height: auto;
 
-    padding: 40px 55px;
+    background: #FDF8EF;
+
+    border-radius: 14px;
 
     position: relative;
 
+    padding: 45px 55px;
+
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .35);
+
+    overflow: visible;
+
 }
+
+.paper-page2::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    border: 1px solid rgba(184, 156, 110, .22);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+
+}
+
+
 
 /*=====================================
 PÁGINA III
@@ -1377,15 +1411,39 @@ PÁGINA III
 
     width: 90vw;
 
-    position: relative;
-    
     max-width: 760px;
 
-    height: 88vh;
+    min-height: 88vh;
 
-    overflow-y: auto;
+    height: auto;
 
     padding: 45px 55px;
+
+    position: relative;
+
+    overflow: visible;
+
+}
+
+.paper-page3::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    border: 1px solid rgba(184, 156, 110, .22);
+
+    border-radius: 10px;
+
+    pointer-events: none;
 
 }
 
@@ -1403,7 +1461,7 @@ PÁGINA III
 
 #page3 .page3-title {
 
-   font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 2rem;
     text-align: center;
     color: #d8b36a;
@@ -1424,7 +1482,7 @@ PÁGINA III
 }
 
 #page3 .page3-text {
-     color: #56453B;
+    color: #56453B;
     font-size: 1.15rem;
     line-height: 2;
     margin: 2px 0;
@@ -1454,7 +1512,7 @@ PÁGINA III
 
 #page3 .page3-button {
 
-      background: linear-gradient(45deg, #cfa15b, #f4d08b);
+    background: linear-gradient(45deg, #cfa15b, #f4d08b);
     color: white;
     border: none;
     padding: 18px 42px;
@@ -1483,11 +1541,11 @@ PÁGINA III
 
 }
 
-#page3 .page3-text{
+#page3 .page3-text {
     visibility: hidden;
 }
 
-#page3 .page3-text.typing-cursor{
+#page3 .page3-text.typing-cursor {
     visibility: visible;
 }
 
@@ -1545,263 +1603,576 @@ PÁGINA III
 /*=====================================
 PÁGINA IV
 ======================================*/
+/*=====================================
+PÁGINA IV
+======================================*/
 
-.paper-page4{
+.paper-page4 {
 
-    width:90vw;
+    width: 90vw;
 
-    max-width:760px;
+    max-width: 780px;
 
-    height:88vh;
+    min-height: 88vh;
 
-    overflow-y:auto;
+    height: auto;
 
-    overflow-x:hidden;
+    padding: 45px 55px;
 
-    padding:45px 55px;
+    position: relative;
 
-    position:relative;
-
-}
-
-/* borde adaptable */
-
-.paper-page4::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:18px;
-
-    left:18px;
-
-    right:18px;
-
-    bottom:18px;
-
-    border:1px solid rgba(184,156,110,.20);
-
-    border-radius:10px;
-
-    pointer-events:none;
+    overflow: visible;
 
 }
 
-/* título */
+/* Borde */
 
-#page4 .page4-title{
+.paper-page4::before {
 
-    text-align:center;
+    content: "";
 
-    font-family:'Cormorant Garamond',serif;
+    position: absolute;
 
-    font-size:2.5rem;
+    top: 18px;
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
 
-    color:#9d5c63;
+    border: 1px solid rgba(184, 156, 110, .22);
 
-    margin-top:20px;
+    border-radius: 10px;
 
-}
-
-#page4 .page4-divider{
-
-    width:120px;
-
-    height:2px;
-
-    margin:20px auto 45px;
-
-    background:#d8b36a;
+    pointer-events: none;
 
 }
 
-/* línea */
+/*==========================
+TÍTULO
+==========================*/
 
-#page4 .page4-timeline{
+#page4 .page4-title {
 
-    position:relative;
+    text-align: center;
 
-    margin:0 auto;
+    font-family: 'Cormorant Garamond', serif;
 
-    padding-left:40px;
+    font-size: 2.8rem;
 
-    border-left:2px solid #d8b36a;
+    color: #d8b36a;
 
-}
-
-/* recuerdo */
-
-#page4 .page4-item{
-
-    position:relative;
-
-    margin-bottom:55px;
+    margin-top: 20px;
 
 }
 
-/* corazón */
+#page4 .page4-subtitle {
 
-#page4 .page4-icon{
-
-    position:absolute;
-
-    left:-54px;
-
-    top:0;
-
-    width:30px;
-
-    height:30px;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    background:#fff8ef;
-
-    border-radius:50%;
-
-    font-size:18px;
+    color: #56453B;
+    font-size: 1.45rem;
+    line-height: 2;
+    margin: 2px 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
 
 }
 
-/* tarjeta */
+#page4 .page4-divider {
 
-#page4 .page4-card{
+    width: 140px;
 
-    background:#fffdf8;
+    height: 2px;
 
-    padding:22px;
+    margin: 30px auto 60px;
 
-    border-radius:12px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    background: #d8b36a;
 
 }
 
-/* fecha */
+/*==========================
+LÍNEA DEL TIEMPO
+==========================*/
 
-#page4 .page4-date{
+#page4 .page4-timeline {
 
-    display:block;
+    position: relative;
 
-    margin-bottom:12px;
+    width: 100%;
 
-    font-weight:bold;
-
-    color:#b68b55;
-
-    letter-spacing:1px;
+    margin: auto;
 
 }
 
-/* texto */
+#page4 .page4-timeline::before {
 
-#page4 .page4-card p{
+    content: "";
 
-    line-height:1.8;
+    position: absolute;
 
-    color:#5b5047;
+    left: 50%;
+
+    top: 0;
+
+    bottom: 0;
+
+    width: 2px;
+
+    background: #d8b36a;
+
+    transform: translateX(-50%);
 
 }
 
-/* foto */
+/*==========================
+RECUERDO
+==========================*/
 
-#page4 .page4-photo{
+#page4 .page4-item {
 
-    margin-top:20px;
+    position: relative;
 
-    height:170px;
+    width: 100%;
 
-    border:2px dashed #d9c19a;
+    display: flex;
 
-    border-radius:10px;
+    margin-bottom: 70px;
 
-    display:flex;
+}
 
-    align-items:center;
+#page4 .page4-item.left {
 
-    justify-content:center;
+    justify-content: flex-start;
 
-    color:#999;
+}
 
-    background:#faf7f1;
+#page4 .page4-item.right {
+
+    justify-content: flex-end;
+
+}
+
+/*==========================
+CORAZÓN
+==========================*/
+
+#page4 .page4-dot {
+
+    position: absolute;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 22px;
+
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #d8b36a;
+
+    border: 4px solid #FDF8EF;
+
+    z-index: 3;
+
+}
+
+/*==========================
+TARJETA
+==========================*/
+
+#page4 .page4-card {
+
+    width: 42%;
+
+    background: white;
+
+    padding: 22px;
+
+    border-radius: 14px;
+
+    box-shadow:
+
+        0 12px 28px rgba(0, 0, 0, .12);
+
+    transition: .4s;
+
+}
+
+#page4 .page4-card:hover {
+
+    transform: translateY(-6px);
+
+}
+
+/*==========================
+FECHA
+==========================*/
+
+#page4 .page4-date {
+
+    display: block;
+
+    color: #b18d53;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 18px;
+
+}
+
+/*==========================
+FOTO
+==========================*/
+
+#page4 .page4-photo {
+
+    background: white;
+
+    padding: 10px;
+
+    border-radius: 4px;
+
+    box-shadow:
+
+        0 10px 25px rgba(0, 0, 0, .18);
+
+    margin-bottom: 20px;
+
+}
+
+#page4 .page4-photo img {
+
+    width: 100%;
+
+    height: 230px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 2px;
+
+}
+
+#page4 .page4-photo span {
+
+    display: block;
+
+    text-align: center;
+
+    margin-top: 12px;
+
+    color: #777;
+
+    font-size: .9rem;
+
+}
+
+/* Inclinación */
+
+#page4 .page4-item.left .page4-photo {
+
+    transform: rotate(-2deg);
+
+}
+
+#page4 .page4-item.right .page4-photo {
+
+    transform: rotate(2deg);
+
+}
+
+/*==========================
+TEXTO
+==========================*/
+
+#page4 .page4-card p {
+
+    color: #5f5147;
+
+    line-height: 1.9;
+
+}
+
+/*==========================
+FINAL
+==========================*/
+
+#page4 .page4-ending {
+
+    text-align: center;
+
+    /*   margin: 60px 0; */
+
+}
+
+#page4 .page4-ending {
+
+    font-size: 2rem;
+
+    color: #b18d53;
+
+}
+
+#page4 .page4-ending p {
+
+    /* margin-top:20px;
+
+    color:#7b6c60;
+
+    line-height:2;
+*/
+
+    color: #56453B;
+    font-size: 1.45rem;
+    line-height: 2;
+    margin: 2px 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+
+}
+
+/*==========================
+BOTÓN
+==========================*/
+
+#page4 .page4-button {
+    margin-top: 0px;
+    padding: 18px 40px;
+    border: none;
+    margin: 14px;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1rem;
+    background: linear-gradient(45deg, #c89b54, #e4c98c);
+    color: white;
+    transition: .35s;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
+
+}
+
+#page4 .page4-button:hover {
+
+    transform: translateY(-4px);
+
+}
+
+/*==========================
+RESPONSIVE
+==========================*/
+
+@media(max-width:768px) {
+
+    .paper-page4 {
+
+        width: 95vw;
+
+        padding: 30px 22px;
+
+    }
+
+    .paper-page4::before {
+
+        top: 12px;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+
+    }
+
+    #page4 .page4-title {
+
+        font-size: 2.1rem;
+
+    }
+
+    #page4 .page4-timeline::before {
+
+        left: 18px;
+
+    }
+
+    #page4 .page4-dot {
+
+        left: 18px;
+
+    }
+
+    #page4 .page4-item {
+
+        justify-content: flex-start !important;
+
+        padding-left: 42px;
+
+    }
+
+    #page4 .page4-card {
+
+        width: 100%;
+
+    }
+
+    #page4 .page4-photo img {
+
+        height: 190px;
+
+    }
+
+    #page4 .page4-item.left .page4-photo,
+
+    #page4 .page4-item.right .page4-photo {
+
+        transform: none;
+
+    }
+
+}
+
+/*=====================================
+ANIMACIONES
+======================================*/
+
+#page4 .page4-item {
+
+    opacity: 0;
+
+    transform: translateY(60px);
+
+    transition: 1s;
+
+}
+
+#page4 .page4-item.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/* final */
+
+#page4 .page4-ending {
+
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition: 1s;
+
+}
+
+#page4 .page4-ending.show {
+
+    opacity: 1;
+
+    transform: none;
 
 }
 
 /* botón */
 
-#page4 .page4-button{
+#page4 .page4-button {
 
-    display:block;
+    opacity: 1;
 
-    margin:40px auto;
-
-    padding:15px 35px;
-
-    border:none;
-
-    border-radius:35px;
-
-    background:#b68b55;
-
-    color:white;
-
-    cursor:pointer;
-
-    transition:.35s;
+    transform: translateY(25px);
 
 }
 
-#page4 .page4-button:hover{
+#page4 .page4-button.show {
 
-    transform:translateY(-3px);
+    opacity: 1;
+
+    transform: none;
 
 }
 
-/* responsive */
+.page4-modal {
 
-@media(max-width:768px){
+    position: fixed;
+    inset: 0;
 
-    .paper-page4{
+    background: rgba(0, 0, 0, .55);
 
-        width:95vw;
+    display: none;
 
-        padding:28px 20px;
+    justify-content: center;
+    align-items: center;
 
-    }
+    z-index: 9999;
 
-    .paper-page4::before{
+}
 
-        top:12px;
 
-        left:12px;
+.page4-modal.show {
 
-        right:12px;
+    display: flex;
 
-        bottom:12px;
+}
 
-    }
 
-    #page4 .page4-title{
+.page4-modal .paper-page4 {
 
-        font-size:2rem;
+    max-height: 90vh;
+    overflow: auto;
 
-    }
+}
 
-    #page4 .page4-timeline{
 
-        padding-left:28px;
 
-    }
+.page4-close {
 
-    #page4 .page4-icon{
+    position: absolute;
 
-        left:-42px;
+    right: 30px;
+    top: 20px;
 
-    }
+    border: none;
+
+    background: none;
+
+    font-size: 25px;
+
+    color: #b18d53;
+
+    cursor: pointer;
+
+}
+
+#fireModal .paper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border: 1px solid rgba(184, 156, 110, .18);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+
+}
+
+#fireModal .paper::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .05;
+
+    background-image:
+
+        radial-gradient(circle, #b8955b 1px, transparent 1px);
+
+    background-size: 24px 24px;
+
+    pointer-events: none;
 
 }
