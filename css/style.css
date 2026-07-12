@@ -269,7 +269,7 @@ LUNA
 
     box-shadow:
 
-        0 15px 30px rgba(248, 108, 167, .35);
+        0 15px 30px rgba(244, 208, 139, 1.0);
 
 }
 
@@ -555,9 +555,9 @@ PÁGINAS DEL LIBRO
 
 .next-btn {
 
-       align-self:center;
+    align-self: center;
 
-    margin-bottom:25px;
+    margin-bottom: 25px;
 
     margin-top: 50px;
 
@@ -725,348 +725,383 @@ BIENVENIDA
 PÁGINA I
 ======================================*/
 
-.book-page{
+.book-page {
 
-    background:transparent;
+    background: transparent;
 
 }
 
-.paper{
+.paper {
 
-     width:min(92vw,430px);
+    width: min(92vw, 430px);
 
-    height:min(92vh,820px);
+    height: min(92vh, 820px);
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    display:flex;
+    display: flex;
 
-    flex-direction:column;
+    flex-direction: column;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    padding:28px;
+    padding: 28px;
 
 
-    border-radius:16px;
+    border-radius: 16px;
 
     background:
         radial-gradient(circle at top,
-        #fffdf8 0%,
-        #fbf6ee 45%,
-        #f6efe4 100%);
+            #fffdf8 0%,
+            #fbf6ee 45%,
+            #f6efe4 100%);
 
-    border:1px solid rgba(184,156,110,.22);
+    border: 1px solid rgba(184, 156, 110, .22);
 
     box-shadow:
-        0 30px 80px rgba(0,0,0,.30),
-        inset 0 0 35px rgba(255,255,255,.45),
-        inset 0 0 80px rgba(214,190,140,.08);
+        0 30px 80px rgba(0, 0, 0, .30),
+        inset 0 0 35px rgba(255, 255, 255, .45),
+        inset 0 0 80px rgba(214, 190, 140, .08);
 
 }
 
-.paper::before{
+.paper::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    inset:18px;
+    inset: 18px;
 
-    border:1px solid rgba(184,156,110,.18);
+    border: 1px solid rgba(184, 156, 110, .18);
 
-    border-radius:10px;
+    border-radius: 10px;
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
-.paper::after{
+.paper::after {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    inset:0;
+    inset: 0;
 
-    opacity:.05;
+    opacity: .05;
 
     background-image:
 
-        radial-gradient(circle,#b8955b 1px,transparent 1px);
+        radial-gradient(circle, #b8955b 1px, transparent 1px);
 
-    background-size:24px 24px;
+    background-size: 24px 24px;
 
-    pointer-events:none;
+    pointer-events: none;
 
 }
 
-.paper{
+.paper {
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(170,140,90,.08) 0%,
-            transparent 6%
-        ),
+        linear-gradient(90deg,
+            rgba(170, 140, 90, .08) 0%,
+            transparent 6%),
         radial-gradient(circle at top,
             #fffdf8,
             #fbf6ee 50%,
             #f6efe4 100%);
 }
 
-.photo-frame{
+.photo-frame {
 
-    transform:rotate(-4deg);
+    transform: rotate(-4deg);
 
-    transition:.5s;
+    transition: .5s;
 
 }
 
-.photo-frame:hover{
+.photo-frame:hover {
 
     transform:
-        rotate(0deg)
-        scale(1.03);
+        rotate(0deg) scale(1.03);
 
 }
 
-.tape{
+.tape {
 
-    position:absolute;
+    position: absolute;
 
-    top:-12px;
+    top: -12px;
 
-    left:50%;
+    left: 50%;
 
-    transform:translateX(-50%) rotate(-8deg);
+    transform: translateX(-50%) rotate(-8deg);
 
-    width:80px;
+    width: 80px;
 
-    height:24px;
+    height: 24px;
 
-    background:rgba(255,255,255,.45);
+    background: rgba(255, 255, 255, .45);
 
-    backdrop-filter:blur(2px);
+    backdrop-filter: blur(2px);
 
 }
 
-/* textura suave */
+/* textura suave Teste*/
 
+#story-page2 .story p {
+    opacity: 0;
+    white-space: pre-line;
+}
+
+#story-page2 .story p.show {
+    opacity: 1;
+}
+
+#story-page2 .cursor {
+    display: inline-block;
+    animation: blink .7s infinite;
+}
+
+
+#page2 .typing {
+    visibility: hidden;
+}
+
+#page2 .typing.show {
+    visibility: visible;
+}
+
+#page2 .next-btn {
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all .8s ease;
+}
+
+#page2 .next-btn.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
 
 /*=====================================
 CAPÍTULO
 ======================================*/
 
-.page-number{
+.page-number {
 
-    position:absolute;
+    position: absolute;
 
-    top:35px;
+    top: 35px;
 
-    left:50%;
+    left: 50%;
 
-    transform:translateX(-50%);
+    transform: translateX(-50%);
 
-    letter-spacing:4px;
+    letter-spacing: 4px;
 
-    text-transform:uppercase;
+    text-transform: uppercase;
 
-    font-size:.85rem;
+    font-size: .85rem;
 
-    color:#b18d53;
-
-}
-
-.page-header{
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    gap:18px;
-
-    margin-bottom:25px;
+    color: #b18d53;
 
 }
 
-.line{
+.page-header {
 
-    flex:1;
+    display: flex;
 
-    height:1px;
+    align-items: center;
 
-    background:linear-gradient(to right,
-    transparent,
-    #caa66b,
-    transparent);
+    justify-content: center;
 
-}
+    gap: 18px;
 
-.page-title{
-
-    text-align:center;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:2.2rem;
-
-    color:#9d5c63;
-
-    margin-bottom:25px;
+    margin-bottom: 25px;
 
 }
 
-.photo-frame{
+.line {
 
-    width:260px;
+    flex: 1;
 
-    margin:0 auto 30px;
+    height: 1px;
 
-    padding:10px;
+    background: linear-gradient(to right,
+            transparent,
+            #caa66b,
+            transparent);
 
-    background:white;
+}
 
-    border-radius:8px;
+.page-title {
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2.2rem;
+
+    color: #9d5c63;
+
+    margin-bottom: 25px;
+
+}
+
+.photo-frame {
+
+    width: 260px;
+
+    margin: 0 auto 30px;
+
+    padding: 10px;
+
+    background: white;
+
+    border-radius: 8px;
 
     box-shadow:
 
-        0 15px 30px rgba(0,0,0,.20);
+        0 15px 30px rgba(0, 0, 0, .20);
 
-    transform:rotate(-2deg);
-
-}
-
-.photo-frame img{
-
-    width:100%;
-
-    display:block;
-
-    border-radius:4px;
+    transform: rotate(-2deg);
 
 }
 
-.story{
+.photo-frame img {
 
-    text-align:center;
+    width: 100%;
 
-}
+    display: block;
 
-.page-title{
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:3.3rem;
-
-    color:#b57b86;
-
-    text-align:center;
-
-    margin-bottom:35px;
-
-    text-shadow:0 2px 8px rgba(181,123,134,.15);
+    border-radius: 4px;
 
 }
 
-.photo-date{
+.story {
 
-    display:block;
-
-    margin-top:12px;
-
-    text-align:center;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:1.2rem;
-
-    color:#8a6d5b;
-
-    font-style:italic;
+    text-align: center;
 
 }
 
-.story p{
+.page-title {
 
-    color:#caa66b;
+    font-family: 'Cormorant Garamond', serif;
 
-    font-size:-0.85rem; /*test*/
+    font-size: 3.3rem;
 
-    line-height:2;
+    color: #b57b86;
 
-    margin:22px 0;
+    text-align: center;
 
-    text-align:center;
+    margin-bottom: 35px;
 
-}
-
-.page-number{
-
-    color:#b18d53;
-
-    letter-spacing:4px;
-
-    text-transform:uppercase;
-
-    font-size:.8rem;
+    text-shadow: 0 2px 8px rgba(181, 123, 134, .15);
 
 }
 
-.paper::after{
+.photo-date {
 
-    content:"";
+    display: block;
 
-    position:absolute;
+    margin-top: 12px;
 
-    inset:12px;
+    text-align: center;
 
-    border:1px solid rgba(183,150,92,.20);
+    font-family: 'Cormorant Garamond', serif;
 
-    border-radius:10px;
+    font-size: 1.2rem;
 
-    pointer-events:none;
+    color: #8a6d5b;
+
+    font-style: italic;
 
 }
+
+.story p {
+
+       color: #56453B;
+    font-size: 1.15rem;
+    line-height: 2;
+    margin: 22px 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.page-number {
+
+    color: #b18d53;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    font-size: .8rem;
+
+}
+
+.paper::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 1px solid rgba(183, 150, 92, .20);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+
+}
+
 /*=====================================
 CONTENIDO
 ======================================*/
 
-.page-content{
+.page-content {
 
-    margin-top:70px;
+    margin-top: 70px;
 
-    text-align:center;
+    text-align: center;
 
 }
 
-.scene{
+.scene {
 
-    font-family:'Cormorant Garamond',serif;
+    font-family: 'Cormorant Garamond', serif;
 
-    font-size:2rem;
+    font-size: 2rem;
 
-    line-height:1.8;
+    line-height: 1.8;
 
-    margin:18px 0;
+    margin: 18px 0;
 
 }
 
 /* primera frase */
 
-.scene:first-child{
+.scene:first-child {
 
-    text-align:left;
+    text-align: left;
 
-    font-size:2.6rem;
+    font-size: 2.6rem;
 
-    font-style:italic;
+    font-style: italic;
 
-    margin-bottom:70px;
+    margin-bottom: 70px;
 
 }
 
@@ -1074,18 +1109,18 @@ CONTENIDO
 LÍNEA DORADA
 ======================================*/
 
-.gold-line{
+.gold-line {
 
-    width:140px;
+    width: 140px;
 
-    height:2px;
+    height: 2px;
 
-    margin:45px auto;
+    margin: 45px auto;
 
-    background:linear-gradient(to right,
-    transparent,
-    #d8b36a,
-    transparent);
+    background: linear-gradient(to right,
+            transparent,
+            #d8b36a,
+            transparent);
 
 }
 
@@ -1093,27 +1128,27 @@ LÍNEA DORADA
 TÍTULO FINAL
 ======================================*/
 
-.final-title{
+.final-title {
 
-    margin-top:70px;
+    margin-top: 70px;
 
-    font-size:2.4rem;
+    font-size: 2.4rem;
 
-    color:#8d5960;
+    color: #8d5960;
 
 }
 
-.paper h2{
+.paper h2 {
 
-    font-family:'Cormorant Garamond',serif;
+    font-family: 'Cormorant Garamond', serif;
 
-    font-size:3rem;
+    font-size: 3rem;
 
-    text-align:center;
+    text-align: center;
 
-    color:#ba7b81;
+    color: #d8b36a;
 
-    margin-top:10px;
+    margin-top: 10px;
 
 }
 
@@ -1121,33 +1156,33 @@ TÍTULO FINAL
 BOTÓN
 ======================================*/
 
-.next-btn{
+.next-btn {
 
-    margin-top:0px;
+    margin-top: 0px;
 
-    padding:18px 40px;
+    padding: 18px 40px;
 
-    border:none;
+    border: none;
 
-    border-radius:40px;
+    border-radius: 40px;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    font-size:1rem;
+    font-size: 1rem;
 
-    background:linear-gradient(45deg,#c89b54,#e4c98c);
+    background: linear-gradient(45deg, #c89b54, #e4c98c);
 
-    color:white;
+    color: white;
 
-    transition:.35s;
+    transition: .35s;
 
-    box-shadow:0 15px 25px rgba(0,0,0,.15);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
 
 }
 
-.next-btn:hover{
+.next-btn:hover {
 
-    transform:translateY(-4px);
+    transform: translateY(-4px);
 
 }
 
@@ -1161,37 +1196,463 @@ FRASE
 FECHA
 ======================================*/
 
-.page-bottom{
+.page-bottom {
 
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    align-items:center;
+    align-items: center;
 
-    margin-top:25px;
+    margin-top: 25px;
 
-    font-size:.85rem;
+    font-size: .85rem;
 
-    color:#8d8d8d;
-
-}
-
-.page-footer{
-
-    font-style:italic;
+    color: #8d8d8d;
 
 }
 
-.page-date{
-
-    opacity:.8;
+.page-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
 
 }
 
-.scene-container{
 
-    flex:1;
+
+.page-date {
+
+    opacity: .8;
+
+}
+
+.hidden-element {
+    opacity: 0;
+    visibility: hidden;
+}
+
+
+.show-element {
+    opacity: 1;
+    visibility: visible;
+    animation: fadeUp .8s ease forwards;
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* efecto maquina */
+
+.typing-title,
+.typing-text {
+
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #b18d53;
+
+    animation:
+        typing 3s steps(40, end),
+        cursor .7s infinite;
+
+}
+
+
+@keyframes typing {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+
+}
+
+
+@keyframes cursor {
+
+    50% {
+        border-color: transparent;
+    }
+
+}
+
+.scene-container {
+
+    flex: 1;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+#sceneText {
+
+    width: 100%;
+
+    max-width: 560px;
+
+    text-shadow:
+
+        0 0 1px rgba(255, 255, 255, .4);
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(1.8rem, 2vw, 2.6rem);
+
+    line-height: 1.8;
+
+    color: #56453B;
+
+    transition: opacity 1.2s;
+
+}
+
+.showScene {
+
+    opacity: 1 !important;
+
+}
+
+.hideScene {
+
+    opacity: 0 !important;
+
+}
+
+.hidden {
+
+    display: none;
+
+}
+
+/*=====================================
+PÁGINA II
+======================================*/
+
+.paper-page2 {
+
+    max-width: 760px;
+
+    width: 90vw;
+
+    height: 88vh;
+
+    overflow-y: auto;
+
+    overflow-x: hidden;
+
+    padding: 40px 55px;
+
+    position: relative;
+
+}
+
+/*=====================================
+PÁGINA III
+======================================*/
+
+.paper-page3 {
+
+    width: 90vw;
+
+    position: relative;
+    
+    max-width: 760px;
+
+    height: 88vh;
+
+    overflow-y: auto;
+
+    padding: 45px 55px;
+
+}
+
+#page3 .page3-content {
+
+    margin: 27px 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+
+}
+
+#page3 .page3-title {
+
+   font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    text-align: center;
+    color: #d8b36a;
+    margin-top: -14px;
+
+}
+
+#page3 .page3-divider {
+
+    width: 120px;
+
+    height: 2px;
+
+    background: #d8b36a;
+
+    margin: 10px auto 30px;
+
+}
+
+#page3 .page3-text {
+     color: #56453B;
+    font-size: 1.15rem;
+    line-height: 2;
+    margin: 2px 0;
+    text-align: center;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+#page3 .typing-cursor::after {
+
+    content: "|";
+
+    margin-left: 3px;
+
+    animation: blink .7s infinite;
+
+}
+
+@keyframes blink {
+
+    50% {
+
+        opacity: 0;
+
+    }
+
+}
+
+#page3 .page3-button {
+
+      background: linear-gradient(45deg, #cfa15b, #f4d08b);
+    color: white;
+    border: none;
+    padding: 18px 42px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: .35s;
+    animation: heartbeat 2.8s infinite;
+
+}
+
+#page3 .page3-button.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+#page3 .page3-button:hover {
+
+    transform: translateY(-3px);
+
+    background: #a97d50;
+
+}
+
+#page3 .page3-text{
+    visibility: hidden;
+}
+
+#page3 .page3-text.typing-cursor{
+    visibility: visible;
+}
+
+#page3 .gold-line {
+
+    width: 140px;
+
+    height: 2px;
+
+    margin: 45px auto;
+
+    background: linear-gradient(to right,
+            transparent,
+            #d8b36a,
+            transparent);
+
+}
+
+#page3 .paper::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 18px;
+
+    border: 1px solid rgba(184, 156, 110, .18);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+
+}
+
+#page3 .paper::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: .05;
+
+    background-image:
+
+        radial-gradient(circle, #b8955b 1px, transparent 1px);
+
+    background-size: 24px 24px;
+
+    pointer-events: none;
+
+}
+
+/*=====================================
+PÁGINA IV
+======================================*/
+
+.paper-page4{
+
+    width:90vw;
+
+    max-width:760px;
+
+    height:88vh;
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
+    padding:45px 55px;
+
+    position:relative;
+
+}
+
+/* borde adaptable */
+
+.paper-page4::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:18px;
+
+    left:18px;
+
+    right:18px;
+
+    bottom:18px;
+
+    border:1px solid rgba(184,156,110,.20);
+
+    border-radius:10px;
+
+    pointer-events:none;
+
+}
+
+/* título */
+
+#page4 .page4-title{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.5rem;
+
+    color:#9d5c63;
+
+    margin-top:20px;
+
+}
+
+#page4 .page4-divider{
+
+    width:120px;
+
+    height:2px;
+
+    margin:20px auto 45px;
+
+    background:#d8b36a;
+
+}
+
+/* línea */
+
+#page4 .page4-timeline{
+
+    position:relative;
+
+    margin:0 auto;
+
+    padding-left:40px;
+
+    border-left:2px solid #d8b36a;
+
+}
+
+/* recuerdo */
+
+#page4 .page4-item{
+
+    position:relative;
+
+    margin-bottom:55px;
+
+}
+
+/* corazón */
+
+#page4 .page4-icon{
+
+    position:absolute;
+
+    left:-54px;
+
+    top:0;
+
+    width:30px;
+
+    height:30px;
 
     display:flex;
 
@@ -1199,46 +1660,148 @@ FECHA
 
     align-items:center;
 
-    text-align:center;
+    background:#fff8ef;
+
+    border-radius:50%;
+
+    font-size:18px;
 
 }
 
-#sceneText{
+/* tarjeta */
 
-    width:100%;
+#page4 .page4-card{
 
-    max-width:560px;
+    background:#fffdf8;
 
-     text-shadow:
+    padding:22px;
 
-    0 0 1px rgba(255,255,255,.4);
-    
-    font-family:'Cormorant Garamond',serif;
+    border-radius:12px;
 
-    font-size:clamp(1.8rem,2vw,2.6rem);
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+}
+
+/* fecha */
+
+#page4 .page4-date{
+
+    display:block;
+
+    margin-bottom:12px;
+
+    font-weight:bold;
+
+    color:#b68b55;
+
+    letter-spacing:1px;
+
+}
+
+/* texto */
+
+#page4 .page4-card p{
 
     line-height:1.8;
 
-    color:#56453B;
-
-    transition:opacity 1.2s;
+    color:#5b5047;
 
 }
 
-.showScene{
+/* foto */
 
-    opacity:1 !important;
+#page4 .page4-photo{
+
+    margin-top:20px;
+
+    height:170px;
+
+    border:2px dashed #d9c19a;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#999;
+
+    background:#faf7f1;
 
 }
 
-.hideScene{
+/* botón */
 
-    opacity:0 !important;
+#page4 .page4-button{
+
+    display:block;
+
+    margin:40px auto;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:35px;
+
+    background:#b68b55;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.35s;
 
 }
 
-.hidden{
+#page4 .page4-button:hover{
 
-    display:none;
+    transform:translateY(-3px);
+
+}
+
+/* responsive */
+
+@media(max-width:768px){
+
+    .paper-page4{
+
+        width:95vw;
+
+        padding:28px 20px;
+
+    }
+
+    .paper-page4::before{
+
+        top:12px;
+
+        left:12px;
+
+        right:12px;
+
+        bottom:12px;
+
+    }
+
+    #page4 .page4-title{
+
+        font-size:2rem;
+
+    }
+
+    #page4 .page4-timeline{
+
+        padding-left:28px;
+
+    }
+
+    #page4 .page4-icon{
+
+        left:-42px;
+
+    }
 
 }

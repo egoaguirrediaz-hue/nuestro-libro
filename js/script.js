@@ -96,33 +96,33 @@ function wait(ms) {
 
 }
 
-window.onload=()=>{
+window.onload = () => {
 
-    const button=document.getElementById("beginButton");
+    const button = document.getElementById("beginButton");
 
-    button.addEventListener("click",startExperience);
+    button.addEventListener("click", startExperience);
 
 }
 
-function startExperience(){
+function startExperience() {
 
-    const music=document.getElementById("music");
+    const music = document.getElementById("music");
 
-    music.volume=0.25;
+    music.volume = 0.25;
 
     music.play();
 
-    const welcome=document.getElementById("welcome");
+    const welcome = document.getElementById("welcome");
 
-    welcome.style.opacity="0";
+    welcome.style.opacity = "0";
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         welcome.remove();
 
         playIntro();
 
-    },1500);
+    }, 1500);
 
 }
 
@@ -191,5 +191,84 @@ function openBook() {
     document.getElementById("page1").classList.remove("hidden");
 
     revealLetter();
+
+}
+
+const paragraphs = document.querySelectorAll("#story-page2 .typing");
+
+async function typeParagraph(element, speed = 45) {
+
+    const text = element.textContent.trim();
+
+    element.textContent = "";
+    element.classList.add("show");
+
+    const cursor = document.createElement("span");
+    cursor.className = "cursor";
+    cursor.textContent = "|";
+    element.appendChild(cursor);
+
+    for (let i = 0; i < text.length; i++) {
+
+        cursor.insertAdjacentText("beforebegin", text[i]);
+
+        await new Promise(resolve => setTimeout(resolve, speed));
+    }
+
+    cursor.remove();
+
+    // pequeña pausa antes del siguiente párrafo
+    await new Promise(resolve => setTimeout(resolve, 600));
+}
+
+async function startStory() {
+
+    for (const paragraph of paragraphs) {
+        await typeParagraph(paragraph);
+    }
+    await wait(500); // pequeña pausa
+
+    document.querySelector("#page2 .next-btn").classList.add("show");
+     document.querySelector("#page3 .next-btn").classList.add("show");
+
+}
+
+/*=====================================
+PÁGINA III
+======================================*/
+async function revealPage3() {
+
+    const paragraphs = document.querySelectorAll("#page3 .page3-text");
+
+    for (const p of paragraphs) {
+
+        const text = p.textContent.trim();
+
+        p.textContent = "";
+
+        p.style.visibility = "visible";
+
+        p.classList.add("typing-cursor");
+
+
+        for (let i = 0; i < text.length; i++) {
+
+            p.textContent += text[i];
+
+            await wait(45);
+
+        }
+
+
+        p.classList.remove("typing-cursor");
+
+        await wait(700);
+
+    }
+
+
+    // Cuando termina TODO el texto aparece el botón
+    document.querySelector("#page3 .page3-button")
+        .classList.add("show");
 
 }

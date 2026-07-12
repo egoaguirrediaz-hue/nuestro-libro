@@ -136,10 +136,18 @@ async function revealLetter() {
 
 }
 
-function nextPage(currentPage, nextPage){
+function nextPage(currentPage, nextPage) {
 
     document.getElementById(currentPage).classList.add("hidden");
 
     document.getElementById(nextPage).classList.remove("hidden");
 
+    if (nextPage === "page2") {
+        startStory();
+    }
+    if (nextPage === "page3") {
+
+        revealPage3();
+
+    }
 }
