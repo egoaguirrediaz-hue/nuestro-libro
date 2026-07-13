@@ -2953,3 +2953,1029 @@ transform:scale(1);
 
 
 }
+
+
+/* ========================= */
+/*        PÁGINA VII           */
+/* Nuestro recuerdo secreto   */
+/* ========================= */
+.paper-page7 {
+
+    width: 90vw;
+
+    max-width: 760px;
+
+    min-height: 88vh;
+
+    height: auto;
+
+    padding: 45px 55px;
+
+    position: relative;
+
+    overflow: visible;
+
+}
+
+
+/* Borde del papel */
+
+.paper-page7::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    border: 1px solid rgba(184, 156, 110, .22);
+
+    border-radius: 10px;
+
+    pointer-events: none;
+
+}
+
+
+/* Título */
+
+#page7 .page7-title {
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 2.6rem;
+
+    color: #d8b36a;
+
+    margin-top: 18px;
+
+}
+
+
+/* Subtítulo */
+
+#page7 .page7-subtitle {
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.45rem;
+
+    margin-top: 12px;
+
+    color: #56453B;
+
+    font-style: italic;
+
+    line-height: 1.8;
+
+}
+
+
+/* Línea dorada */
+
+#page7 .page7-divider {
+
+    width: 120px;
+
+    height: 2px;
+
+    background: #d8b36a;
+
+    margin: 30px auto 45px;
+
+}
+
+
+/* Contenedor */
+
+#page7 .page7-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 35px;
+
+}
+
+
+/* Texto inicial */
+
+#page7 .page7-intro {
+
+    text-align: center;
+
+    color: #5b5047;
+
+    font-size: 1.08rem;
+
+    line-height: 2;
+
+    padding: 0 10px;
+
+}
+
+
+/* Caja del video */
+
+#page7 .page7-video-box {
+
+    display: flex;
+
+    justify-content: center;
+
+    padding: 15px;
+
+}
+
+
+/* Video */
+
+#page7 .page7-video {
+
+    width: 100%;
+
+    max-width: 560px;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(184,156,110,.35);
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+
+}
+
+
+
+/* Mensaje final */
+
+#page7 .page7-message {
+
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.35rem;
+
+    color: #56453B;
+
+    font-style: italic;
+
+    line-height: 1.9;
+
+    padding: 20px;
+
+}
+
+
+
+/* Botón */
+
+#page7 .page7-button {
+
+    display: block;
+
+    margin: 40px auto 35px;
+
+    padding: 16px 40px;
+
+    border: none;
+
+    border-radius: 35px;
+
+    background: linear-gradient(45deg, #c89b54, #e4c98c);
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    box-shadow: 0 15px 25px rgba(0,0,0,.15);
+
+    transition: .35s;
+
+}
+
+
+#page7 .page7-button:hover {
+
+    background: #a67d4d;
+
+    transform: translateY(-3px);
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:768px) {
+
+
+    .paper-page7 {
+
+        width: 95vw;
+
+        padding: 28px 20px;
+
+    }
+
+
+    .paper-page7::before {
+
+        top: 12px;
+
+        left: 12px;
+
+        right: 12px;
+
+        bottom: 12px;
+
+    }
+
+
+    #page7 .page7-title {
+
+        font-size: 2rem;
+
+    }
+
+
+    #page7 .page7-subtitle {
+
+        font-size: 1.2rem;
+
+    }
+
+
+    #page7 .page7-intro {
+
+        font-size: 1rem;
+
+    }
+
+
+    #page7 .page7-message {
+
+        font-size: 1.2rem;
+
+    }
+
+
+    #page7 .page7-video {
+
+        border-radius: 12px;
+
+    }
+
+
+}
+
+/*=====================================
+PÁGINA VIII
+======================================*/
+
+.paper-page8{
+
+    width:90vw;
+
+    max-width:820px;
+
+    min-height:88vh;
+
+    height:auto;
+
+    padding:45px 55px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#253768 0%,#121b34 45%,#070b14 100%);
+
+}
+
+/*====================
+BORDE
+=====================*/
+
+.paper-page8::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:18px;
+
+    border:1px solid rgba(214,185,120,.22);
+
+    border-radius:10px;
+
+    pointer-events:none;
+
+}
+
+/*====================
+LUNA
+=====================*/
+
+#page8 .page8-moon{
+
+    width:95px;
+
+    height:95px;
+
+    margin:15px auto 25px;
+
+    border-radius:50%;
+
+    background:#fff7da;
+
+    box-shadow:
+    0 0 30px rgba(255,240,190,.6),
+    0 0 80px rgba(255,240,190,.25);
+
+}
+
+/*====================
+ESTRELLAS
+=====================*/
+
+#page8 .page8-stars{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+#page8 .star{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 0 10px white;
+
+    animation:twinkle 4s infinite ease-in-out;
+
+}
+
+@keyframes twinkle{
+
+    0%,100%{
+
+        opacity:.25;
+
+        transform:scale(.8);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.8);
+
+    }
+
+}
+
+/* posiciones */
+
+.s1{top:8%;left:12%;}
+.s2{top:13%;left:80%;}
+.s3{top:22%;left:30%;}
+.s4{top:30%;left:74%;}
+.s5{top:45%;left:12%;}
+.s6{top:56%;left:88%;}
+.s7{top:66%;left:18%;}
+.s8{top:72%;left:62%;}
+.s9{top:18%;left:52%;}
+.s10{top:82%;left:44%;}
+.s11{top:10%;left:60%;}
+.s12{top:36%;left:90%;}
+.s13{top:76%;left:12%;}
+.s14{top:58%;left:74%;}
+.s15{top:86%;left:84%;}
+.s16{top:65%;left:48%;}
+
+/*====================
+TÍTULO
+=====================*/
+
+#page8 .page8-title{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.7rem;
+
+    color:#f4e6c4;
+
+    margin-top:15px;
+
+}
+
+#page8 .page8-subtitle{
+
+    width:85%;
+
+    margin:18px auto;
+
+    text-align:center;
+
+    line-height:2;
+
+    color:#d9d9d9;
+
+    font-style:italic;
+
+}
+
+#page8 .page8-divider{
+
+    width:140px;
+
+    height:2px;
+
+    margin:35px auto 55px;
+
+    background:linear-gradient(to right,
+    transparent,
+    #d8b36a,
+    transparent);
+
+}
+
+/*====================
+CIELO
+=====================*/
+
+#page8 .page8-sky{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:flex-start;
+
+    gap:45px;
+
+    margin-bottom:60px;
+
+}
+
+#page8 .constellation{
+
+    flex:1;
+
+}
+
+#page8 .constellation-name{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2rem;
+
+    color:#ecd8a5;
+
+    margin-bottom:30px;
+
+    letter-spacing:2px;
+
+}
+
+#page8 .constellation-box{
+
+    position:relative;
+
+    width:260px;
+
+    height:260px;
+
+    margin:auto;
+
+}
+
+/*=====================================
+CONSTELACIONES
+======================================*/
+
+#page8 .dot{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:#fff7dc;
+
+    box-shadow:
+    0 0 10px #fff,
+    0 0 25px rgba(255,228,160,.8);
+
+}
+
+/*====================
+PISCIS
+=====================*/
+
+.constellation-piscis .p1{top:25px;left:35px;}
+.constellation-piscis .p2{top:70px;left:105px;}
+.constellation-piscis .p3{top:120px;left:55px;}
+.constellation-piscis .p4{top:165px;left:130px;}
+.constellation-piscis .p5{top:210px;left:70px;}
+.constellation-piscis .p6{top:120px;left:190px;}
+
+/*====================
+CÁNCER
+=====================*/
+
+.constellation-cancer .c1{top:40px;left:180px;}
+.constellation-cancer .c2{top:85px;left:120px;}
+.constellation-cancer .c3{top:120px;left:200px;}
+.constellation-cancer .c4{top:165px;left:95px;}
+.constellation-cancer .c5{top:205px;left:160px;}
+.constellation-cancer .c6{top:235px;left:115px;}
+
+/*====================
+LÍNEAS
+=====================*/
+
+#page8 .link{
+
+    position:absolute;
+
+    height:2px;
+
+    background:#d8b36a;
+
+    transform-origin:left center;
+
+    opacity:.85;
+
+}
+
+/* Piscis */
+
+.lp1{
+
+    top:30px;
+    left:40px;
+    width:82px;
+    transform:rotate(28deg);
+
+}
+
+.lp2{
+
+    top:82px;
+    left:74px;
+    width:62px;
+    transform:rotate(118deg);
+
+}
+
+.lp3{
+
+    top:126px;
+    left:63px;
+    width:90px;
+    transform:rotate(28deg);
+
+}
+
+.lp4{
+
+    top:176px;
+    left:98px;
+    width:70px;
+    transform:rotate(118deg);
+
+}
+
+.lp5{
+
+    top:124px;
+    left:136px;
+    width:72px;
+    transform:rotate(-22deg);
+
+}
+
+/* Cáncer */
+
+.lc1{
+
+    top:48px;
+    left:124px;
+    width:70px;
+    transform:rotate(140deg);
+
+}
+
+.lc2{
+
+    top:95px;
+    left:126px;
+    width:85px;
+    transform:rotate(32deg);
+
+}
+
+.lc3{
+
+    top:135px;
+    left:120px;
+    width:92px;
+    transform:rotate(138deg);
+
+}
+
+.lc4{
+
+    top:175px;
+    left:102px;
+    width:82px;
+    transform:rotate(35deg);
+
+}
+
+.lc5{
+
+    top:214px;
+    left:116px;
+    width:45px;
+    transform:rotate(115deg);
+
+}
+
+/*=====================================
+CORAZÓN
+======================================*/
+
+#page8 .page8-center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding-top:95px;
+
+}
+
+#page8 .page8-heart{
+
+    font-size:42px;
+
+    animation:heartFloat 3s ease-in-out infinite;
+
+    filter:drop-shadow(0 0 15px rgba(255,170,170,.6));
+
+}
+
+@keyframes heartFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+/*=====================================
+MENSAJE
+======================================*/
+
+#page8 .page8-message{
+
+    width:85%;
+
+    margin:60px auto 45px;
+
+    text-align:center;
+
+}
+
+#page8 .page8-message p{
+
+    color:#ececec;
+
+    line-height:2.1;
+
+    margin:15px 0;
+
+    font-size:1.1rem;
+
+}
+
+/*=====================================
+FOTO
+======================================*/
+
+#page8 .page8-photo-frame{
+
+    width:320px;
+
+    margin:0 auto;
+
+    padding:12px;
+
+    background:white;
+
+    border-radius:12px;
+
+    box-shadow:
+    0 20px 45px rgba(0,0,0,.35);
+
+    transform:rotate(-2deg);
+
+}
+
+#page8 .page8-photo{
+
+    width:100%;
+
+    display:block;
+
+    border-radius:8px;
+
+}
+
+#page8 .page8-photo-text{
+
+    margin:35px auto 55px;
+
+    width:80%;
+
+    text-align:center;
+
+    color:#f2e8ca;
+
+    line-height:2;
+
+    font-style:italic;
+
+}
+
+/*=====================================
+BOTÓN
+======================================*/
+
+#page8 .page8-button{
+
+    display:block;
+
+    margin:20px auto 35px;
+
+    padding:16px 42px;
+
+    border:none;
+
+    border-radius:40px;
+
+    background:#d1aa63;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+#page8 .page8-button:hover{
+
+    background:#bb9553;
+
+    transform:translateY(-3px);
+
+}
+
+/*=====================================
+RESPONSIVE
+======================================*/
+
+@media(max-width:768px){
+
+    .paper-page8{
+
+        width:95vw;
+
+        padding:30px 22px;
+
+    }
+
+    .paper-page8::before{
+
+        inset:12px;
+
+    }
+
+    #page8 .page8-title{
+
+        font-size:2rem;
+
+    }
+
+    #page8 .page8-subtitle{
+
+        width:100%;
+
+        font-size:.95rem;
+
+    }
+
+    #page8 .page8-sky{
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:60px;
+
+    }
+
+    #page8 .page8-center{
+
+        padding:0;
+
+    }
+
+    #page8 .constellation-box{
+
+        width:230px;
+
+        height:230px;
+
+    }
+
+    #page8 .page8-photo-frame{
+
+        width:100%;
+
+        max-width:300px;
+
+    }
+
+    #page8 .page8-message{
+
+        width:100%;
+
+    }
+
+}
+
+/*=====================================
+ANIMACIÓN CONSTELACIONES
+======================================*/
+
+#page8 .dot{
+
+    opacity:0;
+
+    transform:scale(.2);
+
+    transition:
+    opacity .5s ease,
+    transform .5s ease;
+
+}
+
+#page8 .dot.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+}
+
+#page8 .link{
+
+    opacity:0;
+
+    transform-origin:left center;
+
+    transition:
+    opacity .7s ease,
+    transform .7s ease;
+
+}
+
+#page8 .link.show{
+
+    opacity:.9;
+
+}
+
+#page8 .page8-heart{
+
+    opacity:0;
+
+    transform:scale(.2);
+
+}
+
+#page8 .page8-heart.show{
+
+    opacity:1;
+
+    transform:scale(1);
+
+    transition:1s;
+
+}
+
+#page8 .page8-message{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:1s;
+
+}
+
+#page8 .page8-message.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+#page8 .page8-photo-frame{
+
+    opacity:0;
+
+    transform:scale(.85) rotate(-5deg);
+
+    transition:1.2s;
+
+}
+
+#page8 .page8-photo-frame.show{
+
+    opacity:1;
+
+    transform:scale(1) rotate(-2deg);
+
+}
+
+#page8 .page8-button{
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+#page8 .page8-button.show{
+
+    opacity:1;
+
+    transform:none;
+
+    transition:.8s;
+
+}

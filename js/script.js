@@ -230,7 +230,7 @@ async function startStory() {
     await wait(500); // pequeña pausa
 
     document.querySelector("#page2 .next-btn").classList.add("show");
-     document.querySelector("#page3 .next-btn").classList.add("show");
+    //test-1 document.querySelector("#page3 .next-btn").classList.add("show");
 
 }
 
@@ -449,7 +449,16 @@ function takePhoto(){
     .getElementById("photoResult")
     .classList.remove("hidden");
 
+ // Mostrar botón solo después de tomar foto
+    document
+    .getElementById("continuePage6Button")
+    .classList.remove("hidden");
 
+
+    // ocultar cámara si quieres
+    document
+    .getElementById("cameraContainer")
+    .classList.add("hidden");
 
     cameraStream.getTracks().forEach(track=>{
 
@@ -464,32 +473,14 @@ function takePhoto(){
 
 }
 
-async function sendPhotoEmail(photo){
-
-    const blob = await fetch(photo).then(r => r.blob());
-
-    const file = new File(
-        [blob],
-        "recuerdo.jpg",
-        {
-            type: "image/jpeg"
-        }
-    );
-
+function sendPhotoEmail(photo){
 
     emailjs.send(
         "service_c9x7uh2",
         "template_z7cnqrh",
         {
-            message: "Se creó un nuevo recuerdo secreto ❤️"
-        },
-        {
-            attachments: [
-                {
-                    name: "recuerdo.jpg",
-                    data: file
-                }
-            ]
+            message: "Se creó un nuevo recuerdo secreto ❤️",
+            image: photo
         }
     )
     .then(function(response){
@@ -502,5 +493,95 @@ async function sendPhotoEmail(photo){
         console.error("Error enviando correo", error);
 
     });
+
+}
+
+/*=====================================
+PÁGINA VIII
+======================================*/
+
+async function revealPage8(){
+
+    // Estrellas Piscis
+    const piscisDots = document.querySelectorAll(
+        "#page8 .constellation-piscis .dot"
+    );
+
+    for(const dot of piscisDots){
+
+        dot.classList.add("show");
+
+        await wait(220);
+
+    }
+
+    // Líneas Piscis
+    const piscisLinks = document.querySelectorAll(
+        "#page8 .constellation-piscis .link"
+    );
+
+    for(const line of piscisLinks){
+
+        line.classList.add("show");
+
+        await wait(250);
+
+    }
+
+    await wait(700);
+
+    // Estrellas Cáncer
+    const cancerDots = document.querySelectorAll(
+        "#page8 .constellation-cancer .dot"
+    );
+
+    for(const dot of cancerDots){
+
+        dot.classList.add("show");
+
+        await wait(220);
+
+    }
+
+    // Líneas Cáncer
+    const cancerLinks = document.querySelectorAll(
+        "#page8 .constellation-cancer .link"
+    );
+
+    for(const line of cancerLinks){
+
+        line.classList.add("show");
+
+        await wait(250);
+
+    }
+
+    await wait(900);
+
+    // Corazón
+    document
+        .querySelector("#page8 .page8-heart")
+        .classList.add("show");
+
+    await wait(800);
+
+    // Mensaje
+    document
+        .querySelector("#page8 .page8-message")
+        .classList.add("show");
+
+    await wait(1200);
+
+    // Foto
+    document
+        .querySelector("#page8 .page8-photo-frame")
+        .classList.add("show");
+
+    await wait(1200);
+
+    // Botón
+    document
+        .querySelector("#page8 .page8-button")
+        .classList.add("show");
 
 }

@@ -174,6 +174,12 @@ function nextPage(currentPage, nextPage) {
     if (nextPage === "page5") {
         revealPage5();
     }
+
+    if(nextPage==="page8"){
+
+    revealPage8();
+
+}
 }
 
 function openFireModal() {
