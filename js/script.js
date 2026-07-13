@@ -499,6 +499,23 @@ function sendPhotoEmail(photo){
 /*=====================================
 PÁGINA VIII
 ======================================*/
+function openPhotoZoom(){
+
+    document
+    .getElementById("photoZoomModal")
+    .classList.add("active");
+
+}
+
+
+
+function closePhotoZoom(){
+
+    document
+    .getElementById("photoZoomModal")
+    .classList.remove("active");
+
+}
 
 async function revealPage8(){
 
@@ -583,5 +600,133 @@ async function revealPage8(){
     document
         .querySelector("#page8 .page8-button")
         .classList.add("show");
+
+}
+
+
+/*=====================================
+PÁGINA IX
+======================================*/
+async function revealPage9(){
+
+
+    // Texto inicial
+
+    await wait(500);
+
+    document
+    .querySelector("#page9 .page9-intro")
+    .classList.add("show");
+
+
+
+    // Tarjetas de pequeños momentos
+
+    await wait(700);
+
+
+    const moments = document.querySelectorAll(
+        "#page9 .moment-card"
+    );
+
+
+    for(const card of moments){
+
+        card.classList.add("show");
+
+        await wait(450);
+
+    }
+
+
+
+    // Foto
+
+    await wait(900);
+
+
+    document
+    .querySelector("#page9 .page9-photo-frame")
+    .classList.add("show");
+
+
+
+    // Mensaje final
+
+    await wait(1000);
+
+
+    document
+    .querySelector("#page9 .page9-message")
+    .classList.add("show");
+
+
+
+    // Botón
+
+    await wait(1000);
+
+
+    document
+    .querySelector("#page9 .page9-button")
+    .classList.add("show");
+
+
+}
+/*=====================================
+PÁGINA X
+======================================*/
+function openLetter(){
+
+
+    const envelope = document.querySelector(".envelope");
+
+    const letter = document.querySelector(".love-letter");
+
+
+
+    envelope.classList.add("open");
+
+
+
+    setTimeout(()=>{
+
+        letter.classList.add("show");
+
+
+    },800);
+
+
+}
+
+function revealPage10(){
+
+
+const elements=document.querySelectorAll(
+
+"#page10 .page10-heart-moon, "+
+"#page10 .page10-title, "+
+"#page10 .page10-subtitle, "+
+"#page10 .page10-divider, "+
+"#page10 .page10-message, "+
+"#page10 .page10-button"
+
+);
+
+
+
+elements.forEach((el,index)=>{
+
+
+setTimeout(()=>{
+
+el.classList.add("show");
+
+
+},index*400);
+
+
+});
+
 
 }

@@ -1540,7 +1540,7 @@ PÁGINA III
 
     transform: translateY(-3px);
 
-    background: #a97d50;
+    background: #c89b54;
 
 }
 
@@ -2525,7 +2525,7 @@ PÁGINA V
 
     bottom: 18px;
 
-    border: 1px solid rgba(184,156,110,.22);
+    border: 1px solid rgba(184, 156, 110, .22);
 
     border-radius: 10px;
 
@@ -2579,13 +2579,13 @@ PÁGINA V
 
 #page6 .page6-divider {
 
-    width:120px;
+    width: 120px;
 
-    height:2px;
+    height: 2px;
 
-    background:#d8b36a;
+    background: #d8b36a;
 
-    margin:30px auto 45px;
+    margin: 30px auto 45px;
 
 }
 
@@ -2595,9 +2595,9 @@ PÁGINA V
 
 #page6 .page6-camera-box {
 
-    text-align:center;
+    text-align: center;
 
-    margin-top:50px;
+    margin-top: 50px;
 
 }
 
@@ -2609,27 +2609,27 @@ PÁGINA V
 #page6 #cameraContainer button {
 
 
-    display:block;
+    display: block;
 
-    margin:36px auto 35px;
+    margin: 36px auto 35px;
 
-    padding:16px 40px;
+    padding: 16px 40px;
 
-    border:none;
+    border: none;
 
-    border-radius:35px;
+    border-radius: 35px;
 
-    background:linear-gradient(45deg,#c89b54,#e4c98c);
+    background: linear-gradient(45deg, #c89b54, #e4c98c);
 
-    color:white;
+    color: white;
 
-    font-size:1rem;
+    font-size: 1rem;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    box-shadow:0 15px 25px rgba(0,0,0,.15);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
 
-    transition:.35s;
+    transition: .35s;
 
 }
 
@@ -2638,9 +2638,9 @@ PÁGINA V
 #page6 .page6-button:hover,
 #page6 #cameraContainer button:hover {
 
-    background:#a67d4d;
+    background: #a67d4d;
 
-    transform:translateY(-3px);
+    transform: translateY(-3px);
 
 }
 
@@ -2650,9 +2650,9 @@ PÁGINA V
 
 #page6 #cameraContainer {
 
-    text-align:center;
+    text-align: center;
 
-    margin-top:35px;
+    margin-top: 35px;
 
 }
 
@@ -2661,17 +2661,17 @@ PÁGINA V
 #page6 video {
 
 
-    width:280px;
+    width: 280px;
 
-    max-width:90%;
+    max-width: 90%;
 
-    border-radius:15px;
+    border-radius: 15px;
 
-    border:2px solid #d8b36a;
+    border: 2px solid #d8b36a;
 
-    padding:6px;
+    padding: 6px;
 
-    background:white;
+    background: white;
 
 }
 
@@ -2681,9 +2681,9 @@ PÁGINA V
 
 #page6 #photoResult {
 
-    text-align:center;
+    text-align: center;
 
-    margin-top:45px;
+    margin-top: 45px;
 
 }
 
@@ -2694,17 +2694,17 @@ PÁGINA V
 #page6 #capturedPhoto {
 
 
-    width:280px;
+    width: 280px;
 
-    max-width:90%;
+    max-width: 90%;
 
-    padding:12px;
+    padding: 12px;
 
-    background:white;
+    background: white;
 
-    border-radius:5px;
+    border-radius: 5px;
 
-    box-shadow:0 15px 30px rgba(0,0,0,.15);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .15);
 
 }
 
@@ -2715,19 +2715,19 @@ PÁGINA V
 #page6 .page6-message {
 
 
-    margin-top:35px;
+    margin-top: 35px;
 
-    text-align:center;
+    text-align: center;
 
-    font-family:'Cormorant Garamond',serif;
+    font-family: 'Cormorant Garamond', serif;
 
-    font-size:1.45rem;
+    font-size: 1.45rem;
 
-    color:#56453B;
+    color: #56453B;
 
-    font-style:italic;
+    font-style: italic;
 
-    line-height:1.8;
+    line-height: 1.8;
 
 }
 
@@ -2739,7 +2739,7 @@ PÁGINA V
 #page6 #photoResult {
 
 
-    animation:fadePage6 .8s ease;
+    animation: fadePage6 .8s ease;
 
 }
 
@@ -2750,18 +2750,18 @@ PÁGINA V
 
     from {
 
-        opacity:0;
+        opacity: 0;
 
-        transform:translateY(20px);
+        transform: translateY(20px);
 
     }
 
 
     to {
 
-        opacity:1;
+        opacity: 1;
 
-        transform:translateY(0);
+        transform: translateY(0);
 
     }
 
@@ -2771,48 +2771,48 @@ PÁGINA V
 
 /* Responsive */
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
 
     .paper-page6 {
 
-        width:95vw;
+        width: 95vw;
 
-        padding:28px 20px;
+        padding: 28px 20px;
 
     }
 
 
     .paper-page6::before {
 
-        top:12px;
+        top: 12px;
 
-        left:12px;
+        left: 12px;
 
-        right:12px;
+        right: 12px;
 
-        bottom:12px;
+        bottom: 12px;
 
     }
 
 
     #page6 .page6-title {
 
-        font-size:2rem;
+        font-size: 2rem;
 
     }
 
 
     #page6 .page6-subtitle {
 
-        font-size:1.2rem;
+        font-size: 1.2rem;
 
     }
 
 
     #page6 .page6-message {
 
-        font-size:1.3rem;
+        font-size: 1.3rem;
 
     }
 
@@ -2824,19 +2824,19 @@ PÁGINA V
 .photo-modal {
 
 
-    position:fixed;
+    position: fixed;
 
-    inset:0;
+    inset: 0;
 
-    background:rgba(0,0,0,.55);
+    background: rgba(0, 0, 0, .55);
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    z-index:9999;
+    z-index: 9999;
 
 
 }
@@ -2846,23 +2846,23 @@ PÁGINA V
 .photo-modal-content {
 
 
-    width:90%;
+    width: 90%;
 
-    max-width:420px;
+    max-width: 420px;
 
-    background:#fffaf2;
+    background: #fffaf2;
 
-    padding:35px;
+    padding: 35px;
 
-    border-radius:18px;
+    border-radius: 18px;
 
-    text-align:center;
+    text-align: center;
 
-    border:1px solid rgba(184,156,110,.35);
+    border: 1px solid rgba(184, 156, 110, .35);
 
-    box-shadow:0 25px 60px rgba(0,0,0,.35);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, .35);
 
-    animation:photoModal .5s ease;
+    animation: photoModal .5s ease;
 
 
 }
@@ -2872,11 +2872,11 @@ PÁGINA V
 .photo-modal-content h3 {
 
 
-    font-family:'Cormorant Garamond',serif;
+    font-family: 'Cormorant Garamond', serif;
 
-    font-size:2rem;
+    font-size: 2rem;
 
-    color:#d8b36a;
+    color: #d8b36a;
 
 
 }
@@ -2886,13 +2886,13 @@ PÁGINA V
 .photo-modal-content p {
 
 
-    font-family:'Cormorant Garamond',serif;
+    font-family: 'Cormorant Garamond', serif;
 
-    color:#56453B;
+    color: #56453B;
 
-    font-size:1.3rem;
+    font-size: 1.3rem;
 
-    line-height:1.6;
+    line-height: 1.6;
 
 
 }
@@ -2902,19 +2902,19 @@ PÁGINA V
 .photo-modal-buttons button {
 
 
-    padding:14px 25px;
+    padding: 14px 25px;
 
-    margin:10px;
+    margin: 10px;
 
-    border:none;
+    border: none;
 
-    border-radius:30px;
+    border-radius: 30px;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    color:white;
+    color: white;
 
-    background:linear-gradient(45deg,#c89b54,#e4c98c);
+    background: linear-gradient(45deg, #c89b54, #e4c98c);
 
 
 }
@@ -2924,7 +2924,7 @@ PÁGINA V
 .photo-modal-buttons button:last-child {
 
 
-    background:#8b6b4c;
+    background: #8b6b4c;
 
 
 }
@@ -2934,22 +2934,22 @@ PÁGINA V
 @keyframes photoModal {
 
 
-from{
+    from {
 
-opacity:0;
+        opacity: 0;
 
-transform:scale(.8);
+        transform: scale(.8);
 
-}
+    }
 
 
-to{
+    to {
 
-opacity:1;
+        opacity: 1;
 
-transform:scale(1);
+        transform: scale(1);
 
-}
+    }
 
 
 }
@@ -3109,9 +3109,9 @@ transform:scale(1);
 
     border-radius: 18px;
 
-    border: 1px solid rgba(184,156,110,.35);
+    border: 1px solid rgba(184, 156, 110, .35);
 
-    box-shadow: 0 15px 35px rgba(0,0,0,.18);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .18);
 
 }
 
@@ -3161,7 +3161,7 @@ transform:scale(1);
 
     cursor: pointer;
 
-    box-shadow: 0 15px 25px rgba(0,0,0,.15);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .15);
 
     transition: .35s;
 
@@ -3246,24 +3246,24 @@ transform:scale(1);
 PÁGINA VIII
 ======================================*/
 
-.paper-page8{
+.paper-page8 {
 
-    width:90vw;
+    width: 90vw;
 
-    max-width:820px;
+    max-width: 820px;
 
-    min-height:88vh;
+    min-height: 88vh;
 
-    height:auto;
+    height: auto;
 
-    padding:45px 55px;
+    padding: 45px 55px;
 
-    position:relative;
+    position: relative;
 
-    overflow:hidden;
+    overflow: hidden;
 
     background:
-    radial-gradient(circle at top,#253768 0%,#121b34 45%,#070b14 100%);
+        radial-gradient(circle at top, #253768 0%, #121b34 45%, #070b14 100%);
 
 }
 
@@ -3271,19 +3271,78 @@ PÁGINA VIII
 BORDE
 =====================*/
 
-.paper-page8::before{
+.paper-page8::before {
 
-    content:"";
+    content: "";
 
-    position:absolute;
+    position: absolute;
 
-    inset:18px;
+    inset: 18px;
 
-    border:1px solid rgba(214,185,120,.22);
+    border: 1px solid rgba(214, 185, 120, .22);
 
-    border-radius:10px;
+    border-radius: 10px;
 
-    pointer-events:none;
+    pointer-events: none;
+
+}
+
+.photo-zoom-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.85);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: all .4s ease;
+
+}
+
+
+.photo-zoom-modal.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+}
+
+
+
+.photo-zoom-image {
+
+    max-width: 90%;
+
+    max-height: 85%;
+
+    border-radius: 15px;
+
+    transform: scale(.7);
+
+    transition: transform .4s ease;
+
+    box-shadow: 0 0 40px rgba(255,255,255,.25);
+
+}
+
+
+
+.photo-zoom-modal.active .photo-zoom-image {
+
+    transform: scale(1);
 
 }
 
@@ -3291,21 +3350,21 @@ BORDE
 LUNA
 =====================*/
 
-#page8 .page8-moon{
+#page8 .page8-moon {
 
-    width:95px;
+    width: 95px;
 
-    height:95px;
+    height: 95px;
 
-    margin:15px auto 25px;
+    margin: 15px auto 25px;
 
-    border-radius:50%;
+    border-radius: 50%;
 
-    background:#fff7da;
+    background: #fff7da;
 
     box-shadow:
-    0 0 30px rgba(255,240,190,.6),
-    0 0 80px rgba(255,240,190,.25);
+        0 0 30px rgba(255, 240, 190, .6),
+        0 0 80px rgba(255, 240, 190, .25);
 
 }
 
@@ -3313,51 +3372,52 @@ LUNA
 ESTRELLAS
 =====================*/
 
-#page8 .page8-stars{
+#page8 .page8-stars {
 
-    position:absolute;
+    position: absolute;
 
-    inset:0;
+    inset: 0;
 
-    overflow:hidden;
+    overflow: hidden;
 
-    pointer-events:none;
-
-}
-
-#page8 .star{
-
-    position:absolute;
-
-    width:3px;
-
-    height:3px;
-
-    border-radius:50%;
-
-    background:white;
-
-    box-shadow:0 0 10px white;
-
-    animation:twinkle 4s infinite ease-in-out;
+    pointer-events: none;
 
 }
 
-@keyframes twinkle{
+#page8 .star {
 
-    0%,100%{
+    position: absolute;
 
-        opacity:.25;
+    width: 3px;
 
-        transform:scale(.8);
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    box-shadow: 0 0 10px white;
+
+    animation: twinkle 4s infinite ease-in-out;
+
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+
+        opacity: .25;
+
+        transform: scale(.8);
 
     }
 
-    50%{
+    50% {
 
-        opacity:1;
+        opacity: 1;
 
-        transform:scale(1.8);
+        transform: scale(1.8);
 
     }
 
@@ -3365,69 +3425,132 @@ ESTRELLAS
 
 /* posiciones */
 
-.s1{top:8%;left:12%;}
-.s2{top:13%;left:80%;}
-.s3{top:22%;left:30%;}
-.s4{top:30%;left:74%;}
-.s5{top:45%;left:12%;}
-.s6{top:56%;left:88%;}
-.s7{top:66%;left:18%;}
-.s8{top:72%;left:62%;}
-.s9{top:18%;left:52%;}
-.s10{top:82%;left:44%;}
-.s11{top:10%;left:60%;}
-.s12{top:36%;left:90%;}
-.s13{top:76%;left:12%;}
-.s14{top:58%;left:74%;}
-.s15{top:86%;left:84%;}
-.s16{top:65%;left:48%;}
+.s1 {
+    top: 8%;
+    left: 12%;
+}
+
+.s2 {
+    top: 13%;
+    left: 80%;
+}
+
+.s3 {
+    top: 22%;
+    left: 30%;
+}
+
+.s4 {
+    top: 30%;
+    left: 74%;
+}
+
+.s5 {
+    top: 45%;
+    left: 12%;
+}
+
+.s6 {
+    top: 56%;
+    left: 88%;
+}
+
+.s7 {
+    top: 66%;
+    left: 18%;
+}
+
+.s8 {
+    top: 72%;
+    left: 62%;
+}
+
+.s9 {
+    top: 18%;
+    left: 52%;
+}
+
+.s10 {
+    top: 82%;
+    left: 44%;
+}
+
+.s11 {
+    top: 10%;
+    left: 60%;
+}
+
+.s12 {
+    top: 36%;
+    left: 90%;
+}
+
+.s13 {
+    top: 76%;
+    left: 12%;
+}
+
+.s14 {
+    top: 58%;
+    left: 74%;
+}
+
+.s15 {
+    top: 86%;
+    left: 84%;
+}
+
+.s16 {
+    top: 65%;
+    left: 48%;
+}
 
 /*====================
 TÍTULO
 =====================*/
 
-#page8 .page8-title{
+#page8 .page8-title {
 
-    text-align:center;
+    text-align: center;
 
-    font-family:'Cormorant Garamond',serif;
+    font-family: 'Cormorant Garamond', serif;
 
-    font-size:2.7rem;
+    font-size: 2.7rem;
 
-    color:#f4e6c4;
+    color: #f4e6c4;
 
-    margin-top:15px;
-
-}
-
-#page8 .page8-subtitle{
-
-    width:85%;
-
-    margin:18px auto;
-
-    text-align:center;
-
-    line-height:2;
-
-    color:#d9d9d9;
-
-    font-style:italic;
+    margin-top: 15px;
 
 }
 
-#page8 .page8-divider{
+#page8 .page8-subtitle {
 
-    width:140px;
+    width: 85%;
 
-    height:2px;
+    margin: 18px auto;
 
-    margin:35px auto 55px;
+    text-align: center;
 
-    background:linear-gradient(to right,
-    transparent,
-    #d8b36a,
-    transparent);
+    line-height: 2;
+
+    color: #d9d9d9;
+
+    font-style: italic;
+
+}
+
+#page8 .page8-divider {
+
+    width: 140px;
+
+    height: 2px;
+
+    margin: 35px auto 55px;
+
+    background: linear-gradient(to right,
+            transparent,
+            #d8b36a,
+            transparent);
 
 }
 
@@ -3435,51 +3558,51 @@ TÍTULO
 CIELO
 =====================*/
 
-#page8 .page8-sky{
+#page8 .page8-sky {
 
-    display:flex;
+    display: flex;
 
-    justify-content:space-between;
+    justify-content: space-between;
 
-    align-items:flex-start;
+    align-items: flex-start;
 
-    gap:45px;
+    gap: 45px;
 
-    margin-bottom:60px;
-
-}
-
-#page8 .constellation{
-
-    flex:1;
+    margin-bottom: 60px;
 
 }
 
-#page8 .constellation-name{
+#page8 .constellation {
 
-    text-align:center;
-
-    font-family:'Cormorant Garamond',serif;
-
-    font-size:2rem;
-
-    color:#ecd8a5;
-
-    margin-bottom:30px;
-
-    letter-spacing:2px;
+    flex: 1;
 
 }
 
-#page8 .constellation-box{
+#page8 .constellation-name {
 
-    position:relative;
+    text-align: center;
 
-    width:260px;
+    font-family: 'Cormorant Garamond', serif;
 
-    height:260px;
+    font-size: 2rem;
 
-    margin:auto;
+    color: #ecd8a5;
+
+    margin-bottom: 30px;
+
+    letter-spacing: 2px;
+
+}
+
+#page8 .constellation-box {
+
+    position: relative;
+
+    width: 260px;
+
+    height: 260px;
+
+    margin: auto;
 
 }
 
@@ -3487,21 +3610,20 @@ CIELO
 CONSTELACIONES
 ======================================*/
 
-#page8 .dot{
+#page8 .dot {
 
-    position:absolute;
+    position: absolute;
 
-    width:8px;
+    width: 8px;
+    height: 8px;
 
-    height:8px;
+    border-radius: 50%;
 
-    border-radius:50%;
-
-    background:#fff7dc;
+    background: #fff7dc;
 
     box-shadow:
-    0 0 10px #fff,
-    0 0 25px rgba(255,228,160,.8);
+        0 0 10px #fff,
+        0 0 25px rgba(255, 228, 160, .8);
 
 }
 
@@ -3509,23 +3631,104 @@ CONSTELACIONES
 PISCIS
 =====================*/
 
-.constellation-piscis .p1{top:25px;left:35px;}
-.constellation-piscis .p2{top:70px;left:105px;}
-.constellation-piscis .p3{top:120px;left:55px;}
-.constellation-piscis .p4{top:165px;left:130px;}
-.constellation-piscis .p5{top:210px;left:70px;}
-.constellation-piscis .p6{top:120px;left:190px;}
+.constellation-piscis .p1 {
+    top: 20px;
+    left: 130px;
+}
+
+
+.constellation-piscis .p2 {
+    top: 70px;
+    left: 90px;
+}
+
+
+.constellation-piscis .p3 {
+    top: 120px;
+    left: 35px;
+}
+
+
+.constellation-piscis .p4 {
+    top: 120px;
+    left: 130px;
+}
+
+
+.constellation-piscis .p5 {
+    top: 120px;
+    left: 225px;
+}
+
+
+.constellation-piscis .p6 {
+    top: 170px;
+    left: 75px;
+}
+
+
+.constellation-piscis .p7 {
+    top: 210px;
+    left: 130px;
+}
+
+
+.constellation-piscis .p8 {
+    top: 250px;
+    left: 175px;
+}
+
+
+.constellation-piscis .p9 {
+    top: 285px;
+    left: 220px;
+}
+
+
+.constellation-piscis .p10 {
+    top: 170px;
+    left: 190px;
+}
+
 
 /*====================
 CÁNCER
 =====================*/
 
-.constellation-cancer .c1{top:40px;left:180px;}
-.constellation-cancer .c2{top:85px;left:120px;}
-.constellation-cancer .c3{top:120px;left:200px;}
-.constellation-cancer .c4{top:165px;left:95px;}
-.constellation-cancer .c5{top:205px;left:160px;}
-.constellation-cancer .c6{top:235px;left:115px;}
+.constellation-cancer .c1{
+    top:25px;
+    left:140px;
+}
+
+
+.constellation-cancer .c2{
+    top:90px;
+    left:140px;
+}
+
+
+.constellation-cancer .c3{
+    top:90px;
+    left:45px;
+}
+
+
+.constellation-cancer .c4{
+    top:90px;
+    left:230px;
+}
+
+
+.constellation-cancer .c5{
+    top:165px;
+    left:90px;
+}
+
+
+.constellation-cancer .c6{
+    top:220px;
+    left:150px;
+}
 
 /*====================
 LÍNEAS
@@ -3545,137 +3748,183 @@ LÍNEAS
 
 }
 
+
 /* Piscis */
 
 .lp1{
-
-    top:30px;
-    left:40px;
-    width:82px;
-    transform:rotate(28deg);
-
+    top:28px;
+    left:135px;
+    width:75px;
+    transform:rotate(145deg);
 }
+
 
 .lp2{
-
-    top:82px;
-    left:74px;
-    width:62px;
-    transform:rotate(118deg);
-
+    top:120px;
+    left:45px;
+    width:85px;
+    transform:rotate(0deg);
 }
+
 
 .lp3{
-
-    top:126px;
-    left:63px;
+    top:120px;
+    left:135px;
     width:90px;
-    transform:rotate(28deg);
-
+    transform:rotate(0deg);
 }
+
 
 .lp4{
-
-    top:176px;
-    left:98px;
-    width:70px;
-    transform:rotate(118deg);
-
+    top:125px;
+    left:55px;
+    width:75px;
+    transform:rotate(35deg);
 }
+
 
 .lp5{
-
-    top:124px;
-    left:136px;
-    width:72px;
-    transform:rotate(-22deg);
-
+    top:175px;
+    left:80px;
+    width:65px;
+    transform:rotate(35deg);
 }
+
+
+.lp6{
+    top:215px;
+    left:135px;
+    width:65px;
+    transform:rotate(35deg);
+}
+
+
+.lp7{
+    top:250px;
+    left:180px;
+    width:55px;
+    transform:rotate(35deg);
+}
+
+
+.lp8{
+    top:170px;
+    left:190px;
+    width:70px;
+    transform:rotate(-35deg);
+}
+
+
+.lp9{
+    top:120px;
+    left:140px;
+    width:80px;
+    transform:rotate(90deg);
+}
+
 
 /* Cáncer */
-
 .lc1{
-
-    top:48px;
-    left:124px;
-    width:70px;
-    transform:rotate(140deg);
-
+    top:35px;
+    left:145px;
+    width:65px;
+    transform:rotate(90deg);
 }
+
 
 .lc2{
-
-    top:95px;
-    left:126px;
+    top:90px;
+    left:55px;
     width:85px;
-    transform:rotate(32deg);
-
+    transform:rotate(0deg);
 }
+
 
 .lc3{
-
-    top:135px;
-    left:120px;
-    width:92px;
-    transform:rotate(138deg);
-
+    top:90px;
+    left:145px;
+    width:85px;
+    transform:rotate(0deg);
 }
+
 
 .lc4{
-
-    top:175px;
-    left:102px;
-    width:82px;
-    transform:rotate(35deg);
-
+    top:95px;
+    left:60px;
+    width:75px;
+    transform:rotate(45deg);
 }
 
+
 .lc5{
+    top:95px;
+    left:220px;
+    width:75px;
+    transform:rotate(135deg);
+}
 
-    top:214px;
-    left:116px;
+
+.lc6{
+    top:165px;
+    left:95px;
+    width:70px;
+    transform:rotate(35deg);
+}
+
+
+.lc7{
+    top:165px;
+    left:150px;
+    width:65px;
+    transform:rotate(145deg);
+}
+
+
+.lc8{
+    top:220px;
+    left:150px;
     width:45px;
-    transform:rotate(115deg);
-
+    transform:rotate(90deg);
 }
 
 /*=====================================
 CORAZÓN
 ======================================*/
 
-#page8 .page8-center{
+#page8 .page8-center {
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    justify-content: center;
 
-    align-items:center;
+    align-items: center;
 
-    padding-top:95px;
-
-}
-
-#page8 .page8-heart{
-
-    font-size:42px;
-
-    animation:heartFloat 3s ease-in-out infinite;
-
-    filter:drop-shadow(0 0 15px rgba(255,170,170,.6));
+    padding-top: 95px;
 
 }
 
-@keyframes heartFloat{
+#page8 .page8-heart {
 
-    0%,100%{
+    font-size: 42px;
 
-        transform:translateY(0);
+    animation: heartFloat 3s ease-in-out infinite;
+
+    filter: drop-shadow(0 0 15px rgba(255, 170, 170, .6));
+
+}
+
+@keyframes heartFloat {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
 
     }
 
-    50%{
+    50% {
 
-        transform:translateY(-10px);
+        transform: translateY(-10px);
 
     }
 
@@ -3685,25 +3934,25 @@ CORAZÓN
 MENSAJE
 ======================================*/
 
-#page8 .page8-message{
+#page8 .page8-message {
 
-    width:85%;
+    width: 85%;
 
-    margin:60px auto 45px;
+    margin: 60px auto 45px;
 
-    text-align:center;
+    text-align: center;
 
 }
 
-#page8 .page8-message p{
+#page8 .page8-message p {
 
-    color:#ececec;
+    color: #ececec;
 
-    line-height:2.1;
+    line-height: 2.1;
 
-    margin:15px 0;
+    margin: 15px 0;
 
-    font-size:1.1rem;
+    font-size: 1.1rem;
 
 }
 
@@ -3711,48 +3960,48 @@ MENSAJE
 FOTO
 ======================================*/
 
-#page8 .page8-photo-frame{
+#page8 .page8-photo-frame {
 
-    width:320px;
+    width: 320px;
 
-    margin:0 auto;
+    margin: 0 auto;
 
-    padding:12px;
+    padding: 12px;
 
-    background:white;
+    background: white;
 
-    border-radius:12px;
+    border-radius: 12px;
 
     box-shadow:
-    0 20px 45px rgba(0,0,0,.35);
+        0 20px 45px rgba(0, 0, 0, .35);
 
-    transform:rotate(-2deg);
-
-}
-
-#page8 .page8-photo{
-
-    width:100%;
-
-    display:block;
-
-    border-radius:8px;
+    transform: rotate(-2deg);
 
 }
 
-#page8 .page8-photo-text{
+#page8 .page8-photo {
 
-    margin:35px auto 55px;
+    width: 100%;
 
-    width:80%;
+    display: block;
 
-    text-align:center;
+    border-radius: 8px;
 
-    color:#f2e8ca;
+}
 
-    line-height:2;
+#page8 .page8-photo-text {
 
-    font-style:italic;
+    margin: 35px auto 55px;
+
+    width: 80%;
+
+    text-align: center;
+
+    color: #f2e8ca;
+
+    line-height: 2;
+
+    font-style: italic;
 
 }
 
@@ -3760,35 +4009,35 @@ FOTO
 BOTÓN
 ======================================*/
 
-#page8 .page8-button{
+#page8 .page8-button {
 
-    display:block;
+    display: block;
 
-    margin:20px auto 35px;
+    margin: 20px auto 35px;
 
-    padding:16px 42px;
+    padding: 16px 42px;
 
-    border:none;
+    border: none;
 
-    border-radius:40px;
+    border-radius: 40px;
 
-    background:#d1aa63;
+    background: #d1aa63;
 
-    color:#fff;
+    color: #fff;
 
-    font-size:1rem;
+    font-size: 1rem;
 
-    cursor:pointer;
+    cursor: pointer;
 
-    transition:.35s;
+    transition: .35s;
 
 }
 
-#page8 .page8-button:hover{
+#page8 .page8-button:hover {
 
-    background:#bb9553;
+    background: #bb9553;
 
-    transform:translateY(-3px);
+    transform: translateY(-3px);
 
 }
 
@@ -3796,71 +4045,71 @@ BOTÓN
 RESPONSIVE
 ======================================*/
 
-@media(max-width:768px){
+@media(max-width:768px) {
 
-    .paper-page8{
+    .paper-page8 {
 
-        width:95vw;
+        width: 95vw;
 
-        padding:30px 22px;
-
-    }
-
-    .paper-page8::before{
-
-        inset:12px;
+        padding: 30px 22px;
 
     }
 
-    #page8 .page8-title{
+    .paper-page8::before {
 
-        font-size:2rem;
-
-    }
-
-    #page8 .page8-subtitle{
-
-        width:100%;
-
-        font-size:.95rem;
+        inset: 12px;
 
     }
 
-    #page8 .page8-sky{
+    #page8 .page8-title {
 
-        flex-direction:column;
-
-        align-items:center;
-
-        gap:60px;
+        font-size: 2rem;
 
     }
 
-    #page8 .page8-center{
+    #page8 .page8-subtitle {
 
-        padding:0;
+        width: 100%;
 
-    }
-
-    #page8 .constellation-box{
-
-        width:230px;
-
-        height:230px;
+        font-size: .95rem;
 
     }
 
-    #page8 .page8-photo-frame{
+    #page8 .page8-sky {
 
-        width:100%;
+        flex-direction: column;
 
-        max-width:300px;
+        align-items: center;
+
+        gap: 60px;
 
     }
 
-    #page8 .page8-message{
+    #page8 .page8-center {
 
-        width:100%;
+        padding: 0;
+
+    }
+
+    #page8 .constellation-box {
+
+        width: 230px;
+
+        height: 260px;
+
+    }
+
+    #page8 .page8-photo-frame {
+
+        width: 100%;
+
+        max-width: 300px;
+
+    }
+
+    #page8 .page8-message {
+
+        width: 100%;
 
     }
 
@@ -3870,73 +4119,280 @@ RESPONSIVE
 ANIMACIÓN CONSTELACIONES
 ======================================*/
 
-#page8 .dot{
+#page8 .dot {
 
-    opacity:0;
+    opacity: 0;
 
-    transform:scale(.2);
-
-    transition:
-    opacity .5s ease,
-    transform .5s ease;
-
-}
-
-#page8 .dot.show{
-
-    opacity:1;
-
-    transform:scale(1);
-
-}
-
-#page8 .link{
-
-    opacity:0;
-
-    transform-origin:left center;
+    transform: scale(.2);
 
     transition:
-    opacity .7s ease,
-    transform .7s ease;
+        opacity .5s ease,
+        transform .5s ease;
 
 }
 
-#page8 .link.show{
+#page8 .dot.show {
 
-    opacity:.9;
+    opacity: 1;
+
+    transform: scale(1);
 
 }
 
-#page8 .page8-heart{
+#page8 .link {
+
+    opacity: 0;
+
+    transform-origin: left center;
+
+    transition:
+        opacity .7s ease,
+        transform .7s ease;
+
+}
+
+#page8 .link.show {
+
+    opacity: .9;
+
+}
+
+#page8 .page8-heart {
+
+    opacity: 0;
+
+    transform: scale(.2);
+
+}
+
+#page8 .page8-heart.show {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+    transition: 1s;
+
+}
+
+#page8 .page8-message {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: 1s;
+
+}
+
+#page8 .page8-message.show {
+
+    opacity: 1;
+
+    transform: none;
+
+}
+
+#page8 .page8-photo-frame {
+
+    opacity: 0;
+
+    transform: scale(.85) rotate(-5deg);
+
+    transition: 1.2s;
+
+}
+
+#page8 .page8-photo-frame.show {
+
+    opacity: 1;
+
+    transform: scale(1) rotate(-2deg);
+
+}
+
+#page8 .page8-button {
+
+    opacity: 0;
+
+    transform: translateY(30px);
+
+}
+
+#page8 .page8-button.show {
+
+    opacity: 1;
+
+    transform: none;
+
+    transition: .8s;
+
+}
+
+/*====================
+CONTENIDO PEQUEÑOS MOMENTOS
+=====================*/
+
+.page-scroll{
+    overflow-y:auto;
+}
+
+
+.paper-page9{
+
+    width:90vw;
+    max-width:760px;
+
+    min-height:88vh;
+    height:auto;
+
+    padding:45px 55px;
+
+    position:relative;
+
+    overflow:visible;
+
+}
+
+#page9 .page9-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:35px;
+
+}
+
+
+
+#page9 .page9-intro{
+
+    text-align:center;
+
+    color:#5b5047;
+
+    font-size:1.08rem;
+
+    line-height:2;
+
+}
+
+
+
+#page9 .page9-moments{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+#page9 .moment-card{
+
+    width:170px;
+
+    padding:25px 15px;
+
+    text-align:center;
+
+    background:#fffaf0;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+
+    font-size:1.8rem;
+
+}
+
+
+
+#page9 .moment-card p{
+
+    font-size:.95rem;
+
+    color:#56453B;
+
+    line-height:1.7;
+
+}
+
+
+
+#page9 .page9-photo-frame{
+
+    width: 100%;
+
+    max-width: 100%;
+
+    overflow: hidden;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 35px auto;
+
+}
+
+
+
+#page9 .page9-photo{
+
+   width: 100%;
+
+    max-width: 600px;
+
+    height: auto;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    display: block;
+}
+
+
+
+#page9 .page9-message{
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:1.35rem;
+
+    color:#56453B;
+
+    font-style:italic;
+
+    line-height:1.9;
+
+}
+#page9 .page9-intro,
+#page9 .moment-card,
+#page9 .page9-photo-frame,
+#page9 .page9-message{
 
     opacity:0;
 
-    transform:scale(.2);
+    transform:translateY(25px);
+
+    transition:1s ease;
 
 }
 
-#page8 .page8-heart.show{
 
-    opacity:1;
-
-    transform:scale(1);
-
-    transition:1s;
-
-}
-
-#page8 .page8-message{
-
-    opacity:0;
-
-    transform:translateY(20px);
-
-    transition:1s;
-
-}
-
-#page8 .page8-message.show{
+#page9 .show{
 
     opacity:1;
 
@@ -3944,38 +4400,634 @@ ANIMACIÓN CONSTELACIONES
 
 }
 
-#page8 .page8-photo-frame{
+#page9 .page9-intro,
+#page9 .moment-card,
+#page9 .page9-photo-frame,
+#page9 .page9-message{
 
     opacity:0;
 
-    transform:scale(.85) rotate(-5deg);
+    transform:translateY(25px);
 
-    transition:1.2s;
+    transition:1s ease;
 
 }
 
-#page8 .page8-photo-frame.show{
+
+#page9 .show{
 
     opacity:1;
 
-    transform:scale(1) rotate(-2deg);
+    transform:translateY(0);
 
 }
 
-#page8 .page8-button{
+#page9 .page9-button {
 
-    opacity:0;
+    opacity: 0;
 
-    transform:translateY(30px);
+    transform: translateY(30px);
 
 }
 
-#page8 .page8-button.show{
+#page9 .page9-button.show {
 
-    opacity:1;
+    opacity: 1;
 
-    transform:none;
+    transform: none;
 
-    transition:.8s;
+    transition: .8s;
+
+}
+
+#page9 .page9-button {
+
+    display: block;
+
+    margin: 20px auto 35px;
+
+    padding: 16px 42px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: #d1aa63;
+
+    color: #fff;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+}
+
+#page9 .page9-button:hover {
+
+    background: #bb9553;
+
+    transform: translateY(-3px);
+
+}
+
+#page9 .page9-button {
+
+    display: block;
+
+    margin: 20px auto 35px;
+
+    padding: 16px 42px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background: #d1aa63;
+
+    color: #fff;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    transition: .35s;
+
+}
+
+#page9 .page9-button:hover {
+
+    background: #bb9553;
+
+    transform: translateY(-3px);
+
+}
+
+/*=====================================
+PÁGINA X - CARTA DE AMOR
+======================================*/
+/*=====================================
+PÁGINA X
+======================================*/
+
+
+.paper-page10{
+
+
+    width:90vw;
+
+    max-width:820px;
+
+    min-height:88vh;
+
+    height:auto;
+
+
+    padding:45px 55px;
+
+
+    position:relative;
+
+
+    overflow:hidden;
+
+
+    background:
+
+    radial-gradient(circle at top,
+
+    #8b2635 0%,
+
+    #451522 45%,
+
+    #12060b 100%);
+
+
+}
+
+
+
+
+
+.paper-page10::before{
+
+
+    content:"";
+
+
+    position:absolute;
+
+
+    inset:18px;
+
+
+    border:
+
+    1px solid rgba(220,180,90,.35);
+
+
+    border-radius:10px;
+
+
+    pointer-events:none;
+
+
+}
+
+
+
+
+
+
+/*=====================================
+ESTRELLAS
+======================================*/
+
+
+.page10-stars{
+
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+
+}
+
+
+
+
+#page10 .star{
+
+
+    position:absolute;
+
+
+    width:3px;
+
+    height:3px;
+
+
+    background:#ffd98a;
+
+
+    border-radius:50%;
+
+
+    box-shadow:
+
+    0 0 10px #ffd98a,
+
+    0 0 25px rgba(255,200,100,.8);
+
+
+    animation:twinkle10 4s infinite;
+
+
+}
+
+
+
+
+
+@keyframes twinkle10{
+
+
+    0%,100%{
+
+        opacity:.3;
+
+        transform:scale(.8);
+
+    }
+
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.8);
+
+    }
+
+
+}
+
+
+
+/* posiciones */
+
+
+#page10 .s1{
+top:10%;
+left:15%;
+}
+
+#page10 .s2{
+top:20%;
+right:20%;
+}
+
+#page10 .s3{
+top:35%;
+left:8%;
+}
+
+#page10 .s4{
+top:50%;
+right:10%;
+}
+
+#page10 .s5{
+bottom:20%;
+left:20%;
+}
+
+#page10 .s6{
+bottom:15%;
+right:25%;
+}
+
+#page10 .s7{
+top:15%;
+left:55%;
+}
+
+#page10 .s8{
+top:70%;
+left:50%;
+}
+
+
+
+
+
+/*=====================================
+CORAZÓN LUNA
+======================================*/
+
+
+.page10-heart-moon{
+
+
+    width:95px;
+
+    height:95px;
+
+
+    margin:15px auto 25px;
+
+
+    border-radius:50%;
+
+
+    background:
+
+    radial-gradient(circle at 30% 30%,
+
+    #ffb6b6,
+
+    #d32f55 55%,
+
+    #7a1025);
+
+
+
+    display:flex;
+
+
+    justify-content:center;
+
+
+    align-items:center;
+
+
+
+    font-size:42px;
+
+
+
+    box-shadow:
+
+    0 0 30px rgba(255,120,140,.8),
+
+    0 0 80px rgba(255,70,100,.35);
+
+
+
+    animation:
+
+    heartFloat10 4s infinite;
+
+
+}
+
+
+
+@keyframes heartFloat10{
+
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+
+}
+
+
+
+
+
+/*=====================================
+TEXTOS
+======================================*/
+
+
+.page10-title{
+
+
+    text-align:center;
+
+
+    font-family:'Cormorant Garamond',serif;
+
+
+    font-size:2.7rem;
+
+
+    color:#f6dfad;
+
+
+}
+
+
+
+.page10-subtitle{
+
+
+    width:85%;
+
+
+    margin:20px auto;
+
+
+    text-align:center;
+
+
+    color:#eadada;
+
+
+    font-style:italic;
+
+
+    line-height:2;
+
+
+}
+
+
+
+
+
+.page10-divider{
+
+
+    width:140px;
+
+
+    height:2px;
+
+
+    margin:35px auto 45px;
+
+
+    background:
+
+    linear-gradient(
+
+    to right,
+
+    transparent,
+
+    #d8aa55,
+
+    transparent);
+
+}
+
+
+
+
+
+/*=====================================
+MENSAJE
+======================================*/
+
+
+.page10-message{
+
+
+    width:85%;
+
+
+    margin:auto;
+
+
+    text-align:center;
+
+
+    font-family:'Cormorant Garamond',serif;
+
+
+    font-size:1.35rem;
+
+
+    color:#f4e5d0;
+
+
+    line-height:2;
+
+
+    font-style:italic;
+
+
+}
+
+
+
+
+
+
+/*=====================================
+BOTÓN
+======================================*/
+
+
+.page10-button{
+
+
+    display:block;
+
+
+    margin:45px auto 30px;
+
+
+    padding:16px 42px;
+
+
+    border:none;
+
+
+    border-radius:40px;
+
+
+    background:#d1aa63;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+
+    font-size:1rem;
+
+
+    transition:.3s;
+
+
+}
+
+
+
+.page10-button:hover{
+
+
+    background:#bb9553;
+
+
+    transform:translateY(-3px);
+
+
+}
+
+
+
+
+
+
+/*=====================================
+RESPONSIVE
+======================================*/
+
+
+@media(max-width:768px){
+
+
+.paper-page10{
+
+
+    width:95vw;
+
+
+    padding:30px 22px;
+
+
+}
+
+
+
+.page10-title{
+
+
+    font-size:2rem;
+
+
+}
+
+
+
+.page10-message{
+
+
+    width:100%;
+
+
+}
+
+
+}
+
+#page10 .page10-heart-moon,
+#page10 .page10-title,
+#page10 .page10-subtitle,
+#page10 .page10-divider,
+#page10 .page10-message,
+#page10 .page10-button{
+
+
+opacity:0;
+
+transform:translateY(25px);
+
+transition:1s ease;
+
+
+}
+
+
+
+#page10 .show{
+
+opacity:1;
+
+transform:none;
 
 }

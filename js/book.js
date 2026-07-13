@@ -175,11 +175,21 @@ function nextPage(currentPage, nextPage) {
         revealPage5();
     }
 
-    if(nextPage==="page8"){
+    if (nextPage === "page8") {
 
-    revealPage8();
+        revealPage8();
 
-}
+    }
+    if (nextPage === "page9") {
+
+        revealPage9();
+
+    }
+        if (nextPage === "page10") {
+
+        revealPage10();
+
+    }
 }
 
 function openFireModal() {
