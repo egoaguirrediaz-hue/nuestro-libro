@@ -185,9 +185,15 @@ function nextPage(currentPage, nextPage) {
         revealPage9();
 
     }
-        if (nextPage === "page10") {
+    if (nextPage === "page10") {
 
         revealPage10();
+
+    }
+
+    if (nextPage === "page12") {
+
+        revealPage12();
 
     }
 }

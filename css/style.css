@@ -5031,3 +5031,916 @@ opacity:1;
 transform:none;
 
 }
+
+/* =====================================================
+   PAGE 11 - SI PUDIERA PEDIR UN DESEO
+===================================================== */
+
+
+.paper-page11 {
+
+    position: relative;
+
+    height:auto;
+
+    min-height:88vh;
+
+    overflow:visible;
+
+}
+
+
+/* ==========================
+   TITULO
+========================== */
+
+.page11-title {
+
+    text-align: center;
+
+    font-family: "Georgia", serif;
+
+    font-size: 3rem;
+
+    color: #d0a84b;
+
+    margin: 15px auto 10px;
+
+    line-height: 1.2;
+
+    letter-spacing: 1px;
+
+    max-width: 650px;
+
+}
+
+
+
+/* ==========================
+   SUBTITULO
+========================== */
+
+
+.page11-subtitle {
+
+    text-align: center;
+
+    font-family: "Georgia", serif;
+
+    font-size: 1.15rem;
+
+    font-style: italic;
+
+    color: #80685a;
+
+    max-width: 560px;
+
+    margin: 10px auto 25px;
+
+    line-height: 1.5;
+
+}
+
+
+
+/* ==========================
+   DIVIDER
+========================== */
+
+
+.page11-divider {
+
+    width: 130px;
+
+    height: 2px;
+
+    background: #d5b77a;
+
+    margin: 20px auto 30px;
+
+    border-radius:20px;
+
+}
+
+
+
+
+
+/* ==========================
+   CONTENIDO
+========================== */
+
+
+.page11-content {
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:0 25px 35px;
+
+}
+
+
+
+
+.page11-intro {
+
+
+    text-align:center;
+
+    max-width:600px;
+
+    font-family:"Georgia", serif;
+
+    font-size:1.25rem;
+
+    line-height:1.8;
+
+    color:#4d3b32;
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+/* ==========================
+   TARJETAS DE DESEOS
+========================== */
+
+
+.page11-wishes {
+
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:20px;
+
+    max-width:650px;
+
+    width:100%;
+
+    margin:20px auto 35px;
+
+
+}
+
+
+
+.wish-card {
+
+
+    background:rgba(255,255,255,.65);
+
+
+    border:1px solid rgba(190,150,90,.25);
+
+
+    border-radius:18px;
+
+
+    padding:25px 18px;
+
+
+    text-align:center;
+
+
+    font-size:2rem;
+
+
+    color:#c08b35;
+
+
+    box-shadow:
+
+    0 10px 25px rgba(100,70,40,.10);
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+.wish-card:hover {
+
+
+    transform:translateY(-5px);
+
+
+}
+
+
+
+
+.wish-card p {
+
+
+    margin-top:15px;
+
+
+    font-family:"Georgia",serif;
+
+
+    font-size:1rem;
+
+
+    line-height:1.6;
+
+
+    color:#5d4638;
+
+
+}
+
+
+
+
+
+/* ==========================
+   FOTO
+========================== */
+
+
+.page11-photo-frame {
+
+
+    background:white;
+
+    padding:12px;
+
+    border-radius:15px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+
+    transform:rotate(-2deg);
+
+    margin:20px auto;
+
+
+}
+
+
+
+.page11-photo {
+
+
+    display:block;
+
+    width:280px;
+
+    max-width:100%;
+
+    border-radius:10px;
+
+
+}
+
+
+
+
+
+/* ==========================
+   MENSAJE FINAL
+========================== */
+
+
+.page11-message {
+
+
+    text-align:center;
+
+
+    max-width:620px;
+
+
+    margin:30px auto;
+
+
+    font-family:"Georgia",serif;
+
+
+    font-size:1.2rem;
+
+
+    color:#4a372c;
+
+
+    line-height:1.9;
+
+
+}
+
+
+
+
+
+.page11-message strong {
+
+
+    color:#c08b35;
+
+
+}
+
+
+
+
+
+/* ==========================
+   BOTON
+========================== */
+
+
+.page11-button {
+
+
+    display:block;
+
+
+    margin:25px auto;
+
+
+    padding:14px 35px;
+
+
+    border:none;
+
+
+    border-radius:30px;
+
+
+    background:#b58b4c;
+
+
+    color:white;
+
+
+    font-family:"Georgia",serif;
+
+
+    font-size:1rem;
+
+
+    cursor:pointer;
+
+
+    box-shadow:0 8px 20px rgba(120,80,30,.25);
+
+
+    transition:.3s ease;
+
+
+}
+
+
+
+.page11-button:hover {
+
+
+    transform:scale(1.05);
+
+
+    background:#967039;
+
+
+}
+
+
+
+
+
+/* ==========================
+   ANIMACION
+========================== */
+
+
+.page11-content > * {
+
+
+    animation:page11Appear 1s ease forwards;
+
+
+}
+
+
+
+
+@keyframes page11Appear {
+
+
+    from {
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+
+}
+
+
+
+
+
+/* ==========================
+   MOBILE
+========================== */
+
+
+@media(max-width:700px){
+
+
+    .page11-title {
+
+
+        font-size:2rem;
+
+    }
+
+
+
+    .page11-subtitle {
+
+
+        font-size:1rem;
+
+        padding:0 15px;
+
+    }
+
+
+
+    .page11-intro {
+
+
+        font-size:1.05rem;
+
+    }
+
+
+
+    .page11-wishes {
+
+
+        grid-template-columns:1fr;
+
+    }
+
+
+
+    .wish-card {
+
+
+        padding:20px;
+
+    }
+
+
+
+    .page11-message {
+
+
+        font-size:1.05rem;
+
+    }
+
+
+}
+/*======================================================
+PAGE 12
+======================================================*/
+
+.paper-page12{
+
+    width:90vw;
+
+    max-width:760px;
+
+    min-height:88vh;
+
+    height:auto;
+
+    padding:45px 55px;
+
+    position:relative;
+
+    overflow:visible;
+
+}
+
+/*------------------------------------
+BORDE DEL PAPEL
+------------------------------------*/
+
+.paper-page12::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:18px;
+
+    border:1px solid rgba(184,156,110,.22);
+
+    border-radius:10px;
+
+    pointer-events:none;
+
+}
+
+/*------------------------------------
+TÍTULO
+------------------------------------*/
+
+.page12-title{
+
+    margin-top:20px;
+
+    text-align:center;
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:2.8rem;
+
+    color:#c69b49;
+
+}
+
+/*------------------------------------
+SUBTÍTULO
+------------------------------------*/
+
+.page12-subtitle{
+
+    max-width:620px;
+
+    margin:18px auto;
+
+    text-align:center;
+
+    line-height:1.9;
+
+    color:#7f6658;
+
+    font-style:italic;
+
+}
+
+/*------------------------------------
+DIVISOR
+------------------------------------*/
+
+.page12-divider{
+
+    width:120px;
+
+    height:2px;
+
+    margin:30px auto 45px;
+
+    background:#d8b36a;
+
+}
+
+/*------------------------------------
+CONTENIDO
+------------------------------------*/
+
+.page12-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:45px;
+
+}
+
+/*------------------------------------
+INTRODUCCIÓN
+------------------------------------*/
+
+.page12-intro{
+
+    max-width:630px;
+
+    margin:auto;
+
+    text-align:center;
+
+    line-height:2;
+
+    font-size:1.15rem;
+
+    color:#4d3b32;
+
+    font-family:Georgia,serif;
+
+}
+
+/*------------------------------------
+CONTADOR
+------------------------------------*/
+
+.love-counter{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:22px;
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/*------------------------------------
+TARJETAS
+------------------------------------*/
+
+.counter-card{
+
+    background:#fffdf9;
+
+    border:1px solid rgba(212,178,122,.25);
+
+    border-radius:18px;
+
+    padding:28px 15px;
+
+    text-align:center;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.4s;
+
+    opacity:0;
+
+    transform:translateY(30px);
+
+}
+
+.counter-card.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+.counter-card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/*------------------------------------
+NÚMEROS
+------------------------------------*/
+
+.counter-card span{
+
+    display:block;
+
+    font-size:3.2rem;
+
+    color:#c08b35;
+
+    font-family:'Cormorant Garamond',serif;
+
+    margin-bottom:10px;
+
+}
+
+/*------------------------------------
+TEXTO TARJETA
+------------------------------------*/
+
+.counter-card small{
+
+    display:block;
+
+    color:#8b7263;
+
+    font-size:1rem;
+
+    letter-spacing:1px;
+
+}
+
+/*------------------------------------
+MENSAJE FINAL
+------------------------------------*/
+
+.page12-message{
+
+    max-width:640px;
+
+    margin:auto;
+
+    text-align:center;
+
+    line-height:2.1;
+
+    font-size:1.15rem;
+
+    color:#4d3b32;
+
+    font-family:Georgia,serif;
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    transition:1s;
+
+}
+
+.page12-message.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+.page12-message strong{
+
+    color:#b58b4c;
+
+    font-size:1.35rem;
+
+}
+
+/*------------------------------------
+BOTÓN
+------------------------------------*/
+
+.page12-button{
+
+    display:block;
+
+    margin:30px auto;
+
+    padding:16px 40px;
+
+    border:none;
+
+    border-radius:35px;
+
+    background:#b58b4c;
+
+    color:#fff;
+
+    font-size:1rem;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+.page12-button.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+.page12-button:hover{
+
+    background:#a87d41;
+
+    transform:translateY(-4px);
+
+}
+
+/*------------------------------------
+FOOTER
+------------------------------------*/
+
+#page12 .page-bottom{
+
+    margin-top:45px;
+
+}
+
+/*------------------------------------
+RESPONSIVE
+------------------------------------*/
+
+@media(max-width:768px){
+
+    .paper-page12{
+
+        width:95vw;
+
+        padding:30px 22px;
+
+    }
+
+    .paper-page12::before{
+
+        inset:12px;
+
+    }
+
+    .page12-title{
+
+        font-size:2.1rem;
+
+    }
+
+    .page12-subtitle{
+
+        font-size:.95rem;
+
+    }
+
+    .love-counter{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
+
+    }
+
+    .counter-card{
+
+        padding:22px 10px;
+
+    }
+
+    .counter-card span{
+
+        font-size:2.5rem;
+
+    }
+
+    .page12-intro{
+
+        font-size:1.05rem;
+
+    }
+
+    .page12-message{
+
+        font-size:1.05rem;
+
+    }
+
+}
+
+/*------------------------------------
+ANIMACIONES
+------------------------------------*/
+
+.page12-title,
+.page12-subtitle,
+.page12-divider,
+.page12-intro{
+
+    opacity:0;
+
+    transform:translateY(20px);
+
+    transition:.8s;
+
+}
+
+.page12-title.show,
+.page12-subtitle.show,
+.page12-divider.show,
+.page12-intro.show{
+
+    opacity:1;
+
+    transform:none;
+
+}

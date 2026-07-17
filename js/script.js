@@ -730,3 +730,76 @@ el.classList.add("show");
 
 
 }
+
+const startDate = new Date("2026-05-20T17:30:00");
+
+function updateLoveCounter() {
+
+    const now = new Date();
+
+    let diff = now - startDate;
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    diff %= (1000 * 60 * 60 * 24);
+
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+    diff %= (1000 * 60 * 60);
+
+    const minutes = Math.floor(diff / (1000 * 60));
+    diff %= (1000 * 60);
+
+    const seconds = Math.floor(diff / 1000);
+
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+
+}
+
+updateLoveCounter();
+
+setInterval(updateLoveCounter, 1000);
+
+
+/*=====================================
+PÁGINA XII
+======================================*/
+
+async function revealPage12(){
+
+    document.querySelector(".page12-title").classList.add("show");
+    await wait(400);
+
+    document.querySelector(".page12-subtitle").classList.add("show");
+    await wait(400);
+
+    document.querySelector(".page12-divider").classList.add("show");
+    await wait(400);
+
+    document.querySelector(".page12-intro").classList.add("show");
+    await wait(700);
+
+    const cards=document.querySelectorAll("#page12 .counter-card");
+
+    for(const card of cards){
+
+        card.classList.add("show");
+
+        await wait(180);
+
+    }
+
+    await wait(500);
+
+    document
+        .querySelector(".page12-message")
+        .classList.add("show");
+
+    await wait(700);
+
+    document
+        .querySelector(".page12-button")
+        .classList.add("show");
+
+}
