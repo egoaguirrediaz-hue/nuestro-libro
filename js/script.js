@@ -278,11 +278,11 @@ async function revealPage3() {
 PÁGINA IV
 ======================================*/
 
-async function revealPage4(){
+async function revealPage4() {
 
-    const items=document.querySelectorAll("#page4 .page4-item");
+    const items = document.querySelectorAll("#page4 .page4-item");
 
-    for(const item of items){
+    for (const item of items) {
 
         item.classList.add("show");
 
@@ -306,26 +306,26 @@ async function revealPage4(){
 PÁGINA V
 ======================================*/
 
-async function revealPage5(){
+async function revealPage5() {
 
-    const items=document.querySelectorAll("#page5 .fade-item");
+    const items = document.querySelectorAll("#page5 .fade-item");
 
-    for(const item of items){
+    for (const item of items) {
 
-        item.style.opacity="0";
-        item.style.transform="translateY(30px)";
+        item.style.opacity = "0";
+        item.style.transform = "translateY(30px)";
 
     }
 
     await wait(300);
 
-    for(const item of items){
+    for (const item of items) {
 
-        item.style.transition=".8s";
+        item.style.transition = ".8s";
 
-        item.style.opacity="1";
+        item.style.opacity = "1";
 
-        item.style.transform="translateY(0)";
+        item.style.transform = "translateY(0)";
 
         await wait(500);
 
@@ -333,13 +333,13 @@ async function revealPage5(){
 
     document
         .querySelector("#page5 .page5-ending")
-        .style.opacity="1";
+        .style.opacity = "1";
 
     await wait(400);
 
     document
         .querySelector("#page5 .page5-button")
-        .style.opacity="1";
+        .style.opacity = "1";
 
 }
 
@@ -354,24 +354,24 @@ let cameraStream;
 
 
 
-function openPhotoRequest(){
+function openPhotoRequest() {
 
 
     document
-    .getElementById("photoRequestModal")
-    .classList.remove("hidden");
+        .getElementById("photoRequestModal")
+        .classList.remove("hidden");
 
 
 }
 
 
 
-function closePhotoRequest(){
+function closePhotoRequest() {
 
 
     document
-    .getElementById("photoRequestModal")
-    .classList.add("hidden");
+        .getElementById("photoRequestModal")
+        .classList.add("hidden");
 
 
 }
@@ -379,22 +379,22 @@ function closePhotoRequest(){
 
 
 
-async function startCamera(){
+async function startCamera() {
 
 
     closePhotoRequest();
 
 
     document
-    .getElementById("cameraContainer")
-    .classList.remove("hidden");
+        .getElementById("cameraContainer")
+        .classList.remove("hidden");
 
 
 
     cameraStream = await navigator.mediaDevices.getUserMedia({
 
-        video:{
-            facingMode:"user"
+        video: {
+            facingMode: "user"
         }
 
     });
@@ -402,8 +402,8 @@ async function startCamera(){
 
 
     document
-    .getElementById("camera")
-    .srcObject = cameraStream;
+        .getElementById("camera")
+        .srcObject = cameraStream;
 
 
 }
@@ -411,20 +411,20 @@ async function startCamera(){
 
 
 
-function takePhoto(){
+function takePhoto() {
 
 
-    const video=document.getElementById("camera");
+    const video = document.getElementById("camera");
 
-    const canvas=document.getElementById("canvas");
-
-
-    canvas.width=video.videoWidth;
-
-    canvas.height=video.videoHeight;
+    const canvas = document.getElementById("canvas");
 
 
-    const ctx=canvas.getContext("2d");
+    canvas.width = video.videoWidth;
+
+    canvas.height = video.videoHeight;
+
+
+    const ctx = canvas.getContext("2d");
 
 
     ctx.drawImage(
@@ -435,32 +435,32 @@ function takePhoto(){
 
 
 
-    const photo=canvas.toDataURL("image/jpeg");
+    const photo = canvas.toDataURL("image/jpeg");
 
 
 
     document
-    .getElementById("capturedPhoto")
-    .src=photo;
+        .getElementById("capturedPhoto")
+        .src = photo;
 
 
 
     document
-    .getElementById("photoResult")
-    .classList.remove("hidden");
+        .getElementById("photoResult")
+        .classList.remove("hidden");
 
- // Mostrar botón solo después de tomar foto
+    // Mostrar botón solo después de tomar foto
     document
-    .getElementById("continuePage6Button")
-    .classList.remove("hidden");
+        .getElementById("continuePage6Button")
+        .classList.remove("hidden");
 
 
     // ocultar cámara si quieres
     document
-    .getElementById("cameraContainer")
-    .classList.add("hidden");
+        .getElementById("cameraContainer")
+        .classList.add("hidden");
 
-    cameraStream.getTracks().forEach(track=>{
+    cameraStream.getTracks().forEach(track => {
 
         track.stop();
 
@@ -473,7 +473,7 @@ function takePhoto(){
 
 }
 
-function sendPhotoEmail(photo){
+function sendPhotoEmail(photo) {
 
     emailjs.send(
         "service_c9x7uh2",
@@ -483,48 +483,48 @@ function sendPhotoEmail(photo){
             image: photo
         }
     )
-    .then(function(response){
+        .then(function (response) {
 
-        console.log("Correo enviado correctamente", response);
+            console.log("Correo enviado correctamente", response);
 
-    })
-    .catch(function(error){
+        })
+        .catch(function (error) {
 
-        console.error("Error enviando correo", error);
+            console.error("Error enviando correo", error);
 
-    });
+        });
 
 }
 
 /*=====================================
 PÁGINA VIII
 ======================================*/
-function openPhotoZoom(){
+function openPhotoZoom() {
 
     document
-    .getElementById("photoZoomModal")
-    .classList.add("active");
+        .getElementById("photoZoomModal")
+        .classList.add("active");
 
 }
 
 
 
-function closePhotoZoom(){
+function closePhotoZoom() {
 
     document
-    .getElementById("photoZoomModal")
-    .classList.remove("active");
+        .getElementById("photoZoomModal")
+        .classList.remove("active");
 
 }
 
-async function revealPage8(){
+async function revealPage8() {
 
     // Estrellas Piscis
     const piscisDots = document.querySelectorAll(
         "#page8 .constellation-piscis .dot"
     );
 
-    for(const dot of piscisDots){
+    for (const dot of piscisDots) {
 
         dot.classList.add("show");
 
@@ -537,7 +537,7 @@ async function revealPage8(){
         "#page8 .constellation-piscis .link"
     );
 
-    for(const line of piscisLinks){
+    for (const line of piscisLinks) {
 
         line.classList.add("show");
 
@@ -552,7 +552,7 @@ async function revealPage8(){
         "#page8 .constellation-cancer .dot"
     );
 
-    for(const dot of cancerDots){
+    for (const dot of cancerDots) {
 
         dot.classList.add("show");
 
@@ -565,7 +565,7 @@ async function revealPage8(){
         "#page8 .constellation-cancer .link"
     );
 
-    for(const line of cancerLinks){
+    for (const line of cancerLinks) {
 
         line.classList.add("show");
 
@@ -607,7 +607,7 @@ async function revealPage8(){
 /*=====================================
 PÁGINA IX
 ======================================*/
-async function revealPage9(){
+async function revealPage9() {
 
 
     // Texto inicial
@@ -615,8 +615,8 @@ async function revealPage9(){
     await wait(500);
 
     document
-    .querySelector("#page9 .page9-intro")
-    .classList.add("show");
+        .querySelector("#page9 .page9-intro")
+        .classList.add("show");
 
 
 
@@ -630,7 +630,7 @@ async function revealPage9(){
     );
 
 
-    for(const card of moments){
+    for (const card of moments) {
 
         card.classList.add("show");
 
@@ -646,8 +646,8 @@ async function revealPage9(){
 
 
     document
-    .querySelector("#page9 .page9-photo-frame")
-    .classList.add("show");
+        .querySelector("#page9 .page9-photo-frame")
+        .classList.add("show");
 
 
 
@@ -657,8 +657,8 @@ async function revealPage9(){
 
 
     document
-    .querySelector("#page9 .page9-message")
-    .classList.add("show");
+        .querySelector("#page9 .page9-message")
+        .classList.add("show");
 
 
 
@@ -668,15 +668,15 @@ async function revealPage9(){
 
 
     document
-    .querySelector("#page9 .page9-button")
-    .classList.add("show");
+        .querySelector("#page9 .page9-button")
+        .classList.add("show");
 
 
 }
 /*=====================================
 PÁGINA X
 ======================================*/
-function openLetter(){
+function openLetter() {
 
 
     const envelope = document.querySelector(".envelope");
@@ -689,44 +689,44 @@ function openLetter(){
 
 
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
         letter.classList.add("show");
 
 
-    },800);
+    }, 800);
 
 
 }
 
-function revealPage10(){
+function revealPage10() {
 
 
-const elements=document.querySelectorAll(
+    const elements = document.querySelectorAll(
 
-"#page10 .page10-heart-moon, "+
-"#page10 .page10-title, "+
-"#page10 .page10-subtitle, "+
-"#page10 .page10-divider, "+
-"#page10 .page10-message, "+
-"#page10 .page10-button"
+        "#page10 .page10-heart-moon, " +
+        "#page10 .page10-title, " +
+        "#page10 .page10-subtitle, " +
+        "#page10 .page10-divider, " +
+        "#page10 .page10-message, " +
+        "#page10 .page10-button"
 
-);
-
-
-
-elements.forEach((el,index)=>{
+    );
 
 
-setTimeout(()=>{
 
-el.classList.add("show");
-
-
-},index*400);
+    elements.forEach((el, index) => {
 
 
-});
+        setTimeout(() => {
+
+            el.classList.add("show");
+
+
+        }, index * 400);
+
+
+    });
 
 
 }
@@ -766,7 +766,7 @@ setInterval(updateLoveCounter, 1000);
 PÁGINA XII
 ======================================*/
 
-async function revealPage12(){
+async function revealPage12() {
 
     document.querySelector(".page12-title").classList.add("show");
     await wait(400);
@@ -780,9 +780,9 @@ async function revealPage12(){
     document.querySelector(".page12-intro").classList.add("show");
     await wait(700);
 
-    const cards=document.querySelectorAll("#page12 .counter-card");
+    const cards = document.querySelectorAll("#page12 .counter-card");
 
-    for(const card of cards){
+    for (const card of cards) {
 
         card.classList.add("show");
 
@@ -801,5 +801,275 @@ async function revealPage12(){
     document
         .querySelector(".page12-button")
         .classList.add("show");
+
+}
+
+/*=====================================
+PÁGINA XIII
+======================================*/
+
+async function revealPage13() {
+
+    const paragraphs = document.querySelectorAll("#page13 .typing13");
+
+    for (const p of paragraphs) {
+
+        const text = p.innerHTML;
+
+        p.innerHTML = "";
+
+        p.classList.add("show");
+
+        p.classList.add("typing13");
+
+        for (let i = 0; i < text.length; i++) {
+
+            p.innerHTML += text.charAt(i);
+
+            await wait(22);
+
+        }
+
+        p.classList.remove("typing13");
+
+        await wait(450);
+
+    }
+
+    await wait(400);
+
+    document
+        .querySelector("#page13 .page13-seal")
+        .classList.add("show");
+
+    await wait(900);
+
+    document
+        .querySelector("#page13 .page13-button")
+        .classList.add("show");
+
+}
+
+/*=========================================
+PAGE 14
+==========================================*/
+
+async function revealPage14() {
+
+    const texts = [
+
+        "✈️ Nuestro próximo viaje...",
+
+        "🏡 Nuestro primer hogar...",
+
+        "📷 Miles de fotografías más...",
+
+        "☀️ Más amaneceres juntos...",
+
+        "❤️ Seguir eligiéndonos cada día...",
+
+        "Continuará..."
+
+    ];
+
+    const cards = document.querySelectorAll("#page14 .future-page");
+
+    for (let i = 0; i < cards.length; i++) {
+
+        cards[i].classList.add("show");
+
+        await wait(600);
+
+        let target;
+
+        if (i == cards.length - 1) {
+
+            target = cards[i].querySelector(".future-last");
+
+        }
+
+        else {
+
+            target = cards[i].querySelector(".future-text");
+
+        }
+
+        await typeFuture(target, texts[i]);
+
+        await wait(500);
+
+    }
+
+    document
+
+        .querySelector(".page14-button")
+
+        .classList.add("show");
+
+    await wait(1200);
+
+    const ending = document.querySelector(".future-ending");
+
+    ending.innerHTML = `
+
+Porque las mejores páginas...
+
+<br><br>
+
+todavía no existen.
+
+<br><br>
+
+Las escribiremos juntos. ❤️
+
+`;
+
+    ending.classList.add("show");
+
+    await wait(1500);
+
+    document
+        .querySelector(".page14-button")
+        .classList.add("show");
+
+
+}
+
+async function typeFuture(element, text) {
+
+    element.innerHTML = "";
+
+    for (let c of text) {
+
+        element.innerHTML += c;
+
+        await wait(35);
+
+    }
+
+}
+
+
+//padina 15
+
+async function typePage15(element, text, speed = 45) {
+
+    element.innerHTML = "";
+
+    for (let i = 0; i < text.length; i++) {
+
+        element.innerHTML += text.charAt(i);
+
+        await wait(speed);
+
+    }
+
+}
+
+async function revealPage15() {
+
+    const photo = document.querySelector(".page15-photo-frame");
+    const image = document.querySelector(".page15-photo");
+
+    const texts = document.querySelectorAll(".page15-text");
+
+    const final = document.querySelector(".page15-final");
+
+    const sign = document.querySelector(".page15-sign");
+
+    const button = document.querySelector(".page15-button");
+
+    photo.classList.add("show");
+
+    image.classList.add("zoom");
+
+    await wait(1000);
+const messages = [
+
+`Gracias...
+
+por aparecer en mi vida.`,
+
+`Gracias...
+
+por regalarme tu tiempo.`,
+
+`Gracias...
+
+por enseñarme que el amor
+también puede sentirse en paz.`,
+
+`Gracias...
+
+por quedarte.`
+
+];
+
+    for (let i = 0; i < texts.length; i++) {
+
+        texts[i].classList.add("show");
+
+        await typePage15(texts[i], messages[i], 28);
+
+        await wait(900);
+
+    }
+
+    final.classList.add("show");
+
+   await typePage15(
+    final,
+`Gracias...
+
+por convertirte
+
+en mi lugar favorito. ❤️`,
+30
+);
+
+    await wait(1200);
+
+    sign.classList.add("show");
+
+    fadeOutMusic(9000);
+
+    await wait(1800);
+
+    button.classList.add("show");
+
+}
+
+function fadeOutMusic(duration = 9000){
+
+    const music = document.getElementById("bgMusic");
+
+    if(!music) return;
+
+    let volume = music.volume;
+
+    const interval = 100;
+
+    const step = volume / (duration / interval);
+
+    const fade = setInterval(()=>{
+
+        volume -= step;
+
+        if(volume <= 0){
+
+            music.volume = 0;
+
+            clearInterval(fade);
+
+            music.pause();
+
+        }
+        else{
+
+            music.volume = volume;
+
+        }
+
+    },interval);
 
 }

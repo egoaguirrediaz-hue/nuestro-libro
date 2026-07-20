@@ -196,6 +196,23 @@ function nextPage(currentPage, nextPage) {
         revealPage12();
 
     }
+
+    if (nextPage === "page13") {
+
+        revealPage13();
+
+    }
+    if (nextPage === "page14") {
+
+        revealPage14();
+
+    }
+
+    if (nextPage === "page15") {
+
+        revealPage15();
+
+    }
 }
 
 function openFireModal() {
