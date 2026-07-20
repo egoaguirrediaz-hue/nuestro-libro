@@ -1005,6 +1005,7 @@ por quedarte.`
 
 ];
 
+
     for (let i = 0; i < texts.length; i++) {
 
         texts[i].classList.add("show");
