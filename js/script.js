@@ -1,171 +1,466 @@
+/* =====================================================
+   PARA TI, CUALQUIER DÍA
+   ===================================================== */
 
-const introMessages = [
+document.addEventListener("DOMContentLoaded", () => {
 
-    "Hay personas que llegan...",
+    createStars();
 
-    "y cambian nuestros días.",
+    const startButton = document.getElementById("startButton");
 
-    "Sin hacer ruido...",
+    startButton.addEventListener("click", startExperience);
 
-    "Sin pedir nada...",
+    setupStars();
 
-    "Simplemente estando.",
+    setupNavigation();
 
-    "Hace exactamente dos meses...",
+    setupLoveReveal();
 
-    "comenzó nuestro capítulo favorito 🤎"
+    setupNeeds();
 
-];
+    setupFinal();
 
-/*==============================
-ESTRELLAS
-==============================*/
+});
 
-const stars = document.getElementById("stars");
 
-for (let i = 0; i < 120; i++) {
+/* =====================================================
+   UTILIDADES
+   ===================================================== */
 
-    const star = document.createElement("div");
+function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
-    star.className = "star";
 
-    star.style.left = Math.random() * 100 + "%";
+/* =====================================================
+   ESTRELLAS DEL FONDO
+   ===================================================== */
 
-    star.style.top = Math.random() * 100 + "%";
+function createStars() {
 
-    const size = Math.random() * 4 + 1;
-    star.style.opacity = Math.random();
-    star.style.width = size + "px";
+    const container = document.getElementById("stars");
 
-    star.style.height = size + "px";
+    for (let i = 0; i < 150; i++) {
 
-    star.style.animationDelay = (Math.random() * 5) + "s";
+        const star = document.createElement("span");
 
-    star.style.animationDuration = (3 + Math.random() * 5) + "s";
+        star.className = "star";
 
-    stars.appendChild(star);
+        const size = Math.random() * 2.8 + 1;
+
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+
+        star.style.left = `${Math.random() * 100}%`;
+        star.style.top = `${Math.random() * 100}%`;
+
+        star.style.animationDelay = `${Math.random() * 5}s`;
+        star.style.animationDuration = `${3 + Math.random() * 5}s`;
+
+        container.appendChild(star);
+    }
+}
+
+
+/* =====================================================
+   INICIO
+   ===================================================== */
+
+async function startExperience() {
+
+    const music = document.getElementById("music");
+
+    music.volume = 0.22;
+
+    try {
+        await music.play();
+    } catch (error) {
+        console.log("El navegador requiere interacción para reproducir audio.");
+    }
+
+    const welcome = document.getElementById("welcome");
+
+    welcome.style.opacity = "0";
+    welcome.style.transform = "scale(1.03)";
+
+    await wait(1300);
+
+    welcome.classList.add("hidden");
+
+    playIntro();
 
 }
+
+
+/* =====================================================
+   INTRO
+   ===================================================== */
 
 async function playIntro() {
 
     const intro = document.getElementById("intro");
-
     const text = document.getElementById("introText");
 
-    for (const msg of introMessages) {
+    const messages = [
 
-        text.style.opacity = 0;
+        "No es nuestro aniversario.",
 
-        await wait(700);
+        "No es una fecha importante.",
 
-        text.innerHTML = msg;
+        "No es una ocasión especial.",
 
-        text.style.opacity = 1;
+        "Es simplemente hoy.",
 
-        await wait(2500);
+        "Y hoy pensé en ti."
+
+    ];
+
+    intro.classList.remove("hidden");
+
+    intro.style.opacity = "1";
+
+    for (const message of messages) {
+
+        text.style.opacity = "0";
+
+        await wait(650);
+
+        text.textContent = message;
+
+        text.style.opacity = "1";
+
+        await wait(2300);
 
     }
 
-    intro.style.opacity = 0;
+    intro.style.opacity = "0";
 
-    setTimeout(() => {
+    await wait(1300);
 
-        intro.remove();
+    intro.classList.add("hidden");
 
-        const cover = document.getElementById("cover");
+    const experience = document.getElementById("experience");
 
-        cover.classList.remove("hidden");
+    experience.classList.remove("hidden");
 
-        setTimeout(() => {
+    await wait(100);
 
-            cover.classList.add("show");
+    experience.classList.add("visible");
 
-        }, 100);
-
-    }, 2000);
+    document.getElementById("sky-section")
+        .scrollIntoView({
+            behavior: "instant"
+        });
 
 }
 
-function wait(ms) {
 
-    return new Promise(resolve => {
+/* =====================================================
+   ESTRELLAS INTERACTIVAS
+   ===================================================== */
 
-        setTimeout(resolve, ms);
+function setupStars() {
+
+    const stars = document.querySelectorAll(".star-message");
+    const message = document.getElementById("starMessage");
+
+    stars.forEach(star => {
+
+        star.addEventListener("click", () => {
+
+            message.classList.remove("show");
+
+            setTimeout(() => {
+
+                message.textContent = star.dataset.message;
+
+                message.classList.add("show");
+
+            }, 150);
+
+            createSmallStars(star);
+
+        });
 
     });
 
 }
 
-window.onload = () => {
 
-    const button = document.getElementById("beginButton");
+function createSmallStars(element) {
 
-    button.addEventListener("click", startExperience);
+    const rect = element.getBoundingClientRect();
+
+    for (let i = 0; i < 5; i++) {
+
+        const particle = document.createElement("span");
+
+        particle.style.position = "fixed";
+        particle.style.left = `${rect.left + rect.width / 2}px`;
+        particle.style.top = `${rect.top + rect.height / 2}px`;
+        particle.style.width = "3px";
+        particle.style.height = "3px";
+        particle.style.borderRadius = "50%";
+        particle.style.background = "#ffffff";
+        particle.style.boxShadow = "0 0 8px white";
+        particle.style.pointerEvents = "none";
+        particle.style.zIndex = "20";
+
+        document.body.appendChild(particle);
+
+        const angle = Math.random() * Math.PI * 2;
+        const distance = 30 + Math.random() * 50;
+
+        particle.animate(
+            [
+                {
+                    transform: "translate(0,0)",
+                    opacity: 1
+                },
+                {
+                    transform:
+                        `translate(${Math.cos(angle) * distance}px,
+                                   ${Math.sin(angle) * distance}px)`,
+                    opacity: 0
+                }
+            ],
+            {
+                duration: 700,
+                easing: "ease-out"
+            }
+        ).onfinish = () => particle.remove();
+
+    }
 
 }
 
-function startExperience() {
 
-    const music = document.getElementById("music");
+/* =====================================================
+   NAVEGACIÓN
+   ===================================================== */
 
-    music.volume = 0.25;
+function setupNavigation() {
 
-    music.play();
+    document.querySelectorAll("[data-next]").forEach(button => {
 
-    const welcome = document.getElementById("welcome");
+        button.addEventListener("click", () => {
 
-    welcome.style.opacity = "0";
+            const targetId = button.dataset.next;
 
-    setTimeout(() => {
+            scrollToSection(targetId);
 
-        welcome.remove();
+        });
 
-        playIntro();
-
-    }, 1500);
-
-}
-
-function openBook() {
-
-    document.querySelector(".cover").classList.add("hidden");
-
-    document.getElementById("page1").classList.remove("hidden");
+    });
 
 }
 
 
-async function revealLetter() {
+function scrollToSection(id) {
 
-    const items = document.querySelectorAll("#page1 .fade-item");
+    const section = document.getElementById(id);
 
-    for (const item of items) {
+    if (!section) return;
 
-        const text = item.innerText;
-        item.innerText = "";
+    section.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+    });
 
-        if (text.includes("Mi Amor")) {
+}
 
-            fadeVolume(0.12, 2500);
 
-        }
+/* =====================================================
+   OBSERVER PARA ANIMACIONES
+   ===================================================== */
 
-        item.classList.add("show");
+const observer = new IntersectionObserver(
 
-        await typeWriter(item, text, 50);
+    entries => {
 
-        if (text.includes("Gracias por elegirme")) {
+        entries.forEach(entry => {
 
-            fadeVolume(0.25, 3500);
+            if (!entry.isIntersecting) return;
 
-        }
+            if (entry.target.id === "care-section") {
 
-        if (text.includes("Chris")) {
+                revealCare();
 
-            createPetals();
+            }
 
-        }
+            if (entry.target.id === "final-section") {
+
+                revealFinal();
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold: 0.35
+    }
+
+);
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const care = document.getElementById("care-section");
+    const final = document.getElementById("final-section");
+
+    if (care) observer.observe(care);
+    if (final) observer.observe(final);
+
+});
+
+
+/* =====================================================
+   SECCIÓN DE CUIDADO
+   ===================================================== */
+
+async function revealCare() {
+
+    if (document.getElementById("care-section").dataset.revealed) {
+        return;
+    }
+
+    document.getElementById("care-section").dataset.revealed = "true";
+
+    const lines = document.querySelectorAll(".typing-line");
+
+    for (const line of lines) {
+
+        line.classList.add("show");
+
+        await wait(700);
+
+    }
+
+}
+
+
+/* =====================================================
+   "PUEDO VIVIR SIN TI"
+   ===================================================== */
+
+function setupLoveReveal() {
+
+    const button = document.getElementById("revealButton");
+
+    const answer = document.getElementById("loveAnswer");
+
+    const continueButton = document.getElementById("partContinue");
+
+    button.addEventListener("click", async () => {
+
+        button.style.opacity = "0";
+        button.style.pointerEvents = "none";
+
+        await wait(500);
+
+        answer.classList.remove("hidden");
+
+        await wait(2300);
+
+        continueButton.classList.remove("hidden");
+
+        continueButton.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    });
+
+    continueButton.addEventListener("click", () => {
+
+        scrollToSection("needs-section");
+
+    });
+
+}
+
+
+/* =====================================================
+   ¿QUÉ NECESITAS HOY?
+   ===================================================== */
+
+function setupNeeds() {
+
+    const cards = document.querySelectorAll(".need-card");
+
+    const response = document.getElementById("needResponse");
+
+    const continueButton = document.getElementById("needsContinue");
+
+    const responses = {
+
+        hug:
+            "Entonces ven... aunque sea desde aquí, te mando uno de esos abrazos que no necesitan palabras. 🤍",
+
+        rest:
+            "Entonces descansa, mi amor. No tienes que poder con todo todos los días. Hoy también puedes simplemente respirar.",
+
+        talk:
+            "Entonces háblame. De lo que sea. De lo importante, de lo absurdo o simplemente de cómo estuvo tu día. Yo te escucho.",
+
+        love:
+            "Entonces recuerda esto: eres importante para mí. Muchísimo. Y me haces más feliz de lo que imaginas."
+
+    };
+
+    cards.forEach(card => {
+
+        card.addEventListener("click", () => {
+
+            cards.forEach(c => c.classList.remove("selected"));
+
+            card.classList.add("selected");
+
+            response.classList.remove("show");
+
+            setTimeout(() => {
+
+                response.textContent = responses[card.dataset.need];
+
+                response.classList.add("show");
+
+            }, 200);
+
+            continueButton.classList.remove("hidden");
+
+        });
+
+    });
+
+    continueButton.addEventListener("click", () => {
+
+        scrollToSection("letter-section");
+
+    });
+
+}
+
+
+/* =====================================================
+   FINAL ANIMADO
+   ===================================================== */
+
+async function revealFinal() {
+
+    const section = document.getElementById("final-section");
+
+    if (section.dataset.revealed) return;
+
+    section.dataset.revealed = "true";
+
+    const messages = document.querySelectorAll(".final-messages p");
+
+    await wait(600);
+
+    for (const message of messages) {
+
+        message.classList.add("show");
 
         await wait(800);
 
@@ -173,904 +468,127 @@ async function revealLetter() {
 
 }
 
-async function typeWriter(element, text, speed = 50) {
 
-    for (let i = 0; i < text.length; i++) {
+/* =====================================================
+   ABRAZO
+   ===================================================== */
 
-        element.innerHTML += text.charAt(i);
+function setupFinal() {
 
-        await wait(speed);
+    const button = document.getElementById("finalButton");
 
-    }
+    const hugButton = document.getElementById("hugButton");
 
-}
+    const hugMessage = document.getElementById("hugMessage");
 
-function openBook() {
+    button.addEventListener("click", () => {
 
-    document.querySelector(".cover").classList.add("hidden");
-
-    document.getElementById("page1").classList.remove("hidden");
-
-    revealLetter();
-
-}
-
-const paragraphs = document.querySelectorAll("#story-page2 .typing");
-
-async function typeParagraph(element, speed = 45) {
-
-    const text = element.textContent.trim();
-
-    element.textContent = "";
-    element.classList.add("show");
-
-    const cursor = document.createElement("span");
-    cursor.className = "cursor";
-    cursor.textContent = "|";
-    element.appendChild(cursor);
-
-    for (let i = 0; i < text.length; i++) {
-
-        cursor.insertAdjacentText("beforebegin", text[i]);
-
-        await new Promise(resolve => setTimeout(resolve, speed));
-    }
-
-    cursor.remove();
-
-    // pequeña pausa antes del siguiente párrafo
-    await new Promise(resolve => setTimeout(resolve, 600));
-}
-
-async function startStory() {
-
-    for (const paragraph of paragraphs) {
-        await typeParagraph(paragraph);
-    }
-    await wait(500); // pequeña pausa
-
-    document.querySelector("#page2 .next-btn").classList.add("show");
-    //test-1 document.querySelector("#page3 .next-btn").classList.add("show");
-
-}
-
-/*=====================================
-PÁGINA III
-======================================*/
-async function revealPage3() {
-
-    const paragraphs = document.querySelectorAll("#page3 .page3-text");
-
-    for (const p of paragraphs) {
-
-        const text = p.textContent.trim();
-
-        p.textContent = "";
-
-        p.style.visibility = "visible";
-
-        p.classList.add("typing-cursor");
-
-
-        for (let i = 0; i < text.length; i++) {
-
-            p.textContent += text[i];
-
-            await wait(45);
-
-        }
-
-
-        p.classList.remove("typing-cursor");
-
-        await wait(700);
-
-    }
-
-
-    // Cuando termina TODO el texto aparece el botón
-    document.querySelector("#page3 .page3-button")
-        .classList.add("show");
-
-}
-
-/*=====================================
-PÁGINA IV
-======================================*/
-
-async function revealPage4() {
-
-    const items = document.querySelectorAll("#page4 .page4-item");
-
-    for (const item of items) {
-
-        item.classList.add("show");
-
-        await wait(700);
-
-    }
-
-    document
-        .querySelector("#page4 .page4-ending")
-        .classList.add("show");
-
-    await wait(800);
-
-    document
-        .querySelector("#page4 .page4-button")
-        .classList.add("show");
-
-}
-
-/*=====================================
-PÁGINA V
-======================================*/
-
-async function revealPage5() {
-
-    const items = document.querySelectorAll("#page5 .fade-item");
-
-    for (const item of items) {
-
-        item.style.opacity = "0";
-        item.style.transform = "translateY(30px)";
-
-    }
-
-    await wait(300);
-
-    for (const item of items) {
-
-        item.style.transition = ".8s";
-
-        item.style.opacity = "1";
-
-        item.style.transform = "translateY(0)";
-
-        await wait(500);
-
-    }
-
-    document
-        .querySelector("#page5 .page5-ending")
-        .style.opacity = "1";
-
-    await wait(400);
-
-    document
-        .querySelector("#page5 .page5-button")
-        .style.opacity = "1";
-
-}
-
-/*=====================================
-PÁGINA VI
-======================================*/
-
-emailjs.init("IPGU6EHQ6eemW8uZp");
-
-
-let cameraStream;
-
-
-
-function openPhotoRequest() {
-
-
-    document
-        .getElementById("photoRequestModal")
-        .classList.remove("hidden");
-
-
-}
-
-
-
-function closePhotoRequest() {
-
-
-    document
-        .getElementById("photoRequestModal")
-        .classList.add("hidden");
-
-
-}
-
-
-
-
-async function startCamera() {
-
-
-    closePhotoRequest();
-
-
-    document
-        .getElementById("cameraContainer")
-        .classList.remove("hidden");
-
-
-
-    cameraStream = await navigator.mediaDevices.getUserMedia({
-
-        video: {
-            facingMode: "user"
-        }
+        scrollToSection("final-section");
 
     });
 
+    hugButton.addEventListener("click", async () => {
 
+        hugMessage.classList.remove("hidden");
 
-    document
-        .getElementById("camera")
-        .srcObject = cameraStream;
+        fadeVolume(0.08, 1800);
 
+        createHugParticles();
 
-}
+        await wait(3500);
 
-
-
-
-function takePhoto() {
-
-
-    const video = document.getElementById("camera");
-
-    const canvas = document.getElementById("canvas");
-
-
-    canvas.width = video.videoWidth;
-
-    canvas.height = video.videoHeight;
-
-
-    const ctx = canvas.getContext("2d");
-
-
-    ctx.drawImage(
-        video,
-        0,
-        0
-    );
-
-
-
-    const photo = canvas.toDataURL("image/jpeg");
-
-
-
-    document
-        .getElementById("capturedPhoto")
-        .src = photo;
-
-
-
-    document
-        .getElementById("photoResult")
-        .classList.remove("hidden");
-
-    // Mostrar botón solo después de tomar foto
-    document
-        .getElementById("continuePage6Button")
-        .classList.remove("hidden");
-
-
-    // ocultar cámara si quieres
-    document
-        .getElementById("cameraContainer")
-        .classList.add("hidden");
-
-    cameraStream.getTracks().forEach(track => {
-
-        track.stop();
+        fadeVolume(0.22, 1800);
 
     });
 
-
-
-    sendPhotoEmail(photo);
-
-
-}
-
-function sendPhotoEmail(photo) {
-
-    emailjs.send(
-        "service_c9x7uh2",
-        "template_z7cnqrh",
-        {
-            message: "Se creó un nuevo recuerdo secreto ❤️",
-            image: photo
-        }
-    )
-        .then(function (response) {
-
-            console.log("Correo enviado correctamente", response);
-
-        })
-        .catch(function (error) {
-
-            console.error("Error enviando correo", error);
-
-        });
-
-}
-
-/*=====================================
-PÁGINA VIII
-======================================*/
-function openPhotoZoom() {
-
-    document
-        .getElementById("photoZoomModal")
-        .classList.add("active");
-
 }
 
 
+/* =====================================================
+   PARTÍCULAS DEL ABRAZO
+   ===================================================== */
 
-function closePhotoZoom() {
+function createHugParticles() {
 
-    document
-        .getElementById("photoZoomModal")
-        .classList.remove("active");
+    const section = document.getElementById("final-section");
 
-}
+    for (let i = 0; i < 18; i++) {
 
-async function revealPage8() {
+        const particle = document.createElement("span");
 
-    // Estrellas Piscis
-    const piscisDots = document.querySelectorAll(
-        "#page8 .constellation-piscis .dot"
-    );
+        particle.textContent = "✦";
 
-    for (const dot of piscisDots) {
+        particle.style.position = "absolute";
+        particle.style.left = `${Math.random() * 100}%`;
+        particle.style.top = `${55 + Math.random() * 25}%`;
+        particle.style.color = "rgba(232,223,189,.8)";
+        particle.style.fontSize = `${8 + Math.random() * 12}px`;
+        particle.style.pointerEvents = "none";
+        particle.style.zIndex = "12";
 
-        dot.classList.add("show");
+        section.appendChild(particle);
 
-        await wait(220);
+        particle.animate(
+            [
+                {
+                    transform: "translateY(0) scale(.5)",
+                    opacity: 0
+                },
+                {
+                    transform: "translateY(-120px) scale(1)",
+                    opacity: 1
+                },
+                {
+                    transform: "translateY(-230px) scale(.2)",
+                    opacity: 0
+                }
+            ],
+            {
+                duration: 2500 + Math.random() * 1500,
+                easing: "ease-out"
+            }
+        ).onfinish = () => particle.remove();
 
     }
 
-    // Líneas Piscis
-    const piscisLinks = document.querySelectorAll(
-        "#page8 .constellation-piscis .link"
-    );
-
-    for (const line of piscisLinks) {
-
-        line.classList.add("show");
-
-        await wait(250);
-
-    }
-
-    await wait(700);
-
-    // Estrellas Cáncer
-    const cancerDots = document.querySelectorAll(
-        "#page8 .constellation-cancer .dot"
-    );
-
-    for (const dot of cancerDots) {
-
-        dot.classList.add("show");
-
-        await wait(220);
-
-    }
-
-    // Líneas Cáncer
-    const cancerLinks = document.querySelectorAll(
-        "#page8 .constellation-cancer .link"
-    );
-
-    for (const line of cancerLinks) {
-
-        line.classList.add("show");
-
-        await wait(250);
-
-    }
-
-    await wait(900);
-
-    // Corazón
-    document
-        .querySelector("#page8 .page8-heart")
-        .classList.add("show");
-
-    await wait(800);
-
-    // Mensaje
-    document
-        .querySelector("#page8 .page8-message")
-        .classList.add("show");
-
-    await wait(1200);
-
-    // Foto
-    document
-        .querySelector("#page8 .page8-photo-frame")
-        .classList.add("show");
-
-    await wait(1200);
-
-    // Botón
-    document
-        .querySelector("#page8 .page8-button")
-        .classList.add("show");
-
 }
 
 
-/*=====================================
-PÁGINA IX
-======================================*/
-async function revealPage9() {
+/* =====================================================
+   VOLUMEN
+   ===================================================== */
 
+function fadeVolume(target, duration) {
 
-    // Texto inicial
+    const music = document.getElementById("music");
 
-    await wait(500);
+    if (!music) return;
 
-    document
-        .querySelector("#page9 .page9-intro")
-        .classList.add("show");
+    const start = music.volume;
 
+    const difference = target - start;
 
+    const steps = 50;
 
-    // Tarjetas de pequeños momentos
+    const intervalTime = duration / steps;
 
-    await wait(700);
+    let step = 0;
 
+    const interval = setInterval(() => {
 
-    const moments = document.querySelectorAll(
-        "#page9 .moment-card"
-    );
+        step++;
 
+        music.volume =
+            start + (difference * (step / steps));
 
-    for (const card of moments) {
+        if (step >= steps) {
 
-        card.classList.add("show");
+            music.volume = target;
 
-        await wait(450);
-
-    }
-
-
-
-    // Foto
-
-    await wait(900);
-
-
-    document
-        .querySelector("#page9 .page9-photo-frame")
-        .classList.add("show");
-
-
-
-    // Mensaje final
-
-    await wait(1000);
-
-
-    document
-        .querySelector("#page9 .page9-message")
-        .classList.add("show");
-
-
-
-    // Botón
-
-    await wait(1000);
-
-
-    document
-        .querySelector("#page9 .page9-button")
-        .classList.add("show");
-
-
-}
-/*=====================================
-PÁGINA X
-======================================*/
-function openLetter() {
-
-
-    const envelope = document.querySelector(".envelope");
-
-    const letter = document.querySelector(".love-letter");
-
-
-
-    envelope.classList.add("open");
-
-
-
-    setTimeout(() => {
-
-        letter.classList.add("show");
-
-
-    }, 800);
-
-
-}
-
-function revealPage10() {
-
-
-    const elements = document.querySelectorAll(
-
-        "#page10 .page10-heart-moon, " +
-        "#page10 .page10-title, " +
-        "#page10 .page10-subtitle, " +
-        "#page10 .page10-divider, " +
-        "#page10 .page10-message, " +
-        "#page10 .page10-button"
-
-    );
-
-
-
-    elements.forEach((el, index) => {
-
-
-        setTimeout(() => {
-
-            el.classList.add("show");
-
-
-        }, index * 400);
-
-
-    });
-
-
-}
-
-const startDate = new Date("2026-05-20T17:30:00");
-
-function updateLoveCounter() {
-
-    const now = new Date();
-
-    let diff = now - startDate;
-
-    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-    diff %= (1000 * 60 * 60 * 24);
-
-    const hours = Math.floor(diff / (1000 * 60 * 60));
-    diff %= (1000 * 60 * 60);
-
-    const minutes = Math.floor(diff / (1000 * 60));
-    diff %= (1000 * 60);
-
-    const seconds = Math.floor(diff / 1000);
-
-    document.getElementById("days").textContent = days;
-    document.getElementById("hours").textContent = hours;
-    document.getElementById("minutes").textContent = minutes;
-    document.getElementById("seconds").textContent = seconds;
-
-}
-
-updateLoveCounter();
-
-setInterval(updateLoveCounter, 1000);
-
-
-/*=====================================
-PÁGINA XII
-======================================*/
-
-async function revealPage12() {
-
-    document.querySelector(".page12-title").classList.add("show");
-    await wait(400);
-
-    document.querySelector(".page12-subtitle").classList.add("show");
-    await wait(400);
-
-    document.querySelector(".page12-divider").classList.add("show");
-    await wait(400);
-
-    document.querySelector(".page12-intro").classList.add("show");
-    await wait(700);
-
-    const cards = document.querySelectorAll("#page12 .counter-card");
-
-    for (const card of cards) {
-
-        card.classList.add("show");
-
-        await wait(180);
-
-    }
-
-    await wait(500);
-
-    document
-        .querySelector(".page12-message")
-        .classList.add("show");
-
-    await wait(700);
-
-    document
-        .querySelector(".page12-button")
-        .classList.add("show");
-
-}
-
-/*=====================================
-PÁGINA XIII
-======================================*/
-
-async function revealPage13() {
-
-    const paragraphs = document.querySelectorAll("#page13 .typing13");
-
-    for (const p of paragraphs) {
-
-        const text = p.innerHTML;
-
-        p.innerHTML = "";
-
-        p.classList.add("show");
-
-        p.classList.add("typing13");
-
-        for (let i = 0; i < text.length; i++) {
-
-            p.innerHTML += text.charAt(i);
-
-            await wait(22);
+            clearInterval(interval);
 
         }
 
-        p.classList.remove("typing13");
-
-        await wait(450);
-
-    }
-
-    await wait(400);
-
-    document
-        .querySelector("#page13 .page13-seal")
-        .classList.add("show");
-
-    await wait(900);
-
-    document
-        .querySelector("#page13 .page13-button")
-        .classList.add("show");
-
-}
-
-/*=========================================
-PAGE 14
-==========================================*/
-
-async function revealPage14() {
-
-    const texts = [
-
-        "✈️ Nuestro próximo viaje...",
-
-        "🏡 Nuestro primer hogar...",
-
-        "📷 Miles de fotografías más...",
-
-        "☀️ Más amaneceres juntos...",
-
-        "❤️ Seguir eligiéndonos cada día...",
-
-        "Continuará..."
-
-    ];
-
-    const cards = document.querySelectorAll("#page14 .future-page");
-
-    for (let i = 0; i < cards.length; i++) {
-
-        cards[i].classList.add("show");
-
-        await wait(600);
-
-        let target;
-
-        if (i == cards.length - 1) {
-
-            target = cards[i].querySelector(".future-last");
-
-        }
-
-        else {
-
-            target = cards[i].querySelector(".future-text");
-
-        }
-
-        await typeFuture(target, texts[i]);
-
-        await wait(500);
-
-    }
-
-    document
-
-        .querySelector(".page14-button")
-
-        .classList.add("show");
-
-    await wait(1200);
-
-    const ending = document.querySelector(".future-ending");
-
-    ending.innerHTML = `
-
-Porque las mejores páginas...
-
-<br><br>
-
-todavía no existen.
-
-<br><br>
-
-Las escribiremos juntos. ❤️
-
-`;
-
-    ending.classList.add("show");
-
-    await wait(1500);
-
-    document
-        .querySelector(".page14-button")
-        .classList.add("show");
-
-
-}
-
-async function typeFuture(element, text) {
-
-    element.innerHTML = "";
-
-    for (let c of text) {
-
-        element.innerHTML += c;
-
-        await wait(35);
-
-    }
-
-}
-
-
-//padina 15
-
-async function typePage15(element, text, speed = 45) {
-
-    element.innerHTML = "";
-
-    for (let i = 0; i < text.length; i++) {
-
-        element.innerHTML += text.charAt(i);
-
-        await wait(speed);
-
-    }
-
-}
-
-async function revealPage15() {
-
-    const photo = document.querySelector(".page15-photo-frame");
-    const image = document.querySelector(".page15-photo");
-
-    const texts = document.querySelectorAll(".page15-text");
-
-    const final = document.querySelector(".page15-final");
-
-    const sign = document.querySelector(".page15-sign");
-
-    const button = document.querySelector(".page15-button");
-
-    photo.classList.add("show");
-
-    image.classList.add("zoom");
-
-    await wait(1000);
-const messages = [
-
-`Gracias...
-
-por aparecer en mi vida.`,
-
-`Gracias...
-
-por regalarme tu tiempo.`,
-
-`Gracias...
-
-por enseñarme que el amor
-también puede sentirse en paz.`,
-
-`Gracias...
-
-por quedarte.`
-
-];
-
-
-    for (let i = 0; i < texts.length; i++) {
-
-        texts[i].classList.add("show");
-
-        await typePage15(texts[i], messages[i], 28);
-
-        await wait(900);
-
-    }
-
-    final.classList.add("show");
-
-   await typePage15(
-    final,
-`Gracias...
-
-por convertirte
-
-en mi lugar favorito. ❤️`,
-30
-);
-
-    await wait(1200);
-
-    sign.classList.add("show");
-
-    fadeOutMusic(9000);
-
-    await wait(1800);
-
-    button.classList.add("show");
-
-}
-
-function fadeOutMusic(duration = 9000){
-
-    const music = document.getElementById("bgMusic");
-
-    if(!music) return;
-
-    let volume = music.volume;
-
-    const interval = 100;
-
-    const step = volume / (duration / interval);
-
-    const fade = setInterval(()=>{
-
-        volume -= step;
-
-        if(volume <= 0){
-
-            music.volume = 0;
-
-            clearInterval(fade);
-
-            music.pause();
-
-        }
-        else{
-
-            music.volume = volume;
-
-        }
-
-    },interval);
+    }, intervalTime);
 
 }
